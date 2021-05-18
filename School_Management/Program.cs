@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using School_Management.Manager.Contact;
+using School_Management.Manager.Score;
 namespace School_Management
 {
     static class Program
@@ -21,7 +22,7 @@ namespace School_Management
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
-            Application.Run(new Login_Account());
+            Application.Run(new Results());
         }
     }
 }

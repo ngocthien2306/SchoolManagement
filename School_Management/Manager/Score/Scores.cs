@@ -135,7 +135,7 @@ namespace School_Management.Manager.Score
             {
                 data.Openconnection();
 
-                SqlCommand command = new SqlCommand("SELECT Student_id, Course_id, Student_score FROM Score order BY Student_id, Course_id", data.GetConnection);
+                SqlCommand command = new SqlCommand("SELECT Student_id, Course_id, Student_score , Description FROM Score order BY Student_id, Course_id", data.GetConnection);
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 adapter.SelectCommand = command;
                 DataTable table = new DataTable();
@@ -190,6 +190,7 @@ namespace School_Management.Manager.Score
         {
             try
             {
+                SqlCommand command = new SqlCommand("select * from Score", data.GetConnection);
                 Students student = new Students();
                 Courses course = new Courses();
                 Scores score = new Scores();
@@ -197,7 +198,7 @@ namespace School_Management.Manager.Score
                 //create column
 
                 DataTable result = student.GetAllBriefInfo();
-                result.Columns[0].ColumnName = "Id";
+                result.Columns[0].ColumnName = "ID";
                 result.Columns[1].ColumnName = "Firt Name";
                 result.Columns[2].ColumnName = "Last Name";
 
@@ -209,8 +210,10 @@ namespace School_Management.Manager.Score
                 {
                     result.Columns.Add(coursesLabel.Rows[i][1].ToString().Trim());
                 }
-
+                result.Columns.Add("Average");
                 result.Columns.Add("Result");
+
+
 
                 //test empty
                 if (scores.Rows.Count < 1) return result;
@@ -243,14 +246,57 @@ namespace School_Management.Manager.Score
                 {
                     try
                     {
-                        result.Rows[row][result.Columns.Count - 1]
+                        result.Rows[row][result.Columns.Count - 2]
                             = avgScore.Rows[row][1].ToString().Trim();
+                        int avg = Convert.ToInt32(avgScore.Rows[row][1].ToString().Trim());
+                        if(avg < 5)
+                        {
+                            for(int count = 0; count < result.Rows.Count; count++)
+                            {
+                                try
+                                {
+                                    result.Rows[row][result.Columns.Count - 1] = "Fail";
+                                }
+                                catch
+                                {
+                                    continue;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            for (int count = 0; count < result.Rows.Count; count++)
+                            {
+                                try
+                                {
+                                    result.Rows[count][result.Columns.Count - 1] = "Pass";
+                                }
+                                catch
+                                {
+                                    continue;
+                                }
+                            }
+                        }
                     }
                     catch (Exception)
                     {
                         continue;
                     }
                 }
+                
+                //DataTable table = score.GetScore(command);
+                //for (int row = 0; row < result.Rows.Count; row++)
+                //{
+                //    try
+                //    {
+                //        result.Rows[row][result.Columns.Count - 1]
+                //            = table.Rows[row][3].ToString().Trim();
+                //    }
+                //    catch (Exception)
+                //    {
+                //        continue;
+                //    }
+                //}
                 return result;
             }
             catch (Exception)
@@ -258,7 +304,7 @@ namespace School_Management.Manager.Score
                 throw;
             }
         }
-        public int getPassNumber()
+        public int GetPassNumber()
         {
             My_Database db = new My_Database();
             try
@@ -295,7 +341,7 @@ namespace School_Management.Manager.Score
                 db.Closeconnection();
             }
         }
-        public int getFailNumber()
+        public int GetFailNumber()
         {
             My_Database db = new My_Database();
             try

@@ -246,6 +246,37 @@ namespace School_Management.Manager.Student
                 return true;
             }
         }
+        public int IsExistId(int id)
+        {
+            My_Database dataBase = new My_Database();
+            try
+            {
+                SqlCommand command = new SqlCommand(
+                    "SELECT id, firstname, lastname, birthday, gender, phone, address, picture FROM Add_Student WHERE id = @ID", dataBase.GetConnection);
+                command.Parameters.Add("@ID", SqlDbType.NVarChar).Value = id;
+                dataBase.Openconnection();
+
+                DataTable table = new DataTable();
+
+                SqlDataAdapter adapter = new SqlDataAdapter()
+                {
+                    SelectCommand = command
+                };
+
+                adapter.Fill(table);
+
+                return table.Rows.Count;
+            }
+            catch (Exception)
+            {
+                return 0;
+                throw;
+            }
+            finally
+            {
+                dataBase.Closeconnection();
+            }
+        }
         public bool InsertSelectedCourse(string id, int course)
         {
             My_Database db = new My_Database();

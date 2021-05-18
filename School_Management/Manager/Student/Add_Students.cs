@@ -64,13 +64,11 @@ namespace School_Management.Manager.Student
                 }
 
                 MemoryStream pic = new MemoryStream();
-                //int born_year = Convert.ToInt32(Birthday_Picker.ToString());
-                //int this_year = Convert.ToInt32(DateTime.Now.Year);
-                //if (this_year - born_year < 10 || this_year - born_year > 100)
-                //{
-                //    XtraMessageBox.Show("The student age must be 10 to 100 year", "Invalid Birthday", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
-                if (!Check())
+                if (student.IsExistId(Id) >= 1)
+                {
+
+                }
+                else
                 {
                     Picture_Student.Image.Save(pic, Picture_Student.Image.RawFormat);
                     if (student.AddStudent(Id, firstname, lastname, birthday, gender, phone, address, pic))
@@ -83,14 +81,11 @@ namespace School_Management.Manager.Student
                         XtraMessageBox.Show("Error", "Add student", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                else
-                {
-                    XtraMessageBox.Show("Empty fields", "Add student", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
             }
+
             catch
             {
-                XtraMessageBox.Show("Error! Please check the Cotrol", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Error! Please check the Cotrol", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         public void AddStudent()

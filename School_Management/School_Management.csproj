@@ -408,17 +408,17 @@
     <Compile Include="Manager\Student\Login.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Manager\Student\Manager Student.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manager\Student\Manager Student.Designer.cs">
-      <DependentUpon>Manager Student.cs</DependentUpon>
-    </Compile>
     <Compile Include="Manager\Student\List_Student.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Manager\Student\List_Student.Designer.cs">
       <DependentUpon>List_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Manager Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Manager Student.designer.cs">
+      <DependentUpon>Manager Student.cs</DependentUpon>
     </Compile>
     <Compile Include="Manager\Student\Manager_General.cs">
       <SubType>Form</SubType>
@@ -598,6 +598,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Report.cs" />
+    <Compile Include="Student.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Student.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Manager\Contact\Add_Contacts.resx">
       <DependentUpon>Add_Contacts.cs</DependentUpon>
     </EmbeddedResource>
@@ -676,11 +681,11 @@
     <EmbeddedResource Include="Manager\Student\Find_Student.resx">
       <DependentUpon>Find_Student.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manager\Student\Manager Student.resx">
-      <DependentUpon>Manager Student.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Manager\Student\List_Student.resx">
       <DependentUpon>List_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Student\Manager Student.resx">
+      <DependentUpon>Manager Student.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Student\Manager_General.resx">
       <DependentUpon>Manager_General.cs</DependentUpon>
@@ -806,6 +811,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Student.xsc">
+      <DependentUpon>Student.xsd</DependentUpon>
+    </None>
+    <None Include="Student.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Student.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Student.xss">
+      <DependentUpon>Student.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

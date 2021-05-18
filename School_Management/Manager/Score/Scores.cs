@@ -152,7 +152,6 @@ namespace School_Management.Manager.Score
             {
                 data.Closeconnection();
             }
-
         }
         public DataTable GetAvg_byStudent()
         {

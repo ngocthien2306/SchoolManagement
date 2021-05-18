@@ -83,7 +83,7 @@ namespace School_Management.Manager.Score
             this.splitContainerControl1.Appearance.Options.UseBackColor = true;
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.xtraTabControl1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
@@ -98,7 +98,7 @@ namespace School_Management.Manager.Score
             // 
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
-            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.TabPage1;
             this.xtraTabControl1.Size = new System.Drawing.Size(601, 702);
@@ -118,7 +118,7 @@ namespace School_Management.Manager.Score
             this.TabPage1.Controls.Add(this.Score_lb);
             this.TabPage1.Controls.Add(this.Course_list);
             this.TabPage1.Controls.Add(this.Id_list);
-            this.TabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.TabPage1.Name = "TabPage1";
             this.TabPage1.Size = new System.Drawing.Size(599, 667);
             this.TabPage1.Text = "Home";
@@ -127,7 +127,7 @@ namespace School_Management.Manager.Score
             // IDStudent
             // 
             this.IDStudent.Location = new System.Drawing.Point(222, 60);
-            this.IDStudent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IDStudent.Margin = new System.Windows.Forms.Padding(4);
             this.IDStudent.Name = "IDStudent";
             this.IDStudent.Size = new System.Drawing.Size(328, 28);
             this.IDStudent.TabIndex = 18;
@@ -147,17 +147,16 @@ namespace School_Management.Manager.Score
             new DevExpress.XtraBars.Docking2010.WindowsUIButton("     Refresh     ", true, windowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "A3", 1, false)});
             this.windowsUIButtonPanel1.ForeColor = System.Drawing.Color.DodgerBlue;
             this.windowsUIButtonPanel1.Location = new System.Drawing.Point(4, 547);
-            this.windowsUIButtonPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.windowsUIButtonPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.windowsUIButtonPanel1.Name = "windowsUIButtonPanel1";
             this.windowsUIButtonPanel1.Size = new System.Drawing.Size(573, 98);
             this.windowsUIButtonPanel1.TabIndex = 17;
             this.windowsUIButtonPanel1.Text = "WindowsUIButtonPanel";
             this.windowsUIButtonPanel1.ButtonChecked += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanel1_ButtonChecked);
-            // 
             // Rich_desc
             // 
             this.Rich_desc.Location = new System.Drawing.Point(222, 329);
-            this.Rich_desc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Rich_desc.Margin = new System.Windows.Forms.Padding(4);
             this.Rich_desc.Name = "Rich_desc";
             this.Rich_desc.Size = new System.Drawing.Size(326, 138);
             this.Rich_desc.TabIndex = 16;
@@ -166,7 +165,7 @@ namespace School_Management.Manager.Score
             // Score_tb
             // 
             this.Score_tb.Location = new System.Drawing.Point(222, 240);
-            this.Score_tb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Score_tb.Margin = new System.Windows.Forms.Padding(4);
             this.Score_tb.Name = "Score_tb";
             this.Score_tb.Size = new System.Drawing.Size(328, 28);
             this.Score_tb.TabIndex = 15;
@@ -175,7 +174,7 @@ namespace School_Management.Manager.Score
             // 
             this.ComboBox_Course.FormattingEnabled = true;
             this.ComboBox_Course.Location = new System.Drawing.Point(222, 145);
-            this.ComboBox_Course.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ComboBox_Course.Margin = new System.Windows.Forms.Padding(4);
             this.ComboBox_Course.Name = "ComboBox_Course";
             this.ComboBox_Course.Size = new System.Drawing.Size(326, 27);
             this.ComboBox_Course.TabIndex = 13;
@@ -186,7 +185,7 @@ namespace School_Management.Manager.Score
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Des_course.Location = new System.Drawing.Point(38, 355);
-            this.Des_course.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Des_course.Margin = new System.Windows.Forms.Padding(4);
             this.Des_course.Name = "Des_course";
             this.Des_course.Size = new System.Drawing.Size(79, 19);
             this.Des_course.TabIndex = 12;
@@ -198,7 +197,7 @@ namespace School_Management.Manager.Score
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Score_lb.Location = new System.Drawing.Point(39, 248);
-            this.Score_lb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Score_lb.Margin = new System.Windows.Forms.Padding(4);
             this.Score_lb.Name = "Score_lb";
             this.Score_lb.Size = new System.Drawing.Size(39, 19);
             this.Score_lb.TabIndex = 11;
@@ -210,7 +209,7 @@ namespace School_Management.Manager.Score
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Course_list.Location = new System.Drawing.Point(39, 156);
-            this.Course_list.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Course_list.Margin = new System.Windows.Forms.Padding(4);
             this.Course_list.Name = "Course_list";
             this.Course_list.Size = new System.Drawing.Size(49, 19);
             this.Course_list.TabIndex = 10;
@@ -222,7 +221,7 @@ namespace School_Management.Manager.Score
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Id_list.Location = new System.Drawing.Point(39, 64);
-            this.Id_list.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Id_list.Margin = new System.Windows.Forms.Padding(4);
             this.Id_list.Name = "Id_list";
             this.Id_list.Size = new System.Drawing.Size(76, 19);
             this.Id_list.TabIndex = 9;
@@ -236,7 +235,7 @@ namespace School_Management.Manager.Score
             this.DataGridView_Student.BackgroundColor = System.Drawing.Color.OldLace;
             this.DataGridView_Student.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView_Student.Location = new System.Drawing.Point(3, 153);
-            this.DataGridView_Student.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DataGridView_Student.Margin = new System.Windows.Forms.Padding(4);
             this.DataGridView_Student.Name = "DataGridView_Student";
             this.DataGridView_Student.RowHeadersWidth = 62;
             this.DataGridView_Student.Size = new System.Drawing.Size(811, 541);
@@ -246,7 +245,7 @@ namespace School_Management.Manager.Score
             // xtraTabControl2
             // 
             this.xtraTabControl2.Location = new System.Drawing.Point(2, 0);
-            this.xtraTabControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.xtraTabControl2.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.SelectedTabPage = this.XtraTabPage_Show;
             this.xtraTabControl2.Size = new System.Drawing.Size(896, 145);
@@ -261,7 +260,7 @@ namespace School_Management.Manager.Score
             this.XtraTabPage_Show.Controls.Add(this.simpleButton1);
             this.XtraTabPage_Show.Controls.Add(this.ShowScore);
             this.XtraTabPage_Show.Controls.Add(this.Show_student);
-            this.XtraTabPage_Show.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.XtraTabPage_Show.Margin = new System.Windows.Forms.Padding(4);
             this.XtraTabPage_Show.Name = "XtraTabPage_Show";
             this.XtraTabPage_Show.Size = new System.Drawing.Size(894, 110);
             this.XtraTabPage_Show.Text = "Show Data";
@@ -270,7 +269,7 @@ namespace School_Management.Manager.Score
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
             this.simpleButton1.Location = new System.Drawing.Point(326, 22);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton1.Size = new System.Drawing.Size(112, 51);
@@ -282,7 +281,7 @@ namespace School_Management.Manager.Score
             // 
             this.ShowScore.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ShowScore.ImageOptions.Image")));
             this.ShowScore.Location = new System.Drawing.Point(506, 26);
-            this.ShowScore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ShowScore.Margin = new System.Windows.Forms.Padding(4);
             this.ShowScore.Name = "ShowScore";
             this.ShowScore.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.ShowScore.Size = new System.Drawing.Size(198, 53);
@@ -294,7 +293,7 @@ namespace School_Management.Manager.Score
             // 
             this.Show_student.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Show_student.ImageOptions.Image")));
             this.Show_student.Location = new System.Drawing.Point(68, 22);
-            this.Show_student.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Show_student.Margin = new System.Windows.Forms.Padding(4);
             this.Show_student.Name = "Show_student";
             this.Show_student.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.Show_student.Size = new System.Drawing.Size(190, 61);
@@ -352,7 +351,7 @@ namespace School_Management.Manager.Score
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1413, 702);
             this.Controls.Add(this.splitContainerControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Manager_Score";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Manager Score";

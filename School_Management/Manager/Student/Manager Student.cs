@@ -48,8 +48,8 @@ namespace School_Management.Manager.Student
 
         private void Manager_Student_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'manager_StudentDataSet3.Course' table. You can move, or remove it, as needed.
-            this.courseTableAdapter.Fill(this.manager_StudentDataSet3.Course);
+            // TODO: This line of code loads data into the 'student.Course' table. You can move, or remove it, as needed.
+            this.courseTableAdapter1.Fill(this.student.Course);
             // TODO: This line of code loads data into the 'manager_StudentDataSet3.Add_Student' table. You can move, or remove it, as needed.
             this.add_StudentTableAdapter.Fill(this.manager_StudentDataSet3.Add_Student);
         }

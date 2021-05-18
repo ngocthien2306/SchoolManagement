@@ -47,7 +47,7 @@ namespace School_Management.Manager.Contact
                     dataBase.Closeconnection();
                     TextEdit_ID.Text = table.Rows[0]["Id"].ToString();
                     TextEdit_Fname.Text = table.Rows[0]["Firstname"].ToString();
-                    TextEdit_Lastname.Text = table.Rows[0]["Fastname"].ToString();
+                    TextEdit_Lastname.Text = table.Rows[0]["Lastname"].ToString();
                     ComboBox_GroupId.SelectedValue = table.Rows[0]["Group_id"].ToString();
                     ComboBoxEdit_Gender.SelectedItem = table.Rows[0]["Gender"].ToString();
                     DateEdit_Birthday.DateTime = (DateTime)table.Rows[0]["Birthday"];

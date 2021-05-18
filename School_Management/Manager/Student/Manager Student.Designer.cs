@@ -30,7 +30,6 @@ namespace School_Management.Manager.Student
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager_Student));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.M010201 = new DevExpress.XtraBars.BarButtonItem();
@@ -106,19 +105,37 @@ namespace School_Management.Manager.Student
             this.coladdress = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colphone = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colpicture = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.courseGridControl = new DevExpress.XtraGrid.GridControl();
             this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.GridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colId1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.collabel = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colperiod = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.coldescription = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GroupBox_Status = new System.Windows.Forms.GroupBox();
             this.Picture_user = new DevExpress.XtraEditors.PictureEdit();
             this.Label_Status = new DevExpress.XtraEditors.LabelControl();
             this.add_StudentTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.Add_StudentTableAdapter();
             this.tableAdapterManager = new School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager();
             this.courseTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.CourseTableAdapter();
+            this.student = new School_Management.Student();
+            this.courseBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.courseTableAdapter1 = new School_Management.StudentTableAdapters.CourseTableAdapter();
+            this.tableAdapterManager1 = new School_Management.StudentTableAdapters.TableAdapterManager();
+            this.courseGridControl = new DevExpress.XtraGrid.GridControl();
+            this.GridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.collabel = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colperiod = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldescription = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colsemester = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -129,11 +146,15 @@ namespace School_Management.Manager.Student
             ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.add_StudentGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridView2)).BeginInit();
             this.GroupBox_Status.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_user.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.student)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbon
@@ -426,8 +447,8 @@ namespace School_Management.Manager.Student
             // 
             this.M050102.Caption = "Static Result";
             this.M050102.Id = 36;
-            this.M050102.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.M050102.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.M050102.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("M050102.ImageOptions.Image")));
+            this.M050102.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("M050102.ImageOptions.LargeImage")));
             this.M050102.Name = "M050102";
             this.M050102.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.M050102_ItemClick);
             // 
@@ -573,6 +594,7 @@ namespace School_Management.Manager.Student
             this.splitContainerControl1.Panel1.Controls.Add(this.add_StudentBindingNavigator);
             this.splitContainerControl1.Panel1.Controls.Add(this.add_StudentGridControl);
             this.splitContainerControl1.Panel1.Text = "Panel1";
+            this.splitContainerControl1.Panel2.Controls.Add(this.bindingNavigator1);
             this.splitContainerControl1.Panel2.Controls.Add(this.courseGridControl);
             this.splitContainerControl1.Panel2.Text = "Panel2";
             this.splitContainerControl1.Size = new System.Drawing.Size(1492, 616);
@@ -606,7 +628,7 @@ namespace School_Management.Manager.Student
             this.add_StudentBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.add_StudentBindingNavigator.Name = "add_StudentBindingNavigator";
             this.add_StudentBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.add_StudentBindingNavigator.Size = new System.Drawing.Size(873, 38);
+            this.add_StudentBindingNavigator.Size = new System.Drawing.Size(873, 33);
             this.add_StudentBindingNavigator.TabIndex = 13;
             this.add_StudentBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -672,6 +694,7 @@ namespace School_Management.Manager.Student
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -824,77 +847,10 @@ namespace School_Management.Manager.Student
             this.colpicture.VisibleIndex = 7;
             this.colpicture.Width = 112;
             // 
-            // courseGridControl
-            // 
-            this.courseGridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.courseGridControl.DataSource = this.courseBindingSource;
-            this.courseGridControl.Location = new System.Drawing.Point(0, 36);
-            this.courseGridControl.MainView = this.GridView2;
-            this.courseGridControl.MenuManager = this.ribbon;
-            this.courseGridControl.Name = "courseGridControl";
-            this.courseGridControl.Size = new System.Drawing.Size(598, 573);
-            this.courseGridControl.TabIndex = 0;
-            this.courseGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.GridView2});
-            // 
             // courseBindingSource
             // 
             this.courseBindingSource.DataMember = "Course";
             this.courseBindingSource.DataSource = this.manager_StudentDataSet3;
-            // 
-            // GridView2
-            // 
-            this.GridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colId1,
-            this.collabel,
-            this.colperiod,
-            this.coldescription});
-            this.GridView2.GridControl = this.courseGridControl;
-            this.GridView2.Name = "GridView2";
-            this.GridView2.OptionsFind.AlwaysVisible = true;
-            this.GridView2.OptionsFind.ShowClearButton = false;
-            // 
-            // colId1
-            // 
-            this.colId1.Caption = "ID ";
-            this.colId1.FieldName = "Id";
-            this.colId1.MinWidth = 30;
-            this.colId1.Name = "colId1";
-            this.colId1.Visible = true;
-            this.colId1.VisibleIndex = 0;
-            this.colId1.Width = 112;
-            // 
-            // collabel
-            // 
-            this.collabel.Caption = "Name of Course";
-            this.collabel.FieldName = "label";
-            this.collabel.MinWidth = 30;
-            this.collabel.Name = "collabel";
-            this.collabel.Visible = true;
-            this.collabel.VisibleIndex = 1;
-            this.collabel.Width = 112;
-            // 
-            // colperiod
-            // 
-            this.colperiod.Caption = "Period";
-            this.colperiod.FieldName = "period";
-            this.colperiod.MinWidth = 30;
-            this.colperiod.Name = "colperiod";
-            this.colperiod.Visible = true;
-            this.colperiod.VisibleIndex = 2;
-            this.colperiod.Width = 112;
-            // 
-            // coldescription
-            // 
-            this.coldescription.Caption = "Description";
-            this.coldescription.FieldName = "description";
-            this.coldescription.MinWidth = 30;
-            this.coldescription.Name = "coldescription";
-            this.coldescription.Visible = true;
-            this.coldescription.VisibleIndex = 3;
-            this.coldescription.Width = 112;
             // 
             // GroupBox_Status
             // 
@@ -943,6 +899,231 @@ namespace School_Management.Manager.Student
             // 
             this.courseTableAdapter.ClearBeforeFill = true;
             // 
+            // student
+            // 
+            this.student.DataSetName = "Student";
+            this.student.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // courseBindingSource1
+            // 
+            this.courseBindingSource1.DataMember = "Course";
+            this.courseBindingSource1.DataSource = this.student;
+            // 
+            // courseTableAdapter1
+            // 
+            this.courseTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.Add_StudentTableAdapter = null;
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.ContactTableAdapter = null;
+            this.tableAdapterManager1.CourseTableAdapter = this.courseTableAdapter1;
+            this.tableAdapterManager1.Group1TableAdapter = null;
+            this.tableAdapterManager1.GroupTableAdapter = null;
+            this.tableAdapterManager1.New_UserTableAdapter = null;
+            this.tableAdapterManager1.ScoreTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = School_Management.StudentTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // courseGridControl
+            // 
+            this.courseGridControl.DataSource = this.courseBindingSource1;
+            this.courseGridControl.Location = new System.Drawing.Point(0, 36);
+            this.courseGridControl.MainView = this.GridView2;
+            this.courseGridControl.MenuManager = this.ribbon;
+            this.courseGridControl.Name = "courseGridControl";
+            this.courseGridControl.Size = new System.Drawing.Size(598, 573);
+            this.courseGridControl.TabIndex = 0;
+            this.courseGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.GridView2});
+            // 
+            // GridView2
+            // 
+            this.GridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId1,
+            this.collabel,
+            this.colperiod,
+            this.coldescription,
+            this.colsemester});
+            this.GridView2.GridControl = this.courseGridControl;
+            this.GridView2.Name = "GridView2";
+            this.GridView2.OptionsFind.AlwaysVisible = true;
+            // 
+            // colId1
+            // 
+            this.colId1.Caption = "ID";
+            this.colId1.FieldName = "Id";
+            this.colId1.MinWidth = 30;
+            this.colId1.Name = "colId1";
+            this.colId1.Visible = true;
+            this.colId1.VisibleIndex = 0;
+            this.colId1.Width = 112;
+            // 
+            // collabel
+            // 
+            this.collabel.Caption = "Name of Course";
+            this.collabel.FieldName = "label";
+            this.collabel.MinWidth = 30;
+            this.collabel.Name = "collabel";
+            this.collabel.Visible = true;
+            this.collabel.VisibleIndex = 1;
+            this.collabel.Width = 112;
+            // 
+            // colperiod
+            // 
+            this.colperiod.Caption = "Period";
+            this.colperiod.FieldName = "period";
+            this.colperiod.MinWidth = 30;
+            this.colperiod.Name = "colperiod";
+            this.colperiod.Visible = true;
+            this.colperiod.VisibleIndex = 2;
+            this.colperiod.Width = 112;
+            // 
+            // coldescription
+            // 
+            this.coldescription.Caption = "Description";
+            this.coldescription.FieldName = "description";
+            this.coldescription.MinWidth = 30;
+            this.coldescription.Name = "coldescription";
+            this.coldescription.Visible = true;
+            this.coldescription.VisibleIndex = 3;
+            this.coldescription.Width = 112;
+            // 
+            // colsemester
+            // 
+            this.colsemester.Caption = "Semester";
+            this.colsemester.FieldName = "semester";
+            this.colsemester.MinWidth = 30;
+            this.colsemester.Name = "colsemester";
+            this.colsemester.Visible = true;
+            this.colsemester.VisibleIndex = 4;
+            this.colsemester.Width = 112;
+            // 
+            // bindingNavigator1
+            // 
+            this.bindingNavigator1.AddNewItem = this.toolStripButton1;
+            this.bindingNavigator1.BindingSource = this.add_StudentBindingSource;
+            this.bindingNavigator1.CountItem = this.toolStripLabel1;
+            this.bindingNavigator1.DeleteItem = this.toolStripButton2;
+            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripSeparator1,
+            this.toolStripTextBox1,
+            this.toolStripLabel1,
+            this.toolStripSeparator2,
+            this.toolStripButton5,
+            this.toolStripButton6,
+            this.toolStripSeparator3,
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton7});
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
+            this.bindingNavigator1.MoveFirstItem = this.toolStripButton3;
+            this.bindingNavigator1.MoveLastItem = this.toolStripButton6;
+            this.bindingNavigator1.MoveNextItem = this.toolStripButton5;
+            this.bindingNavigator1.MovePreviousItem = this.toolStripButton4;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = this.toolStripTextBox1;
+            this.bindingNavigator1.Size = new System.Drawing.Size(601, 33);
+            this.bindingNavigator1.TabIndex = 14;
+            this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton1.Size = new System.Drawing.Size(34, 28);
+            this.toolStripButton1.Text = "Add new";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(54, 28);
+            this.toolStripLabel1.Text = "of {0}";
+            this.toolStripLabel1.ToolTipText = "Total number of items";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton2.Size = new System.Drawing.Size(34, 28);
+            this.toolStripButton2.Text = "Delete";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton3.Size = new System.Drawing.Size(34, 28);
+            this.toolStripButton3.Text = "Move first";
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton4.Size = new System.Drawing.Size(34, 28);
+            this.toolStripButton4.Text = "Move previous";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 33);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.AccessibleName = "Position";
+            this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 31);
+            this.toolStripTextBox1.Text = "0";
+            this.toolStripTextBox1.ToolTipText = "Current position";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 33);
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton5.Size = new System.Drawing.Size(34, 28);
+            this.toolStripButton5.Text = "Move next";
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton6.Size = new System.Drawing.Size(34, 28);
+            this.toolStripButton6.Text = "Move last";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 33);
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(34, 28);
+            this.toolStripButton7.Text = "Save Data";
+            // 
             // Manager_Student
             // 
             this.Appearance.Options.UseFont = true;
@@ -972,12 +1153,17 @@ namespace School_Management.Manager.Student
             ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.add_StudentGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridView2)).EndInit();
             this.GroupBox_Status.ResumeLayout(false);
             this.GroupBox_Status.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_user.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.student)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
+            this.bindingNavigator1.ResumeLayout(false);
+            this.bindingNavigator1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1053,8 +1239,6 @@ namespace School_Management.Manager.Student
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton add_StudentBindingNavigatorSaveItem;
-        private DevExpress.XtraGrid.GridControl courseGridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView GridView2;
         private DevExpress.XtraBars.BarButtonItem M050101;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup M05;
         private DevExpress.XtraGrid.Columns.GridColumn colid;
@@ -1065,11 +1249,31 @@ namespace School_Management.Manager.Student
         private DevExpress.XtraGrid.Columns.GridColumn coladdress;
         private DevExpress.XtraGrid.Columns.GridColumn colphone;
         private DevExpress.XtraGrid.Columns.GridColumn colpicture;
+        private DevExpress.XtraBars.BarButtonItem M030104;
+        private DevExpress.XtraBars.BarButtonItem M050102;
+        private School_Management.Student student;
+        private System.Windows.Forms.BindingSource courseBindingSource1;
+        private StudentTableAdapters.CourseTableAdapter courseTableAdapter1;
+        private StudentTableAdapters.TableAdapterManager tableAdapterManager1;
+        private DevExpress.XtraGrid.GridControl courseGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView GridView2;
         private DevExpress.XtraGrid.Columns.GridColumn colId1;
         private DevExpress.XtraGrid.Columns.GridColumn collabel;
         private DevExpress.XtraGrid.Columns.GridColumn colperiod;
         private DevExpress.XtraGrid.Columns.GridColumn coldescription;
-        private DevExpress.XtraBars.BarButtonItem M030104;
-        private DevExpress.XtraBars.BarButtonItem M050102;
+        private DevExpress.XtraGrid.Columns.GridColumn colsemester;
+        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
     }
 }

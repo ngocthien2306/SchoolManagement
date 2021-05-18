@@ -32,7 +32,7 @@ namespace School_Management.Manager.Course
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCourse_FormStuent));
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.Edit = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.Add = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Edit_andSave = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ResetChange = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Delete_course = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -41,15 +41,13 @@ namespace School_Management.Manager.Course
             this.Label_semester = new DevExpress.XtraEditors.LabelControl();
             this.Label_course = new DevExpress.XtraEditors.LabelControl();
             this.Label_Selected = new DevExpress.XtraEditors.LabelControl();
-            this.checkedComboBoxEdit1 = new DevExpress.XtraEditors.CheckedComboBoxEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.listBoxControl1 = new DevExpress.XtraEditors.ListBoxControl();
-            this.listBoxControl2 = new DevExpress.XtraEditors.ListBoxControl();
+            this.ListBoxCourse = new DevExpress.XtraEditors.ListBoxControl();
+            this.Listbox_Available = new DevExpress.XtraEditors.ListBoxControl();
+            this.ComboBox_Student = new System.Windows.Forms.ComboBox();
+            this.ComboBox_Semester = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkedComboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listBoxControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListBoxCourse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Listbox_Available)).BeginInit();
             this.SuspendLayout();
             // 
             // accordionControl1
@@ -57,7 +55,7 @@ namespace School_Management.Manager.Course
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement6,
-            this.Edit,
+            this.Add,
             this.Edit_andSave,
             this.ResetChange,
             this.Delete_course,
@@ -66,7 +64,7 @@ namespace School_Management.Manager.Course
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(191, 534);
+            this.accordionControl1.Size = new System.Drawing.Size(191, 488);
             this.accordionControl1.TabIndex = 13;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -76,19 +74,21 @@ namespace School_Management.Manager.Course
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Text = "Task";
             // 
-            // Edit
+            // Add
             // 
-            this.Edit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Edit.ImageOptions.Image")));
-            this.Edit.Name = "Edit";
-            this.Edit.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.Edit.Text = "Edit";
+            this.Add.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Edit.ImageOptions.Image")));
+            this.Add.Name = "Add";
+            this.Add.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.Add.Text = "Add";
+            this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // Edit_andSave
             // 
             this.Edit_andSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Edit_andSave.ImageOptions.Image")));
             this.Edit_andSave.Name = "Edit_andSave";
             this.Edit_andSave.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.Edit_andSave.Text = "Edit and Close";
+            this.Edit_andSave.Text = "Save and Close";
+            this.Edit_andSave.Click += new System.EventHandler(this.Edit_andSave_Click);
             // 
             // ResetChange
             // 
@@ -103,6 +103,7 @@ namespace School_Management.Manager.Course
             this.Delete_course.Name = "Delete_course";
             this.Delete_course.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.Delete_course.Text = "Delete";
+            this.Delete_course.Click += new System.EventHandler(this.Delete_course_Click);
             // 
             // Back
             // 
@@ -113,7 +114,7 @@ namespace School_Management.Manager.Course
             // 
             // Label_ID
             // 
-            this.Label_ID.Location = new System.Drawing.Point(213, 107);
+            this.Label_ID.Location = new System.Drawing.Point(230, 76);
             this.Label_ID.Name = "Label_ID";
             this.Label_ID.Size = new System.Drawing.Size(76, 19);
             this.Label_ID.TabIndex = 14;
@@ -121,7 +122,7 @@ namespace School_Management.Manager.Course
             // 
             // Label_semester
             // 
-            this.Label_semester.Location = new System.Drawing.Point(555, 107);
+            this.Label_semester.Location = new System.Drawing.Point(631, 76);
             this.Label_semester.Name = "Label_semester";
             this.Label_semester.Size = new System.Drawing.Size(65, 19);
             this.Label_semester.TabIndex = 15;
@@ -129,7 +130,7 @@ namespace School_Management.Manager.Course
             // 
             // Label_course
             // 
-            this.Label_course.Location = new System.Drawing.Point(213, 219);
+            this.Label_course.Location = new System.Drawing.Point(230, 174);
             this.Label_course.Name = "Label_course";
             this.Label_course.Size = new System.Drawing.Size(118, 19);
             this.Label_course.TabIndex = 16;
@@ -137,51 +138,53 @@ namespace School_Management.Manager.Course
             // 
             // Label_Selected
             // 
-            this.Label_Selected.Location = new System.Drawing.Point(555, 219);
+            this.Label_Selected.Location = new System.Drawing.Point(631, 174);
             this.Label_Selected.Name = "Label_Selected";
             this.Label_Selected.Size = new System.Drawing.Size(112, 19);
             this.Label_Selected.TabIndex = 17;
             this.Label_Selected.Text = "Selected Course";
             // 
-            // checkedComboBoxEdit1
+            // ListBoxCourse
             // 
-            this.checkedComboBoxEdit1.Location = new System.Drawing.Point(646, 103);
-            this.checkedComboBoxEdit1.Name = "checkedComboBoxEdit1";
-            this.checkedComboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.checkedComboBoxEdit1.Size = new System.Drawing.Size(150, 28);
-            this.checkedComboBoxEdit1.TabIndex = 18;
+            this.ListBoxCourse.Location = new System.Drawing.Point(631, 240);
+            this.ListBoxCourse.Name = "ListBoxCourse";
+            this.ListBoxCourse.Size = new System.Drawing.Size(306, 182);
+            this.ListBoxCourse.TabIndex = 20;
             // 
-            // textEdit1
+            // Listbox_Available
             // 
-            this.textEdit1.Location = new System.Drawing.Point(308, 103);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(150, 28);
-            this.textEdit1.TabIndex = 19;
+            this.Listbox_Available.Location = new System.Drawing.Point(230, 240);
+            this.Listbox_Available.Name = "Listbox_Available";
+            this.Listbox_Available.Size = new System.Drawing.Size(310, 182);
+            this.Listbox_Available.TabIndex = 21;
             // 
-            // listBoxControl1
+            // ComboBox_Student
             // 
-            this.listBoxControl1.Location = new System.Drawing.Point(555, 271);
-            this.listBoxControl1.Name = "listBoxControl1";
-            this.listBoxControl1.Size = new System.Drawing.Size(241, 182);
-            this.listBoxControl1.TabIndex = 20;
+            this.ComboBox_Student.FormattingEnabled = true;
+            this.ComboBox_Student.Location = new System.Drawing.Point(346, 73);
+            this.ComboBox_Student.Name = "ComboBox_Student";
+            this.ComboBox_Student.Size = new System.Drawing.Size(194, 27);
+            this.ComboBox_Student.TabIndex = 22;
+            this.ComboBox_Student.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Student_SelectedIndexChanged);
             // 
-            // listBoxControl2
+            // ComboBox_Semester
             // 
-            this.listBoxControl2.Location = new System.Drawing.Point(213, 271);
-            this.listBoxControl2.Name = "listBoxControl2";
-            this.listBoxControl2.Size = new System.Drawing.Size(245, 182);
-            this.listBoxControl2.TabIndex = 21;
+            this.ComboBox_Semester.FormattingEnabled = true;
+            this.ComboBox_Semester.Location = new System.Drawing.Point(743, 73);
+            this.ComboBox_Semester.Name = "ComboBox_Semester";
+            this.ComboBox_Semester.Size = new System.Drawing.Size(194, 27);
+            this.ComboBox_Semester.TabIndex = 23;
+            this.ComboBox_Semester.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Semester_SelectedIndexChanged);
             // 
             // AddCourse_FormStuent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 534);
-            this.Controls.Add(this.listBoxControl2);
-            this.Controls.Add(this.listBoxControl1);
-            this.Controls.Add(this.textEdit1);
-            this.Controls.Add(this.checkedComboBoxEdit1);
+            this.ClientSize = new System.Drawing.Size(975, 488);
+            this.Controls.Add(this.ComboBox_Semester);
+            this.Controls.Add(this.ComboBox_Student);
+            this.Controls.Add(this.Listbox_Available);
+            this.Controls.Add(this.ListBoxCourse);
             this.Controls.Add(this.Label_Selected);
             this.Controls.Add(this.Label_course);
             this.Controls.Add(this.Label_semester);
@@ -190,10 +193,8 @@ namespace School_Management.Manager.Course
             this.Name = "AddCourse_FormStuent";
             this.Text = "Add Course";
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkedComboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listBoxControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListBoxCourse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Listbox_Available)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,7 +204,7 @@ namespace School_Management.Manager.Course
 
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement Edit;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement Add;
         private DevExpress.XtraBars.Navigation.AccordionControlElement Edit_andSave;
         private DevExpress.XtraBars.Navigation.AccordionControlElement ResetChange;
         private DevExpress.XtraBars.Navigation.AccordionControlElement Delete_course;
@@ -212,9 +213,9 @@ namespace School_Management.Manager.Course
         private DevExpress.XtraEditors.LabelControl Label_semester;
         private DevExpress.XtraEditors.LabelControl Label_course;
         private DevExpress.XtraEditors.LabelControl Label_Selected;
-        private DevExpress.XtraEditors.CheckedComboBoxEdit checkedComboBoxEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.ListBoxControl listBoxControl1;
-        private DevExpress.XtraEditors.ListBoxControl listBoxControl2;
+        private DevExpress.XtraEditors.ListBoxControl ListBoxCourse;
+        private DevExpress.XtraEditors.ListBoxControl Listbox_Available;
+        private System.Windows.Forms.ComboBox ComboBox_Student;
+        private System.Windows.Forms.ComboBox ComboBox_Semester;
     }
 }

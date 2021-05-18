@@ -110,7 +110,7 @@ namespace School_Management.Manager.Score
         {
             My_Database data = new My_Database();
             Students student = new Students();
-            SqlCommand commnand = new SqlCommand("SELECT id, firstname, lastname FROM Add_Student",data.GetConnection);
+            SqlCommand commnand = new SqlCommand("SELECT id as ID, firstname as Firstname, lastname as Lastname, birthday as Birthday FROM Add_Student",data.GetConnection);
             DataGridView_Student.DataSource = student.GetStudents(commnand);
 
 
@@ -130,7 +130,7 @@ namespace School_Management.Manager.Score
             {
                 ComboBox_Course.Items.Add(row[1].ToString().Trim());
             }
-
+            this.LoadData();
 
         }
         public void RemoveScore()
@@ -144,17 +144,18 @@ namespace School_Management.Manager.Score
                     int cid = Convert.ToInt32(table.Rows[ComboBox_Course.SelectedIndex][0].ToString());
                     if (score.Delete_Score(id, cid))
                     {
-                        MessageBox.Show("Delete successful!", "Delete Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        XtraMessageBox.Show("Delete successful!", "Delete Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        MessageBox.Show("Delete failed!", "Delete Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        XtraMessageBox.Show("Delete failed!", "Delete Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-
+                    XtraMessageBox.Show("Error!, please check the textbox control again", "Delete Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+            
             }
             catch
             {
@@ -163,48 +164,61 @@ namespace School_Management.Manager.Score
         }
         public void AddScore()
         {
-            
-
             try
             {
-                if (IDStudent.Text == ""
-                            || ComboBox_Course.SelectedIndex == -1
-                            || Rich_desc.Text == ""
-                            || Score_tb.Text == "")
-                {
 
-                    MessageBox.Show("The textboxs are blank, please enter again!", "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Scores score = new Scores();
+                int sid = Convert.ToInt32(IDStudent.Text);
+                int cid = Convert.ToInt32(ComboBox_Course.SelectedValue);
+                float score_stu = (float)Convert.ToDouble(Score_tb.Text);
+                string des = Rich_desc.Text;
+                if (score_stu > 10 || score_stu < 0)
+                {
+                    XtraMessageBox.Show("Score can not over 10. Please anter again!", "Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 }
                 else
                 {
-                    int id = Convert.ToInt32(IDStudent.Text);
-                    float sc = (float)Convert.ToDouble(Score_tb.Text);
-                    string des = Rich_desc.Text;
-                    int cid = Convert.ToInt32(table.Rows[ComboBox_Course.SelectedIndex][0].ToString());
-                    if (score.Add_Score(id, cid, sc, des))
+                    if (!score.Student_Score_Exist(sid, cid))
                     {
-                        MessageBox.Show("Add score successful!!", "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (score.Add_Score(sid, cid, score_stu, des))
+                        {
+                            XtraMessageBox.Show("Add score successful!", "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("Add score failed !", "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {
-
+                        XtraMessageBox.Show("The Student ID and Course ID already", "All Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
+
             }
             catch
             {
-                MessageBox.Show("Error!", "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("The textbox is blank. Please enter again", "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void windowsUIButtonPanel1_ButtonChecked(object sender, ButtonEventArgs e)
         {
-            
+            int score = Convert.ToInt32(Score_tb.Text);
+
             string tag = ((WindowsUIButton)e.Button).Tag.ToString();
             switch (tag)
             {
                 case "A1":
-                        this.AddScore();                    
+                    if (score > 0 || score <= 10)
+                    {
+                        this.AddScore();
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("The Score geater 0 or least 10", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }                     
                     break;
                 case "A2":
                     this.RemoveScore();
@@ -218,11 +232,13 @@ namespace School_Management.Manager.Score
         private void Show_student_Click(object sender, EventArgs e)
         {
             DataGridView_Student.DataSource = score.GetStudentScore();
+            
         }
 
         private void ShowScore_Click(object sender, EventArgs e)
         {
             DataGridView_Student.DataSource = score.GetAllScore();
+            
         }
         private void scoreBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {

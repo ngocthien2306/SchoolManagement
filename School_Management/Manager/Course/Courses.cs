@@ -531,6 +531,25 @@ namespace School_Management.Manager.Course
                 db.Closeconnection();
             }
         }
+        public int GetIdByLabel(string label)
+        {
+            My_Database dataBase = new My_Database();
+            try
+            {
+                label = label.Trim();
+                SqlCommand command = new SqlCommand("SELECT Id From Course Where label = @label", dataBase.GetConnection);
+                command.Parameters.Add("@label", SqlDbType.NVarChar).Value = label;
+                dataBase.Openconnection();
+                int result = Convert.ToInt32(command.ExecuteScalar());
+                dataBase.Closeconnection();
+                return result;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         public DataTable AllLabel_IdOrder()
         {
             My_Database db = new My_Database();
@@ -544,6 +563,36 @@ namespace School_Management.Manager.Course
                                     "from Course " +
                                     "order by Course.Id"
                 };
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                adapter.SelectCommand = command;
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                db.Closeconnection();
+
+                return table;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                db.Closeconnection();
+            }
+        }
+        public DataTable GetCourseBySemester(string semester)
+        {
+            semester = semester.Trim();
+            My_Database db = new My_Database();
+            try
+            {
+                db.Openconnection();
+                SqlCommand command = new SqlCommand()
+                {
+                    Connection = db.GetConnection,
+                    CommandText = "SELECT * FROM Courses WHERE semester = @semester"
+                };
+                command.Parameters.Add("@semester", SqlDbType.NVarChar).Value = semester;
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 adapter.SelectCommand = command;
                 DataTable table = new DataTable();

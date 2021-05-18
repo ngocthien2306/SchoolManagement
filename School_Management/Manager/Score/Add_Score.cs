@@ -79,6 +79,10 @@ namespace School_Management.Manager.Score
                             XtraMessageBox.Show("Add score failed !", "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
+                    else
+                    {
+                        XtraMessageBox.Show("The Student ID and Course ID already", "All Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
             
             }

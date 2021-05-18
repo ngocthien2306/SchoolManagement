@@ -67,6 +67,8 @@ namespace School_Management.Manager.Course
             this.Reset = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Delete = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Close_program = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.CheckedComboBox = new DevExpress.XtraEditors.CheckedComboBoxEdit();
+            this.Label_Semester = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Edit_CourselayoutControl1ConvertedLayout)).BeginInit();
             this.Edit_CourselayoutControl1ConvertedLayout.SuspendLayout();
@@ -79,6 +81,7 @@ namespace School_Management.Manager.Course
             ((System.ComponentModel.ISupportInitialize)(this.ID_Course_tb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ControlGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CheckedComboBox.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // toolbarFormManager1
@@ -161,10 +164,10 @@ namespace School_Management.Manager.Course
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Location = new System.Drawing.Point(16, 7);
+            this.xtraTabControl1.Location = new System.Drawing.Point(16, 12);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.XTabPage;
-            this.xtraTabControl1.Size = new System.Drawing.Size(687, 400);
+            this.xtraTabControl1.Size = new System.Drawing.Size(687, 416);
             this.xtraTabControl1.TabIndex = 18;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.XTabPage});
@@ -173,10 +176,12 @@ namespace School_Management.Manager.Course
             // 
             this.XTabPage.Controls.Add(this.tabFormContentContainer1);
             this.XTabPage.Name = "XTabPage";
-            this.XTabPage.Size = new System.Drawing.Size(685, 380);
+            this.XTabPage.Size = new System.Drawing.Size(685, 396);
             // 
             // tabFormContentContainer1
             // 
+            this.tabFormContentContainer1.Controls.Add(this.CheckedComboBox);
+            this.tabFormContentContainer1.Controls.Add(this.Label_Semester);
             this.tabFormContentContainer1.Controls.Add(this.Find_bt);
             this.tabFormContentContainer1.Controls.Add(this.Description);
             this.tabFormContentContainer1.Controls.Add(this.ID_coures_lb);
@@ -193,7 +198,7 @@ namespace School_Management.Manager.Course
             // 
             // Find_bt
             // 
-            this.Find_bt.Location = new System.Drawing.Point(573, 31);
+            this.Find_bt.Location = new System.Drawing.Point(571, 65);
             this.Find_bt.Name = "Find_bt";
             this.Find_bt.Size = new System.Drawing.Size(75, 43);
             this.Find_bt.TabIndex = 8;
@@ -202,7 +207,7 @@ namespace School_Management.Manager.Course
             // Description
             // 
             this.Description.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Description.Location = new System.Drawing.Point(195, 194);
+            this.Description.Location = new System.Drawing.Point(193, 228);
             this.Description.Name = "Description";
             this.Description.Size = new System.Drawing.Size(455, 129);
             this.Description.TabIndex = 7;
@@ -212,7 +217,7 @@ namespace School_Management.Manager.Course
             // 
             this.ID_coures_lb.Appearance.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_coures_lb.Appearance.Options.UseFont = true;
-            this.ID_coures_lb.Location = new System.Drawing.Point(15, 39);
+            this.ID_coures_lb.Location = new System.Drawing.Point(13, 73);
             this.ID_coures_lb.Name = "ID_coures_lb";
             this.ID_coures_lb.Size = new System.Drawing.Size(75, 21);
             this.ID_coures_lb.TabIndex = 1;
@@ -220,7 +225,7 @@ namespace School_Management.Manager.Course
             // 
             // Period_tb
             // 
-            this.Period_tb.Location = new System.Drawing.Point(193, 126);
+            this.Period_tb.Location = new System.Drawing.Point(191, 160);
             this.Period_tb.Name = "Period_tb";
             this.Period_tb.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Period_tb.Properties.Appearance.Options.UseFont = true;
@@ -231,7 +236,7 @@ namespace School_Management.Manager.Course
             // 
             this.Name_lb.Appearance.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name_lb.Appearance.Options.UseFont = true;
-            this.Name_lb.Location = new System.Drawing.Point(15, 87);
+            this.Name_lb.Location = new System.Drawing.Point(13, 121);
             this.Name_lb.Name = "Name_lb";
             this.Name_lb.Size = new System.Drawing.Size(125, 21);
             this.Name_lb.TabIndex = 0;
@@ -239,7 +244,7 @@ namespace School_Management.Manager.Course
             // 
             // NameCourse_tb
             // 
-            this.NameCourse_tb.Location = new System.Drawing.Point(194, 80);
+            this.NameCourse_tb.Location = new System.Drawing.Point(192, 114);
             this.NameCourse_tb.Name = "NameCourse_tb";
             this.NameCourse_tb.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameCourse_tb.Properties.Appearance.Options.UseFont = true;
@@ -250,7 +255,7 @@ namespace School_Management.Manager.Course
             // 
             this.Period_lb.Appearance.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Period_lb.Appearance.Options.UseFont = true;
-            this.Period_lb.Location = new System.Drawing.Point(15, 130);
+            this.Period_lb.Location = new System.Drawing.Point(13, 164);
             this.Period_lb.Name = "Period_lb";
             this.Period_lb.Size = new System.Drawing.Size(48, 21);
             this.Period_lb.TabIndex = 2;
@@ -258,7 +263,7 @@ namespace School_Management.Manager.Course
             // 
             // ID_Course_tb
             // 
-            this.ID_Course_tb.Location = new System.Drawing.Point(193, 35);
+            this.ID_Course_tb.Location = new System.Drawing.Point(191, 69);
             this.ID_Course_tb.Name = "ID_Course_tb";
             this.ID_Course_tb.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_Course_tb.Properties.Appearance.Options.UseFont = true;
@@ -269,7 +274,7 @@ namespace School_Management.Manager.Course
             // 
             this.Desc_lb.Appearance.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Desc_lb.Appearance.Options.UseFont = true;
-            this.Desc_lb.Location = new System.Drawing.Point(15, 214);
+            this.Desc_lb.Location = new System.Drawing.Point(13, 248);
             this.Desc_lb.Name = "Desc_lb";
             this.Desc_lb.Size = new System.Drawing.Size(87, 21);
             this.Desc_lb.TabIndex = 3;
@@ -406,6 +411,31 @@ namespace School_Management.Manager.Course
             this.Close_program.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.Close_program.Text = "Close";
             // 
+            // CheckedComboBox
+            // 
+            this.CheckedComboBox.EditValue = "";
+            this.CheckedComboBox.Location = new System.Drawing.Point(191, 24);
+            this.CheckedComboBox.Name = "CheckedComboBox";
+            this.CheckedComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CheckedComboBox.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(1),
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(2),
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("3")});
+            this.CheckedComboBox.Size = new System.Drawing.Size(196, 28);
+            this.CheckedComboBox.TabIndex = 11;
+            // 
+            // Label_Semester
+            // 
+            this.Label_Semester.Appearance.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Semester.Appearance.Options.UseFont = true;
+            this.Label_Semester.Location = new System.Drawing.Point(16, 28);
+            this.Label_Semester.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Label_Semester.Name = "Label_Semester";
+            this.Label_Semester.Size = new System.Drawing.Size(72, 21);
+            this.Label_Semester.TabIndex = 10;
+            this.Label_Semester.Text = "Semester";
+            // 
             // Edit_Course
             // 
             this.Appearance.Options.UseFont = true;
@@ -436,6 +466,7 @@ namespace School_Management.Manager.Course
             ((System.ComponentModel.ISupportInitialize)(this.ID_Course_tb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ControlGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CheckedComboBox.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -478,5 +509,7 @@ namespace School_Management.Manager.Course
         public DevExpress.XtraEditors.TextEdit ID_Course_tb;
         public DevExpress.XtraEditors.LabelControl Desc_lb;
         private DevExpress.XtraEditors.SimpleButton Find_bt;
+        private DevExpress.XtraEditors.CheckedComboBoxEdit CheckedComboBox;
+        private DevExpress.XtraEditors.LabelControl Label_Semester;
     }
 }

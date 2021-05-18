@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using School_Management.Manager.Course;
 namespace School_Management.Manager.Student
 {
     public partial class Add_Students : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -45,7 +45,7 @@ namespace School_Management.Manager.Student
                 Picture_Student.Image = Image.FromFile(open.FileName);
             }
         }
-        public void AddStudent()
+        public void Add()
         {
             try
             {
@@ -62,7 +62,7 @@ namespace School_Management.Manager.Student
                     Check_female.Checked = false;
                     gender = "Male";
                 }
-                
+
                 MemoryStream pic = new MemoryStream();
                 //int born_year = Convert.ToInt32(Birthday_Picker.ToString());
                 //int this_year = Convert.ToInt32(DateTime.Now.Year);
@@ -93,6 +93,10 @@ namespace School_Management.Manager.Student
                 XtraMessageBox.Show("Error! Please check the Cotrol", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public void AddStudent()
+        {
+            this.Add();
+        }
         private void Save_bt_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             this.AddStudent();
@@ -106,6 +110,44 @@ namespace School_Management.Manager.Student
         private void Check_female_CheckedChanged(object sender, EventArgs e)
         {
             Check_male.Checked = false;
+        }
+
+        private void M0201_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Add_Course add = new Add_Course();
+            add.ShowDialog();
+        }
+
+        private void Save_close_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Add();
+            this.Hide();
+        }
+        public void ResetChange()
+        {
+            ID_student.Text = "";
+            Firstname.Text = "";
+            Lastname.Text = "";
+            Check_male.Checked = true;
+            Check_female.Checked = false;
+            Phone_student.Text = "";
+            Address_student.Text = "";
+            Picture_Student.Image = null;
+
+        }
+        private void Save_new_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Add();
+            this.ResetChange();
+        }
+
+        private void Reset_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.ResetChange();
+        }
+        private void Close_bt_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Hide();
         }
     }
 }

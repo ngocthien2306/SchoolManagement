@@ -606,7 +606,7 @@ namespace School_Management.Manager.Student
             this.add_StudentBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.add_StudentBindingNavigator.Name = "add_StudentBindingNavigator";
             this.add_StudentBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.add_StudentBindingNavigator.Size = new System.Drawing.Size(873, 33);
+            this.add_StudentBindingNavigator.Size = new System.Drawing.Size(873, 38);
             this.add_StudentBindingNavigator.TabIndex = 13;
             this.add_StudentBindingNavigator.Text = "bindingNavigator1";
             // 

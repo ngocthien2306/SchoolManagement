@@ -23,6 +23,8 @@ namespace School_Management.Manager.Contact
 
         private void Add_Contacts_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'manager_StudentDataSet31.Group' table. You can move, or remove it, as needed.
+            this.groupTableAdapter.Fill(this.manager_StudentDataSet31.Group);
             // TODO: This line of code loads data into the 'manager_StudentDataSet3.Contact' table. You can move, or remove it, as needed.
             this.contactTableAdapter.Fill(this.manager_StudentDataSet3.Contact);
 
@@ -32,12 +34,7 @@ namespace School_Management.Manager.Contact
             SqlCommand command = new SqlCommand("SELECT Group_id, Group_name FROM Group1", data.GetConnection);
             DataTable table;
             table = group.GetAll_ID_label();
-            ComboBox_GroupID.ValueMember = "Group_id";
-            foreach (DataRow row in table.Rows)
-            {
-                ComboBox_GroupID.Items.Add(row[1].ToString().Trim());
 
-            }
             DateEdit_Birthday.Text = "1/1/2000";
         }
 

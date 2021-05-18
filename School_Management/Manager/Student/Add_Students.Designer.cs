@@ -30,7 +30,7 @@ namespace School_Management.Manager.Student
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions7 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Students));
             this.windowsUIButtonPanel1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.Picture_Student = new DevExpress.XtraEditors.PictureEdit();
@@ -42,9 +42,11 @@ namespace School_Management.Manager.Student
             this.Lastname = new DevExpress.XtraEditors.TextEdit();
             this.GroupPage = new DevExpress.XtraTab.XtraTabControl();
             this.Contact_student = new DevExpress.XtraTab.XtraTabPage();
+            this.Birthday_Picker = new System.Windows.Forms.DateTimePicker();
             this.Check_female = new DevExpress.XtraEditors.CheckEdit();
             this.Check_male = new DevExpress.XtraEditors.CheckEdit();
             this.Address_student = new DevExpress.XtraEditors.TextEdit();
+            this.Phone_student = new DevExpress.XtraEditors.TextEdit();
             this.Address_lb = new DevExpress.XtraEditors.LabelControl();
             this.Gender_lb = new DevExpress.XtraEditors.LabelControl();
             this.Phone_lb = new DevExpress.XtraEditors.LabelControl();
@@ -58,13 +60,13 @@ namespace School_Management.Manager.Student
             this.Save_close = new DevExpress.XtraBars.BarButtonItem();
             this.Save_new = new DevExpress.XtraBars.BarButtonItem();
             this.Reset = new DevExpress.XtraBars.BarButtonItem();
-            this.Delete_bt = new DevExpress.XtraBars.BarButtonItem();
             this.Close_bt = new DevExpress.XtraBars.BarButtonItem();
             this.Method01 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.Method0101 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ToolTip_id = new System.Windows.Forms.ToolTip(this.components);
-            this.Phone_student = new DevExpress.XtraEditors.TextEdit();
-            this.Birthday_Picker = new System.Windows.Forms.DateTimePicker();
+            this.Method0201 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.M0201 = new DevExpress.XtraBars.BarButtonItem();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Picture_Student.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ID_student.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Firstname.Properties)).BeginInit();
@@ -75,29 +77,30 @@ namespace School_Management.Manager.Student
             ((System.ComponentModel.ISupportInitialize)(this.Check_female.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Check_male.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Address_student.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Phone_student.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ribbon_Control)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Phone_student.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.SuspendLayout();
             // 
             // windowsUIButtonPanel1
             // 
-            windowsUIButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("windowsUIButtonImageOptions2.Image")));
+            windowsUIButtonImageOptions7.Image = ((System.Drawing.Image)(resources.GetObject("windowsUIButtonImageOptions7.Image")));
             this.windowsUIButtonPanel1.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Back", true, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Back", true, windowsUIButtonImageOptions7, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUIButton()});
             this.windowsUIButtonPanel1.ContentAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.windowsUIButtonPanel1.Location = new System.Drawing.Point(0, 218);
+            this.windowsUIButtonPanel1.Location = new System.Drawing.Point(0, 231);
             this.windowsUIButtonPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.windowsUIButtonPanel1.Name = "windowsUIButtonPanel1";
-            this.windowsUIButtonPanel1.Size = new System.Drawing.Size(87, 334);
+            this.windowsUIButtonPanel1.Size = new System.Drawing.Size(87, 321);
             this.windowsUIButtonPanel1.TabIndex = 1;
             this.windowsUIButtonPanel1.Text = "windowsUIButtonPanel1";
             // 
             // Picture_Student
             // 
-            this.Picture_Student.EditValue = global::School_Management.Properties.Resources.download;
+            this.Picture_Student.EditValue = ((object)(resources.GetObject("Picture_Student.EditValue")));
             this.Picture_Student.Location = new System.Drawing.Point(93, 231);
             this.Picture_Student.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Picture_Student.Name = "Picture_Student";
@@ -184,6 +187,17 @@ namespace School_Management.Manager.Student
             this.Contact_student.Size = new System.Drawing.Size(563, 126);
             this.Contact_student.Text = "Contact";
             // 
+            // Birthday_Picker
+            // 
+            this.Birthday_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Birthday_Picker.Location = new System.Drawing.Point(100, 28);
+            this.Birthday_Picker.MaxDate = new System.DateTime(2022, 12, 31, 0, 0, 0, 0);
+            this.Birthday_Picker.MinDate = new System.DateTime(1953, 1, 1, 0, 0, 0, 0);
+            this.Birthday_Picker.Name = "Birthday_Picker";
+            this.Birthday_Picker.Size = new System.Drawing.Size(170, 27);
+            this.Birthday_Picker.TabIndex = 9;
+            this.Birthday_Picker.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            // 
             // Check_female
             // 
             this.Check_female.Location = new System.Drawing.Point(461, 25);
@@ -211,6 +225,14 @@ namespace School_Management.Manager.Student
             this.Address_student.Name = "Address_student";
             this.Address_student.Size = new System.Drawing.Size(180, 28);
             this.Address_student.TabIndex = 5;
+            // 
+            // Phone_student
+            // 
+            this.Phone_student.Location = new System.Drawing.Point(100, 74);
+            this.Phone_student.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Phone_student.Name = "Phone_student";
+            this.Phone_student.Size = new System.Drawing.Size(170, 28);
+            this.Phone_student.TabIndex = 4;
             // 
             // Address_lb
             // 
@@ -254,7 +276,7 @@ namespace School_Management.Manager.Student
             this.xtraTabPage2.Controls.Add(this.Email_lb);
             this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(538, 126);
+            this.xtraTabPage2.Size = new System.Drawing.Size(563, 126);
             this.xtraTabPage2.Text = "Addition Information";
             // 
             // textEdit1
@@ -297,11 +319,11 @@ namespace School_Management.Manager.Student
             this.Save_close,
             this.Save_new,
             this.Reset,
-            this.Delete_bt,
-            this.Close_bt});
+            this.Close_bt,
+            this.M0201});
             this.Ribbon_Control.Location = new System.Drawing.Point(0, 0);
             this.Ribbon_Control.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Ribbon_Control.MaxItemId = 7;
+            this.Ribbon_Control.MaxItemId = 8;
             this.Ribbon_Control.Name = "Ribbon_Control";
             this.Ribbon_Control.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.Method01});
@@ -323,6 +345,7 @@ namespace School_Management.Manager.Student
             this.Save_close.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Save_close.ImageOptions.Image")));
             this.Save_close.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Save_close.ImageOptions.LargeImage")));
             this.Save_close.Name = "Save_close";
+            this.Save_close.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Save_close_ItemClick);
             // 
             // Save_new
             // 
@@ -331,6 +354,7 @@ namespace School_Management.Manager.Student
             this.Save_new.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Save_new.ImageOptions.Image")));
             this.Save_new.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Save_new.ImageOptions.LargeImage")));
             this.Save_new.Name = "Save_new";
+            this.Save_new.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Save_new_ItemClick);
             // 
             // Reset
             // 
@@ -339,14 +363,7 @@ namespace School_Management.Manager.Student
             this.Reset.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Reset.ImageOptions.Image")));
             this.Reset.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Reset.ImageOptions.LargeImage")));
             this.Reset.Name = "Reset";
-            // 
-            // Delete_bt
-            // 
-            this.Delete_bt.Caption = "Delete";
-            this.Delete_bt.Id = 5;
-            this.Delete_bt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Delete_bt.ImageOptions.Image")));
-            this.Delete_bt.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Delete_bt.ImageOptions.LargeImage")));
-            this.Delete_bt.Name = "Delete_bt";
+            this.Reset.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Reset_ItemClick);
             // 
             // Close_bt
             // 
@@ -355,11 +372,13 @@ namespace School_Management.Manager.Student
             this.Close_bt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Close_bt.ImageOptions.Image")));
             this.Close_bt.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Close_bt.ImageOptions.LargeImage")));
             this.Close_bt.Name = "Close_bt";
+            this.Close_bt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Close_bt_ItemClick);
             // 
             // Method01
             // 
             this.Method01.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.Method0101});
+            this.Method0101,
+            this.Method0201});
             this.Method01.Name = "Method01";
             this.Method01.Text = "Home";
             // 
@@ -369,7 +388,6 @@ namespace School_Management.Manager.Student
             this.Method0101.ItemLinks.Add(this.Save_close);
             this.Method0101.ItemLinks.Add(this.Save_new);
             this.Method0101.ItemLinks.Add(this.Reset);
-            this.Method0101.ItemLinks.Add(this.Delete_bt);
             this.Method0101.ItemLinks.Add(this.Close_bt);
             this.Method0101.Name = "Method0101";
             this.Method0101.Text = "Task";
@@ -378,24 +396,29 @@ namespace School_Management.Manager.Student
             // 
             this.ToolTip_id.ToolTipTitle = "Just number";
             // 
-            // Phone_student
+            // Method0201
             // 
-            this.Phone_student.Location = new System.Drawing.Point(100, 74);
-            this.Phone_student.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Phone_student.Name = "Phone_student";
-            this.Phone_student.Size = new System.Drawing.Size(170, 28);
-            this.Phone_student.TabIndex = 4;
+            this.Method0201.ItemLinks.Add(this.M0201);
+            this.Method0201.Name = "Method0201";
+            this.Method0201.Text = "Task Course";
             // 
-            // Birthday_Picker
+            // M0201
             // 
-            this.Birthday_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Birthday_Picker.Location = new System.Drawing.Point(100, 28);
-            this.Birthday_Picker.MaxDate = new System.DateTime(2022, 12, 31, 0, 0, 0, 0);
-            this.Birthday_Picker.MinDate = new System.DateTime(1953, 1, 1, 0, 0, 0, 0);
-            this.Birthday_Picker.Name = "Birthday_Picker";
-            this.Birthday_Picker.Size = new System.Drawing.Size(170, 27);
-            this.Birthday_Picker.TabIndex = 9;
-            this.Birthday_Picker.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.M0201.ActAsDropDown = true;
+            this.M0201.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
+            this.M0201.Caption = "Add Course";
+            this.M0201.DropDownControl = this.popupMenu1;
+            this.M0201.Id = 7;
+            this.M0201.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("M0201.ImageOptions.Image")));
+            this.M0201.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("M0201.ImageOptions.LargeImage")));
+            this.M0201.Name = "M0201";
+            this.M0201.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.M0201.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.M0201_ItemClick);
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.Name = "popupMenu1";
+            this.popupMenu1.Ribbon = this.Ribbon_Control;
             // 
             // Add_Students
             // 
@@ -433,11 +456,12 @@ namespace School_Management.Manager.Student
             ((System.ComponentModel.ISupportInitialize)(this.Check_female.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Check_male.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Address_student.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Phone_student.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ribbon_Control)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Phone_student.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -472,10 +496,12 @@ namespace School_Management.Manager.Student
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup Method0101;
         private DevExpress.XtraBars.BarButtonItem Save_new;
         private DevExpress.XtraBars.BarButtonItem Reset;
-        private DevExpress.XtraBars.BarButtonItem Delete_bt;
         private DevExpress.XtraBars.BarButtonItem Close_bt;
         private System.Windows.Forms.ToolTip ToolTip_id;
         private System.Windows.Forms.DateTimePicker Birthday_Picker;
         public DevExpress.XtraEditors.TextEdit Phone_student;
+        private DevExpress.XtraBars.BarButtonItem M0201;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup Method0201;
     }
 }

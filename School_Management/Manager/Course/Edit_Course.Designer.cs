@@ -195,7 +195,7 @@ namespace School_Management.Manager.Course
             // 
             this.Find_bt.Location = new System.Drawing.Point(573, 31);
             this.Find_bt.Name = "Find_bt";
-            this.Find_bt.Size = new System.Drawing.Size(75, 32);
+            this.Find_bt.Size = new System.Drawing.Size(75, 43);
             this.Find_bt.TabIndex = 8;
             this.Find_bt.Text = "Find";
             // 
@@ -326,10 +326,15 @@ namespace School_Management.Manager.Course
             // 
             // Edit_andSave
             // 
+            this.Edit_andSave.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
             this.Edit_andSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Edit_andSave.ImageOptions.Image")));
             this.Edit_andSave.Name = "Edit_andSave";
             this.Edit_andSave.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.Edit_andSave.Text = "Edit and Save";
+            this.Edit_andSave.Text = "Edit and Close";
             this.Edit_andSave.Click += new System.EventHandler(this.Edit_andSave_Click);
             // 
             // ResetChange

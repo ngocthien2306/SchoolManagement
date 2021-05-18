@@ -66,6 +66,8 @@ namespace School_Management.Manager.Student
             this.Close_bt = new DevExpress.XtraBars.BarButtonItem();
             this.Method01 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.Method0101 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.Methoad0201 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.M0202 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.Lastname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Firstname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ID_student.Properties)).BeginInit();
@@ -288,7 +290,7 @@ namespace School_Management.Manager.Student
             this.xtraTabPage2.Controls.Add(this.Email_lb);
             this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(538, 126);
+            this.xtraTabPage2.Size = new System.Drawing.Size(579, 126);
             this.xtraTabPage2.Text = "Addition Information";
             // 
             // textEdit1
@@ -335,10 +337,11 @@ namespace School_Management.Manager.Student
             this.Save_new,
             this.Reset,
             this.Delete_bt,
-            this.Close_bt});
+            this.Close_bt,
+            this.M0202});
             this.Ribbon_Control.Location = new System.Drawing.Point(0, 0);
             this.Ribbon_Control.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Ribbon_Control.MaxItemId = 7;
+            this.Ribbon_Control.MaxItemId = 8;
             this.Ribbon_Control.Name = "Ribbon_Control";
             this.Ribbon_Control.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.Method01});
@@ -405,7 +408,8 @@ namespace School_Management.Manager.Student
             // Method01
             // 
             this.Method01.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.Method0101});
+            this.Method0101,
+            this.Methoad0201});
             this.Method01.Name = "Method01";
             this.Method01.Text = "Home";
             // 
@@ -418,6 +422,20 @@ namespace School_Management.Manager.Student
             this.Method0101.ItemLinks.Add(this.Close_bt);
             this.Method0101.Name = "Method0101";
             this.Method0101.Text = "Task";
+            // 
+            // Methoad0201
+            // 
+            this.Methoad0201.ItemLinks.Add(this.M0202);
+            this.Methoad0201.Name = "Methoad0201";
+            this.Methoad0201.Text = "Task Course";
+            // 
+            // M0202
+            // 
+            this.M0202.Caption = "Add Course";
+            this.M0202.Id = 7;
+            this.M0202.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("M0202.ImageOptions.Image")));
+            this.M0202.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("M0202.ImageOptions.LargeImage")));
+            this.M0202.Name = "M0202";
             // 
             // Edit_Remove
             // 
@@ -503,5 +521,7 @@ namespace School_Management.Manager.Student
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup Method0101;
         private DevExpress.XtraBars.Ribbon.ApplicationMenu applicationMenu1;
         public DevExpress.XtraEditors.SimpleButton Find_bt;
+        private DevExpress.XtraBars.BarButtonItem M0202;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup Methoad0201;
     }
 }

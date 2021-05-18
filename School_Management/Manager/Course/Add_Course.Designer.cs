@@ -71,6 +71,8 @@ namespace School_Management.Manager.Course
             this.ID_Course_tb = new DevExpress.XtraEditors.TextEdit();
             this.Desc_lb = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.CheckedComboBox = new DevExpress.XtraEditors.CheckedComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
@@ -82,6 +84,7 @@ namespace School_Management.Manager.Course
             ((System.ComponentModel.ISupportInitialize)(this.ID_Course_tb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CheckedComboBox.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -105,7 +108,7 @@ namespace School_Management.Manager.Course
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 31);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 38);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.barDockControlTop.Size = new System.Drawing.Size(876, 0);
@@ -123,19 +126,19 @@ namespace School_Management.Manager.Course
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 31);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 38);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 471);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 464);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(876, 31);
+            this.barDockControlRight.Location = new System.Drawing.Point(876, 38);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 471);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 464);
             // 
             // Save_bt
             // 
@@ -224,7 +227,7 @@ namespace School_Management.Manager.Course
             // 
             this.barDockControl1.CausesValidation = false;
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControl1.Location = new System.Drawing.Point(0, 31);
+            this.barDockControl1.Location = new System.Drawing.Point(0, 38);
             this.barDockControl1.Manager = this.toolbarFormManager1;
             this.barDockControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.barDockControl1.Size = new System.Drawing.Size(876, 0);
@@ -242,27 +245,27 @@ namespace School_Management.Manager.Course
             // 
             this.barDockControl3.CausesValidation = false;
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl3.Location = new System.Drawing.Point(0, 31);
+            this.barDockControl3.Location = new System.Drawing.Point(0, 38);
             this.barDockControl3.Manager = this.toolbarFormManager1;
             this.barDockControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControl3.Size = new System.Drawing.Size(0, 471);
+            this.barDockControl3.Size = new System.Drawing.Size(0, 464);
             // 
             // barDockControl4
             // 
             this.barDockControl4.CausesValidation = false;
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl4.Location = new System.Drawing.Point(876, 31);
+            this.barDockControl4.Location = new System.Drawing.Point(876, 38);
             this.barDockControl4.Manager = this.toolbarFormManager1;
             this.barDockControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControl4.Size = new System.Drawing.Size(0, 471);
+            this.barDockControl4.Size = new System.Drawing.Size(0, 464);
             // 
             // fluentDesignFormContainer1
             // 
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(181, 31);
+            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(181, 38);
             this.fluentDesignFormContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(695, 471);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(695, 464);
             this.fluentDesignFormContainer1.TabIndex = 23;
             // 
             // accordionControl1
@@ -270,11 +273,11 @@ namespace School_Management.Manager.Course
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.Save});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 31);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 38);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(181, 471);
+            this.accordionControl1.Size = new System.Drawing.Size(181, 464);
             this.accordionControl1.TabIndex = 24;
             // 
             // Save
@@ -334,7 +337,7 @@ namespace School_Management.Manager.Course
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(876, 31);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(876, 38);
             this.fluentDesignFormControl1.TabIndex = 25;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -343,10 +346,12 @@ namespace School_Management.Manager.Course
             this.xtraTabPage1.Controls.Add(this.tabFormContentContainer1);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(692, 453);
+            this.xtraTabPage1.Size = new System.Drawing.Size(692, 449);
             // 
             // tabFormContentContainer1
             // 
+            this.tabFormContentContainer1.Controls.Add(this.CheckedComboBox);
+            this.tabFormContentContainer1.Controls.Add(this.labelControl1);
             this.tabFormContentContainer1.Controls.Add(this.Description);
             this.tabFormContentContainer1.Controls.Add(this.ID_coures_lb);
             this.tabFormContentContainer1.Controls.Add(this.Period_tb);
@@ -364,10 +369,10 @@ namespace School_Management.Manager.Course
             // Description
             // 
             this.Description.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Description.Location = new System.Drawing.Point(176, 235);
+            this.Description.Location = new System.Drawing.Point(171, 248);
             this.Description.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Description.Name = "Description";
-            this.Description.Size = new System.Drawing.Size(497, 158);
+            this.Description.Size = new System.Drawing.Size(500, 158);
             this.Description.TabIndex = 7;
             this.Description.Text = "";
             // 
@@ -375,76 +380,76 @@ namespace School_Management.Manager.Course
             // 
             this.ID_coures_lb.Appearance.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_coures_lb.Appearance.Options.UseFont = true;
-            this.ID_coures_lb.Location = new System.Drawing.Point(17, 42);
+            this.ID_coures_lb.Location = new System.Drawing.Point(15, 82);
             this.ID_coures_lb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ID_coures_lb.Name = "ID_coures_lb";
-            this.ID_coures_lb.Size = new System.Drawing.Size(51, 16);
+            this.ID_coures_lb.Size = new System.Drawing.Size(75, 21);
             this.ID_coures_lb.TabIndex = 1;
             this.ID_coures_lb.Text = "ID Course";
             // 
             // Period_tb
             // 
-            this.Period_tb.Location = new System.Drawing.Point(173, 151);
+            this.Period_tb.Location = new System.Drawing.Point(171, 191);
             this.Period_tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Period_tb.MenuManager = this.barManager1;
             this.Period_tb.Name = "Period_tb";
             this.Period_tb.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Period_tb.Properties.Appearance.Options.UseFont = true;
-            this.Period_tb.Size = new System.Drawing.Size(497, 24);
+            this.Period_tb.Size = new System.Drawing.Size(497, 30);
             this.Period_tb.TabIndex = 6;
             // 
             // Name_lb
             // 
             this.Name_lb.Appearance.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name_lb.Appearance.Options.UseFont = true;
-            this.Name_lb.Location = new System.Drawing.Point(17, 101);
+            this.Name_lb.Location = new System.Drawing.Point(15, 141);
             this.Name_lb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name_lb.Name = "Name_lb";
-            this.Name_lb.Size = new System.Drawing.Size(86, 16);
+            this.Name_lb.Size = new System.Drawing.Size(125, 21);
             this.Name_lb.TabIndex = 0;
             this.Name_lb.Text = "Name of Course";
             // 
             // NameCourse_tb
             // 
-            this.NameCourse_tb.Location = new System.Drawing.Point(175, 95);
+            this.NameCourse_tb.Location = new System.Drawing.Point(171, 135);
             this.NameCourse_tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NameCourse_tb.MenuManager = this.barManager1;
             this.NameCourse_tb.Name = "NameCourse_tb";
             this.NameCourse_tb.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameCourse_tb.Properties.Appearance.Options.UseFont = true;
-            this.NameCourse_tb.Size = new System.Drawing.Size(497, 24);
+            this.NameCourse_tb.Size = new System.Drawing.Size(499, 30);
             this.NameCourse_tb.TabIndex = 5;
             // 
             // Period_lb
             // 
             this.Period_lb.Appearance.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Period_lb.Appearance.Options.UseFont = true;
-            this.Period_lb.Location = new System.Drawing.Point(17, 154);
+            this.Period_lb.Location = new System.Drawing.Point(15, 194);
             this.Period_lb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Period_lb.Name = "Period_lb";
-            this.Period_lb.Size = new System.Drawing.Size(34, 16);
+            this.Period_lb.Size = new System.Drawing.Size(48, 21);
             this.Period_lb.TabIndex = 2;
             this.Period_lb.Text = "Period";
             // 
             // ID_Course_tb
             // 
-            this.ID_Course_tb.Location = new System.Drawing.Point(173, 39);
+            this.ID_Course_tb.Location = new System.Drawing.Point(171, 79);
             this.ID_Course_tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ID_Course_tb.MenuManager = this.barManager1;
             this.ID_Course_tb.Name = "ID_Course_tb";
             this.ID_Course_tb.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_Course_tb.Properties.Appearance.Options.UseFont = true;
-            this.ID_Course_tb.Size = new System.Drawing.Size(500, 24);
+            this.ID_Course_tb.Size = new System.Drawing.Size(500, 30);
             this.ID_Course_tb.TabIndex = 4;
             // 
             // Desc_lb
             // 
             this.Desc_lb.Appearance.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Desc_lb.Appearance.Options.UseFont = true;
-            this.Desc_lb.Location = new System.Drawing.Point(17, 257);
+            this.Desc_lb.Location = new System.Drawing.Point(15, 270);
             this.Desc_lb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Desc_lb.Name = "Desc_lb";
-            this.Desc_lb.Size = new System.Drawing.Size(59, 16);
+            this.Desc_lb.Size = new System.Drawing.Size(87, 21);
             this.Desc_lb.TabIndex = 3;
             this.Desc_lb.Text = "Description";
             // 
@@ -459,12 +464,37 @@ namespace School_Management.Manager.Course
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1});
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(15, 22);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(72, 21);
+            this.labelControl1.TabIndex = 8;
+            this.labelControl1.Text = "Semester";
+            // 
+            // CheckedComboBox
+            // 
+            this.CheckedComboBox.EditValue = "";
+            this.CheckedComboBox.Location = new System.Drawing.Point(173, 19);
+            this.CheckedComboBox.Name = "CheckedComboBox";
+            this.CheckedComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CheckedComboBox.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(1),
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(2),
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("3")});
+            this.CheckedComboBox.Size = new System.Drawing.Size(196, 28);
+            this.CheckedComboBox.TabIndex = 9;
+            // 
             // Add_Course
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(876, 502);
             this.ControlContainer = this.fluentDesignFormContainer1;
@@ -499,6 +529,7 @@ namespace School_Management.Manager.Course
             ((System.ComponentModel.ISupportInitialize)(this.ID_Course_tb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CheckedComboBox.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -546,5 +577,7 @@ namespace School_Management.Manager.Course
         private DevExpress.XtraEditors.LabelControl Desc_lb;
         private DevExpress.XtraBars.Navigation.AccordionControlElement Save_Course;
         private System.Windows.Forms.RichTextBox Description;
+        private DevExpress.XtraEditors.CheckedComboBoxEdit CheckedComboBox;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

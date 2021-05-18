@@ -30,7 +30,6 @@ namespace School_Management.Manager.Student
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager_Student));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.M010201 = new DevExpress.XtraBars.BarButtonItem();
@@ -97,15 +96,6 @@ namespace School_Management.Manager.Student
             this.add_StudentBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.add_StudentGridControl = new DevExpress.XtraGrid.GridControl();
             this.GridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.courseGridControl = new DevExpress.XtraGrid.GridControl();
-            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.GridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.GroupBox_Status = new System.Windows.Forms.GroupBox();
-            this.Picture_user = new DevExpress.XtraEditors.PictureEdit();
-            this.Label_Status = new DevExpress.XtraEditors.LabelControl();
-            this.add_StudentTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.Add_StudentTableAdapter();
-            this.tableAdapterManager = new School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager();
-            this.courseTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.CourseTableAdapter();
             this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colfirstname = new DevExpress.XtraGrid.Columns.GridColumn();
             this.collastname = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -114,10 +104,20 @@ namespace School_Management.Manager.Student
             this.coladdress = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colphone = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colpicture = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.courseGridControl = new DevExpress.XtraGrid.GridControl();
+            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.GridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.collabel = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colperiod = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coldescription = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GroupBox_Status = new System.Windows.Forms.GroupBox();
+            this.Picture_user = new DevExpress.XtraEditors.PictureEdit();
+            this.Label_Status = new DevExpress.XtraEditors.LabelControl();
+            this.add_StudentTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.Add_StudentTableAdapter();
+            this.tableAdapterManager = new School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager();
+            this.courseTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.CourseTableAdapter();
+            this.M030104 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -168,10 +168,11 @@ namespace School_Management.Manager.Student
             this.M030102,
             this.M030103,
             this.M060101,
-            this.M050101});
+            this.M050101,
+            this.M030104});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbon.MaxItemId = 35;
+            this.ribbon.MaxItemId = 36;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.M01,
@@ -405,8 +406,8 @@ namespace School_Management.Manager.Student
             // 
             this.M050101.Caption = "Result By Score";
             this.M050101.Id = 34;
-            this.M050101.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.M050101.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.M050101.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("M050101.ImageOptions.Image")));
+            this.M050101.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("M050101.ImageOptions.LargeImage")));
             this.M050101.Name = "M050101";
             this.M050101.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.M050101_ItemClick);
             // 
@@ -510,6 +511,7 @@ namespace School_Management.Manager.Student
             this.M0301.ItemLinks.Add(this.M030101);
             this.M0301.ItemLinks.Add(this.M030102);
             this.M0301.ItemLinks.Add(this.M030103);
+            this.M0301.ItemLinks.Add(this.M030104);
             this.M0301.Name = "M0301";
             this.M0301.Text = "Task";
             // 
@@ -728,85 +730,6 @@ namespace School_Management.Manager.Student
             this.GridView.Name = "GridView";
             this.GridView.OptionsFind.AlwaysVisible = true;
             // 
-            // courseGridControl
-            // 
-            this.courseGridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.courseGridControl.DataSource = this.courseBindingSource;
-            this.courseGridControl.Location = new System.Drawing.Point(0, 36);
-            this.courseGridControl.MainView = this.GridView2;
-            this.courseGridControl.MenuManager = this.ribbon;
-            this.courseGridControl.Name = "courseGridControl";
-            this.courseGridControl.Size = new System.Drawing.Size(598, 573);
-            this.courseGridControl.TabIndex = 0;
-            this.courseGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.GridView2});
-            // 
-            // courseBindingSource
-            // 
-            this.courseBindingSource.DataMember = "Course";
-            this.courseBindingSource.DataSource = this.manager_StudentDataSet3;
-            // 
-            // GridView2
-            // 
-            this.GridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colId1,
-            this.collabel,
-            this.colperiod,
-            this.coldescription});
-            this.GridView2.GridControl = this.courseGridControl;
-            this.GridView2.Name = "GridView2";
-            this.GridView2.OptionsFind.AlwaysVisible = true;
-            this.GridView2.OptionsFind.ShowClearButton = false;
-            // 
-            // GroupBox_Status
-            // 
-            this.GroupBox_Status.Controls.Add(this.Picture_user);
-            this.GroupBox_Status.Controls.Add(this.Label_Status);
-            this.GroupBox_Status.Location = new System.Drawing.Point(1237, 95);
-            this.GroupBox_Status.Name = "GroupBox_Status";
-            this.GroupBox_Status.Size = new System.Drawing.Size(255, 95);
-            this.GroupBox_Status.TabIndex = 8;
-            this.GroupBox_Status.TabStop = false;
-            // 
-            // Picture_user
-            // 
-            this.Picture_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Picture_user.Location = new System.Drawing.Point(6, 17);
-            this.Picture_user.MenuManager = this.ribbon;
-            this.Picture_user.Name = "Picture_user";
-            this.Picture_user.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.Picture_user.Size = new System.Drawing.Size(75, 67);
-            this.Picture_user.TabIndex = 0;
-            // 
-            // Label_Status
-            // 
-            this.Label_Status.Location = new System.Drawing.Point(88, 21);
-            this.Label_Status.Name = "Label_Status";
-            this.Label_Status.Size = new System.Drawing.Size(68, 19);
-            this.Label_Status.TabIndex = 1;
-            this.Label_Status.Text = "Wellcome";
-            // 
-            // add_StudentTableAdapter
-            // 
-            this.add_StudentTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.Add_StudentTableAdapter = this.add_StudentTableAdapter;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ContactTableAdapter = null;
-            this.tableAdapterManager.CourseTableAdapter = this.courseTableAdapter;
-            this.tableAdapterManager.GroupTableAdapter = null;
-            this.tableAdapterManager.New_UserTableAdapter = null;
-            this.tableAdapterManager.ScoreTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // courseTableAdapter
-            // 
-            this.courseTableAdapter.ClearBeforeFill = true;
-            // 
             // colid
             // 
             this.colid.Caption = "ID";
@@ -887,6 +810,38 @@ namespace School_Management.Manager.Student
             this.colpicture.VisibleIndex = 7;
             this.colpicture.Width = 112;
             // 
+            // courseGridControl
+            // 
+            this.courseGridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.courseGridControl.DataSource = this.courseBindingSource;
+            this.courseGridControl.Location = new System.Drawing.Point(0, 36);
+            this.courseGridControl.MainView = this.GridView2;
+            this.courseGridControl.MenuManager = this.ribbon;
+            this.courseGridControl.Name = "courseGridControl";
+            this.courseGridControl.Size = new System.Drawing.Size(598, 573);
+            this.courseGridControl.TabIndex = 0;
+            this.courseGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.GridView2});
+            // 
+            // courseBindingSource
+            // 
+            this.courseBindingSource.DataMember = "Course";
+            this.courseBindingSource.DataSource = this.manager_StudentDataSet3;
+            // 
+            // GridView2
+            // 
+            this.GridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId1,
+            this.collabel,
+            this.colperiod,
+            this.coldescription});
+            this.GridView2.GridControl = this.courseGridControl;
+            this.GridView2.Name = "GridView2";
+            this.GridView2.OptionsFind.AlwaysVisible = true;
+            this.GridView2.OptionsFind.ShowClearButton = false;
+            // 
             // colId1
             // 
             this.colId1.Caption = "ID ";
@@ -926,6 +881,62 @@ namespace School_Management.Manager.Student
             this.coldescription.Visible = true;
             this.coldescription.VisibleIndex = 3;
             this.coldescription.Width = 112;
+            // 
+            // GroupBox_Status
+            // 
+            this.GroupBox_Status.Controls.Add(this.Picture_user);
+            this.GroupBox_Status.Controls.Add(this.Label_Status);
+            this.GroupBox_Status.Location = new System.Drawing.Point(1237, 95);
+            this.GroupBox_Status.Name = "GroupBox_Status";
+            this.GroupBox_Status.Size = new System.Drawing.Size(255, 95);
+            this.GroupBox_Status.TabIndex = 8;
+            this.GroupBox_Status.TabStop = false;
+            // 
+            // Picture_user
+            // 
+            this.Picture_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Picture_user.Location = new System.Drawing.Point(6, 17);
+            this.Picture_user.MenuManager = this.ribbon;
+            this.Picture_user.Name = "Picture_user";
+            this.Picture_user.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.Picture_user.Size = new System.Drawing.Size(75, 67);
+            this.Picture_user.TabIndex = 0;
+            // 
+            // Label_Status
+            // 
+            this.Label_Status.Location = new System.Drawing.Point(88, 21);
+            this.Label_Status.Name = "Label_Status";
+            this.Label_Status.Size = new System.Drawing.Size(68, 19);
+            this.Label_Status.TabIndex = 1;
+            this.Label_Status.Text = "Wellcome";
+            // 
+            // add_StudentTableAdapter
+            // 
+            this.add_StudentTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.Add_StudentTableAdapter = this.add_StudentTableAdapter;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ContactTableAdapter = null;
+            this.tableAdapterManager.CourseTableAdapter = this.courseTableAdapter;
+            this.tableAdapterManager.GroupTableAdapter = null;
+            this.tableAdapterManager.New_UserTableAdapter = null;
+            this.tableAdapterManager.ScoreTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // courseTableAdapter
+            // 
+            this.courseTableAdapter.ClearBeforeFill = true;
+            // 
+            // M030104
+            // 
+            this.M030104.Caption = "Remove Score";
+            this.M030104.Id = 35;
+            this.M030104.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.M030104.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.M030104.Name = "M030104";
+            this.M030104.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.M030104_ItemClick);
             // 
             // Manager_Student
             // 
@@ -1054,5 +1065,6 @@ namespace School_Management.Manager.Student
         private DevExpress.XtraGrid.Columns.GridColumn collabel;
         private DevExpress.XtraGrid.Columns.GridColumn colperiod;
         private DevExpress.XtraGrid.Columns.GridColumn coldescription;
+        private DevExpress.XtraBars.BarButtonItem M030104;
     }
 }

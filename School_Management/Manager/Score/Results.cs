@@ -23,5 +23,10 @@ namespace School_Management.Manager.Score
             Scores scores = new Scores();
             DataGridView_Score.DataSource = scores.MakeStudentScoreResultTable();
         }
+
+        private void DataGridView_Score_DoubleClick(object sender, EventArgs e)
+        {
+            TextEdit_ID.Text = DataGridView_Score.CurrentRow.Cells[0].Value.ToString().Trim();
+        }
     }
 }

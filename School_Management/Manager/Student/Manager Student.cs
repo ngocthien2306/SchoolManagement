@@ -193,5 +193,11 @@ namespace School_Management.Manager.Student
             Results re = new Results();
             re.ShowDialog();
         }
+
+        private void M030104_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            RemoveScore remove = new RemoveScore();
+            remove.ShowDialog();
+        }
     }
 }

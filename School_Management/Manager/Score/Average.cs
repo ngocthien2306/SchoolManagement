@@ -21,7 +21,7 @@ namespace School_Management.Manager.Score
         private void Average_Load(object sender, EventArgs e)
         {
             Scores score = new Scores();
-            score.GetAvg_byStudent();
+            GridControl1.DataSource = score.GetAvg_byStudent();
             
         }
     }

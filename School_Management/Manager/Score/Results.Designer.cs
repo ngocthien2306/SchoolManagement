@@ -36,20 +36,20 @@ namespace School_Management.Manager.Score
             this.Label_fname = new DevExpress.XtraEditors.LabelControl();
             this.Label_lname = new DevExpress.XtraEditors.LabelControl();
             this.Label_search = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.TextEdit_ID = new DevExpress.XtraEditors.TextEdit();
+            this.TextEdit_fname = new DevExpress.XtraEditors.TextEdit();
+            this.TextEdit_lname = new DevExpress.XtraEditors.TextEdit();
+            this.TextEdit_find = new DevExpress.XtraEditors.TextEdit();
             this.Print_btn = new DevExpress.XtraEditors.SimpleButton();
             this.Exit_btn = new DevExpress.XtraEditors.SimpleButton();
             this.Find_btn = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_Score)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TextEdit_ID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TextEdit_fname.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TextEdit_lname.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TextEdit_find.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -60,10 +60,10 @@ namespace School_Management.Manager.Score
             this.splitContainerControl1.Panel1.Controls.Add(this.Find_btn);
             this.splitContainerControl1.Panel1.Controls.Add(this.Exit_btn);
             this.splitContainerControl1.Panel1.Controls.Add(this.Print_btn);
-            this.splitContainerControl1.Panel1.Controls.Add(this.textEdit4);
-            this.splitContainerControl1.Panel1.Controls.Add(this.textEdit3);
-            this.splitContainerControl1.Panel1.Controls.Add(this.textEdit2);
-            this.splitContainerControl1.Panel1.Controls.Add(this.textEdit1);
+            this.splitContainerControl1.Panel1.Controls.Add(this.TextEdit_find);
+            this.splitContainerControl1.Panel1.Controls.Add(this.TextEdit_lname);
+            this.splitContainerControl1.Panel1.Controls.Add(this.TextEdit_fname);
+            this.splitContainerControl1.Panel1.Controls.Add(this.TextEdit_ID);
             this.splitContainerControl1.Panel1.Controls.Add(this.Label_search);
             this.splitContainerControl1.Panel1.Controls.Add(this.Label_lname);
             this.splitContainerControl1.Panel1.Controls.Add(this.Label_fname);
@@ -87,6 +87,7 @@ namespace School_Management.Manager.Score
             this.DataGridView_Score.RowTemplate.Height = 28;
             this.DataGridView_Score.Size = new System.Drawing.Size(845, 439);
             this.DataGridView_Score.TabIndex = 0;
+            this.DataGridView_Score.DoubleClick += new System.EventHandler(this.DataGridView_Score_DoubleClick);
             // 
             // Label_ID
             // 
@@ -120,33 +121,33 @@ namespace School_Management.Manager.Score
             this.Label_search.TabIndex = 3;
             this.Label_search.Text = "Find By ID or First Name";
             // 
-            // textEdit1
+            // TextEdit_ID
             // 
-            this.textEdit1.Location = new System.Drawing.Point(145, 28);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(190, 28);
-            this.textEdit1.TabIndex = 4;
+            this.TextEdit_ID.Location = new System.Drawing.Point(145, 28);
+            this.TextEdit_ID.Name = "TextEdit_ID";
+            this.TextEdit_ID.Size = new System.Drawing.Size(190, 28);
+            this.TextEdit_ID.TabIndex = 4;
             // 
-            // textEdit2
+            // TextEdit_fname
             // 
-            this.textEdit2.Location = new System.Drawing.Point(145, 105);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(190, 28);
-            this.textEdit2.TabIndex = 5;
+            this.TextEdit_fname.Location = new System.Drawing.Point(145, 105);
+            this.TextEdit_fname.Name = "TextEdit_fname";
+            this.TextEdit_fname.Size = new System.Drawing.Size(190, 28);
+            this.TextEdit_fname.TabIndex = 5;
             // 
-            // textEdit3
+            // TextEdit_lname
             // 
-            this.textEdit3.Location = new System.Drawing.Point(145, 180);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(190, 28);
-            this.textEdit3.TabIndex = 6;
+            this.TextEdit_lname.Location = new System.Drawing.Point(145, 180);
+            this.TextEdit_lname.Name = "TextEdit_lname";
+            this.TextEdit_lname.Size = new System.Drawing.Size(190, 28);
+            this.TextEdit_lname.TabIndex = 6;
             // 
-            // textEdit4
+            // TextEdit_find
             // 
-            this.textEdit4.Location = new System.Drawing.Point(145, 295);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(190, 28);
-            this.textEdit4.TabIndex = 7;
+            this.TextEdit_find.Location = new System.Drawing.Point(145, 295);
+            this.TextEdit_find.Name = "TextEdit_find";
+            this.TextEdit_find.Size = new System.Drawing.Size(190, 28);
+            this.TextEdit_find.TabIndex = 7;
             // 
             // Print_btn
             // 
@@ -187,10 +188,10 @@ namespace School_Management.Manager.Score
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_Score)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TextEdit_ID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TextEdit_fname.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TextEdit_lname.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TextEdit_find.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -201,10 +202,10 @@ namespace School_Management.Manager.Score
         private DevExpress.XtraEditors.SimpleButton Find_btn;
         private DevExpress.XtraEditors.SimpleButton Exit_btn;
         private DevExpress.XtraEditors.SimpleButton Print_btn;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit TextEdit_find;
+        private DevExpress.XtraEditors.TextEdit TextEdit_lname;
+        private DevExpress.XtraEditors.TextEdit TextEdit_fname;
+        private DevExpress.XtraEditors.TextEdit TextEdit_ID;
         private DevExpress.XtraEditors.LabelControl Label_search;
         private DevExpress.XtraEditors.LabelControl Label_lname;
         private DevExpress.XtraEditors.LabelControl Label_fname;

@@ -40,41 +40,51 @@ namespace School_Management.Manager.Score
         public void ReloadCourse()
         {
             My_Database data = new My_Database();
-            SqlCommand command = new SqlCommand("select * from Score",data.GetConnection);
-            DataGridView.Width = 60;
-            DataGridView.DataSource = score.GetScore(command);
+            SqlCommand command = new SqlCommand("select Student_id as ID, Course_id as Course, Student_score as Score, Description from Score",data.GetConnection);
+            DataGridView_Sourse.Width = 60;
+            DataGridView_Sourse.DataSource = score.GetScore(command);
         }
         public void ReloadStudent()
         {
 
             My_Database data = new My_Database();
-            DataGridView.Width = 60;
+            DataGridView_Sourse.Width = 60;
             SqlCommand command = new SqlCommand("select id as ID, firstname as Firstname, lastname as Lastname from Add_Student", data.GetConnection);
-            DataGridView.DataSource = student.GetStudents(command);
+            DataGridView_Sourse.DataSource = student.GetStudents(command);
         }
         private void Add_bt_Click(object sender, EventArgs e)
         {
             try
             {
+                
                 Scores score = new Scores();
                 int sid = Convert.ToInt32(Id_tb.Text);
                 int cid = Convert.ToInt32(ComboBox_Course.SelectedValue);
                 float score_stu = (float)Convert.ToDouble(Score_tb.Text);
                 string des = Des_tb.Text;
-                if (!score.Student_Score_Exist(sid, cid)) {
-                    if (score.Add_Score(sid, cid, score_stu, des))
+                if(score_stu > 10 || score_stu < 0)
+                {
+                    XtraMessageBox.Show("Score can not over 10. Please anter again!", "Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+                else {
+                    if (!score.Student_Score_Exist(sid, cid))
                     {
-                        MessageBox.Show("Add score successful!", "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (score.Add_Score(sid, cid, score_stu, des))
+                        {
+                            XtraMessageBox.Show("Add score successful!", "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("Add score failed !", "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Add score failed !", "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }             
+                }
+            
             }
             catch
             {
-                MessageBox.Show("The textbox is blank. Please enter again", "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("The textbox is blank. Please enter again", "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -102,6 +112,11 @@ namespace School_Management.Manager.Score
         private void LoadScore_Click(object sender, EventArgs e)
         {
             this.ReloadCourse();
+        }
+
+        private void DataGridView_DoubleClick(object sender, EventArgs e)
+        {
+            Id_tb.Text = DataGridView_Sourse.CurrentRow.Cells[0].Value.ToString().Trim();
         }
     }
 }

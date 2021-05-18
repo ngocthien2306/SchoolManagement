@@ -62,8 +62,8 @@ namespace School_Management.Manager.Score
                     para1.Range.set_Style(ref styleHeading1);
                     para1.Range.Text = "List of Student\nClass: 19110CLA2\nObject Winform Programming";
                     para1.Range.InsertParagraphAfter();
-                    int rows = DataGridView.Rows.Count + 1;
-                    int cols = DataGridView.Columns.Count + 1;
+                    int rows = DataGridView_Student.Rows.Count + 1;
+                    int cols = DataGridView_Student.Columns.Count + 1;
                     Table table = document.Tables.Add(para1.Range, rows, cols, ref missing, ref missing);
                     table.Borders.Enable = 1;
                     table.Rows[1].Cells[1].Range.Text = "STT";
@@ -74,7 +74,7 @@ namespace School_Management.Manager.Score
 
                             //Header 
                             table.Rows[i + 1].Cells[1].Range.Text = i.ToString();
-                            table.Rows[1].Cells[j].Range.Text = DataGridView.Columns[j - 2].HeaderText.ToString();
+                            table.Rows[1].Cells[j].Range.Text = DataGridView_Student.Columns[j - 2].HeaderText.ToString();
                             table.Rows[1].Cells[j].Range.Font.Bold = 1;
                             table.Rows[1].Cells[j].Range.Font.Name = "verdana";
                             table.Rows[1].Cells[j].Range.Font.Size = 10;
@@ -82,7 +82,7 @@ namespace School_Management.Manager.Score
                             table.Rows[1].Cells[j].VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalCenter;
                             table.Rows[1].Cells[j].Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
                             //Data
-                            table.Rows[i + 1].Cells[j].Range.Text = DataGridView.Rows[i - 1].Cells[j - 2].Value.ToString();
+                            table.Rows[i + 1].Cells[j].Range.Text = DataGridView_Student.Rows[i - 1].Cells[j - 2].Value.ToString();
                         }
                     }
                     document.SaveAs2(ref filename);
@@ -111,7 +111,7 @@ namespace School_Management.Manager.Score
             My_Database data = new My_Database();
             Students student = new Students();
             SqlCommand commnand = new SqlCommand("SELECT id, firstname, lastname FROM Add_Student",data.GetConnection);
-            DataGridView.DataSource = student.GetStudents(commnand);
+            DataGridView_Student.DataSource = student.GetStudents(commnand);
 
 
         }
@@ -217,12 +217,12 @@ namespace School_Management.Manager.Score
 
         private void Show_student_Click(object sender, EventArgs e)
         {
-            DataGridView.DataSource = score.GetStudentScore();
+            DataGridView_Student.DataSource = score.GetStudentScore();
         }
 
         private void ShowScore_Click(object sender, EventArgs e)
         {
-            DataGridView.DataSource = score.GetAllScore();
+            DataGridView_Student.DataSource = score.GetAllScore();
         }
         private void scoreBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -238,6 +238,11 @@ namespace School_Management.Manager.Score
         private void TabPage1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void DataGridView_DoubleClick(object sender, EventArgs e)
+        {
+            IDStudent.Text = DataGridView_Student.CurrentRow.Cells[0].Value.ToString().Trim();
         }
     }
 }

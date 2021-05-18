@@ -330,17 +330,17 @@
     <Compile Include="Manager\Score\Average.Designer.cs">
       <DependentUpon>Average.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manager\Score\Avg_Score.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manager\Score\Avg_Score.Designer.cs">
-      <DependentUpon>Avg_Score.cs</DependentUpon>
-    </Compile>
     <Compile Include="Manager\Score\Manager_Score.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Manager\Score\Manager_Score.Designer.cs">
       <DependentUpon>Manager_Score.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Score\RemoveScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Score\RemoveScore.Designer.cs">
+      <DependentUpon>RemoveScore.cs</DependentUpon>
     </Compile>
     <Compile Include="Manager\Score\Results.cs">
       <SubType>Form</SubType>
@@ -614,11 +614,11 @@
     <EmbeddedResource Include="Manager\Score\Average.resx">
       <DependentUpon>Average.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manager\Score\Avg_Score.resx">
-      <DependentUpon>Avg_Score.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Manager\Score\Manager_Score.resx">
       <DependentUpon>Manager_Score.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Score\RemoveScore.resx">
+      <DependentUpon>RemoveScore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Score\Results.resx">
       <DependentUpon>Results.cs</DependentUpon>

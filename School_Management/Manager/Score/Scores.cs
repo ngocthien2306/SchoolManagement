@@ -131,22 +131,16 @@ namespace School_Management.Manager.Score
         }
         public DataTable GetALL_IdCourseOrder()
         {
-            My_Database db = new My_Database();
             try
             {
-                db.Openconnection();
-                SqlCommand command = new SqlCommand()
-                {
-                    Connection = db.GetConnection,
-                    CommandText = "SELECT student_id, course_id, student_score " +
-                                    "FROM Score " +
-                                    "order by student_id, course_id"
-                };
+                data.Openconnection();
+
+                SqlCommand command = new SqlCommand("SELECT Student_id, Course_id, Student_score FROM Score order BY Student_id, Course_id", data.GetConnection);
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 adapter.SelectCommand = command;
                 DataTable table = new DataTable();
                 adapter.Fill(table);
-                db.Closeconnection();
+                data.Closeconnection();
 
                 return table;
             }
@@ -156,7 +150,7 @@ namespace School_Management.Manager.Score
             }
             finally
             {
-                db.Closeconnection();
+                data.Closeconnection();
             }
 
         }
@@ -208,7 +202,6 @@ namespace School_Management.Manager.Score
                 result.Columns[2].ColumnName = "Last Name";
 
                 DataTable coursesLabel = course.AllLabel_IdOrder();
-                DataTable briefInfo = student.GetAllBriefInfo();
                 DataTable scores = score.GetALL_IdCourseOrder();
                 DataTable avgScore = score.GetAvg_byStudent();
 
@@ -219,32 +212,126 @@ namespace School_Management.Manager.Score
 
                 result.Columns.Add("Result");
 
+                //test empty
+                if (scores.Rows.Count < 1) return result;
+
                 //fill score to table 
                 int scoreRow = 0;
                 for (int row = 0; row < result.Rows.Count; row++)
                 {
-                    int courseIndex = 0;
-                    while (result.Rows[row][0].ToString().Trim() == scores.Rows[scoreRow][0].ToString().Trim())
+                    try
                     {
-                        result.Rows[row][courseIndex + 3] = scores.Rows[scoreRow][2].ToString().Trim();
-                        courseIndex++;
-                        scoreRow++;
-                        if (scoreRow > scores.Rows.Count - 1)
+                        int courseIndex = 0;
+                        while (result.Rows[row][0].ToString().Trim() == scores.Rows[scoreRow][0].ToString().Trim())
                         {
-                            break;
+                            result.Rows[row][courseIndex + 3] = scores.Rows[scoreRow][2].ToString().Trim();
+                            courseIndex++;
+                            scoreRow++;
+                            if (scoreRow > scores.Rows.Count - 1)
+                            {
+                                break;
+                            }
                         }
                     }
+                    catch (Exception)
+                    {
+                        continue;
+                    }
                 }
+                // fill avg score
                 for (int row = 0; row < result.Rows.Count; row++)
                 {
-                    result.Rows[row][result.Columns.Count - 1] = avgScore.Rows[row][1].ToString().Trim();
+                    try
+                    {
+                        result.Rows[row][result.Columns.Count - 1]
+                            = avgScore.Rows[row][1].ToString().Trim();
+                    }
+                    catch (Exception)
+                    {
+                        continue;
+                    }
                 }
+                return result;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public int getPassNumber()
+        {
+            My_Database db = new My_Database();
+            try
+            {
+                db.Openconnection();
+                SqlCommand command = new SqlCommand()
+                {
+                    Connection = db.GetConnection,
+                    CommandText = "select count(A.Student_id) " +
+                        "from (SELECT Score.Student_id, AVG(Score.Student_score) as AvgScore " +
+                        "FROM Add_Student inner join Score on Add_Student.ID = Score.Student_id " +
+                        "Group by Score.Student_id " +
+                        "HAVING AVG(Score.Student_score) >= 5) as A"
+                };
+                int result;
+                try
+                {
+                    result = (int)command.ExecuteScalar();
+                }
+                catch (Exception)
+                {
+                    return 0;
+                }
+                db.Closeconnection();
 
                 return result;
             }
             catch (Exception)
             {
                 throw;
+            }
+            finally
+            {
+                db.Closeconnection();
+            }
+        }
+        public int getFailNumber()
+        {
+            My_Database db = new My_Database();
+            try
+            {
+                db.Openconnection();
+                SqlCommand command = new SqlCommand()
+                {
+                    Connection = db.GetConnection,
+                    CommandText = "select count(A.Student_id) " +
+                        "from (SELECT Score.Student_id, AVG(Score.student_score) as AvgScore " +
+                        "FROM Add_Student inner join Score on Add_Student.ID = Score.Student_id " +
+                        "Group by Score.Student_id " +
+                        "HAVING AVG(Score.Student_score) < 5 and AVG(Score.Student_score) >= 0) as A"
+                };
+
+                int result = 0;
+                try
+                {
+                    result = (int)command.ExecuteScalar();
+                }
+                catch (Exception)
+                {
+                    return 0;
+                }
+
+                db.Closeconnection();
+
+                return result;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                db.Closeconnection();
             }
         }
     }

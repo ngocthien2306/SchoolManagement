@@ -1,0 +1,818 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E9B5FC56-A660-48A7-8561-17799351F03D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>School_Management</RootNamespace>
+    <AssemblyName>School_Management</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v19.1" />
+    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.1" />
+    <Reference Include="DevExpress.DataAccess.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Diagram.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Map.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v19.1.DataModel, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v19.1.DataModel.EF6, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v19.1.ViewModel, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v19.1.Drawing, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Export, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.TreeMap.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core" />
+    <Reference Include="DevExpress.Utils.v19.1.UI, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.Extensions, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.UI, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.Wizard, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDiagram.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.1" />
+    <Reference Include="DevExpress.Printing.v19.1.Core" />
+    <Reference Include="DevExpress.XtraGauges.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPdfViewer.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.1.Extensions, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Word, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Word.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSet_Student.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Student.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="Manager\Contact\Add_Contacts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Contact\Add_Contacts.Designer.cs">
+      <DependentUpon>Add_Contacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Contact\Add_Student.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Contact\Contacts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Contact\Contacts.Designer.cs">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Contact\Contact_class.cs" />
+    <Compile Include="Manager\Contact\Course.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Contact\Edit_Contact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Contact\Edit_Contact.Designer.cs">
+      <DependentUpon>Edit_Contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Contact\Login.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Contact\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Contact\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Contact\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Contact\Name.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Contact\Print_Contact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Contact\Print_Contact.Designer.cs">
+      <DependentUpon>Print_Contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Contact\Score.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Contact\sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Course\Add_Course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Course\Add_Course.Designer.cs">
+      <DependentUpon>Add_Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Course\Courses.cs" />
+    <Compile Include="Manager\Course\Edit_Course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Course\Edit_Course.Designer.cs">
+      <DependentUpon>Edit_Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Course\Find Course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Course\Find Course.Designer.cs">
+      <DependentUpon>Find Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Course\ListCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Course\ListCourse.Designer.cs">
+      <DependentUpon>ListCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Course\Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Course\Manager.Designer.cs">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Course\Manager_Course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Course\Manager_Course.Designer.cs">
+      <DependentUpon>Manager_Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Contact\Group.cs" />
+    <Compile Include="Manager\Course\Print_Course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Course\Print_Course.Designer.cs">
+      <DependentUpon>Print_Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\List_Full\Add_Student.cs">
+      <DependentUpon>Entity_School.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\List_Full\Course.cs">
+      <DependentUpon>Entity_School.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\List_Full\Entity_School.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entity_School.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\List_Full\Entity_School.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entity_School.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\List_Full\Entity_School.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entity_School.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\List_Full\Group1.cs">
+      <DependentUpon>Entity_School.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\List_Full\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\List_Full\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\List_Full\Login.cs">
+      <DependentUpon>Entity_School.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\List_Full\Name.cs">
+      <DependentUpon>Entity_School.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\List_Full\Score.cs">
+      <DependentUpon>Entity_School.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\List_Full\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Entity_School.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\List_Full\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Entity_School.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\List_Full\sysdiagram.cs">
+      <DependentUpon>Entity_School.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Login\Create_Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Login\Create_Account.Designer.cs">
+      <DependentUpon>Create_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Login\Login Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Login\Login Account.Designer.cs">
+      <DependentUpon>Login Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Login\Progress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Login\Progress.Designer.cs">
+      <DependentUpon>Progress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Login\Users.cs" />
+    <Compile Include="Manager\Score\Add_Score.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Score\Add_Score.Designer.cs">
+      <DependentUpon>Add_Score.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Score\Average.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Score\Average.Designer.cs">
+      <DependentUpon>Average.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Score\Avg_Score.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Score\Avg_Score.Designer.cs">
+      <DependentUpon>Avg_Score.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Score\Manager_Score.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Score\Manager_Score.Designer.cs">
+      <DependentUpon>Manager_Score.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Score\Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Score\Results.Designer.cs">
+      <DependentUpon>Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Score\Scores.cs" />
+    <Compile Include="Manager\Student\Add_Student.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Add_Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Add_Students.Designer.cs">
+      <DependentUpon>Add_Students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Common\CollectionViewModel.cs" />
+    <Compile Include="Manager\Student\Common\EntitiesViewModel.cs" />
+    <Compile Include="Manager\Student\Common\ReadOnlyCollectionViewModel.cs" />
+    <Compile Include="Manager\Student\Common\SingleObjectViewModel.cs" />
+    <Compile Include="Manager\Student\Course.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\CustomGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Edit_Remove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Edit_Remove.Designer.cs">
+      <DependentUpon>Edit_Remove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Find_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Find_Student.Designer.cs">
+      <DependentUpon>Find_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Login.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Manager Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Manager Student.Designer.cs">
+      <DependentUpon>Manager Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\List_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\List_Student.Designer.cs">
+      <DependentUpon>List_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Manager_General.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Manager_General.Designer.cs">
+      <DependentUpon>Manager_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Name.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Print.Designer.cs">
+      <DependentUpon>Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Print_List_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Print_List_Student.Designer.cs">
+      <DependentUpon>Print_List_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Score.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Statics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Statics.Designer.cs">
+      <DependentUpon>Statics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\StudentEntitiesDataModel\IStudentEntitiesUnitOfWork.cs" />
+    <Compile Include="Manager\Student\StudentEntitiesDataModel\StudentEntitiesUnitOfWork.cs" />
+    <Compile Include="Manager\Student\StudentEntitiesDataModel\UnitOfWorkSource.cs" />
+    <Compile Include="Manager\Student\Students.cs" />
+    <Compile Include="Manager\Student\sysdiagram.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\ViewModels\Add_Student\Add_StudentCollectionViewModel.cs" />
+    <Compile Include="Manager\Student\ViewModels\Add_Student\Add_StudentViewModel.cs" />
+    <Compile Include="Manager\Student\ViewModels\Course\CourseCollectionViewModel.cs" />
+    <Compile Include="Manager\Student\ViewModels\Course\CourseViewModel.cs" />
+    <Compile Include="Manager\Student\ViewModels\Login\LoginCollectionViewModel.cs" />
+    <Compile Include="Manager\Student\ViewModels\Login\LoginViewModel.cs" />
+    <Compile Include="Manager\Student\ViewModels\Name\NameCollectionViewModel.cs" />
+    <Compile Include="Manager\Student\ViewModels\Name\NameViewModel.cs" />
+    <Compile Include="Manager\Student\ViewModels\Score\ScoreCollectionViewModel.cs" />
+    <Compile Include="Manager\Student\ViewModels\StudentEntitiesViewModel.cs" />
+    <Compile Include="Manager\Student\ViewModels\sysdiagram\sysdiagramCollectionViewModel.cs" />
+    <Compile Include="Manager\Student\ViewModels\sysdiagram\sysdiagramViewModel.cs" />
+    <Compile Include="Manager\Student\Views\Add_Student\Add_StudentCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Views\Add_Student\Add_StudentCollectionView.designer.cs">
+      <DependentUpon>Add_StudentCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Views\Add_Student\Add_StudentView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Views\Add_Student\Add_StudentView.designer.cs">
+      <DependentUpon>Add_StudentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Views\Course\CourseCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Views\Course\CourseCollectionView.designer.cs">
+      <DependentUpon>CourseCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Views\Course\CourseView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Views\Course\CourseView.designer.cs">
+      <DependentUpon>CourseView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Views\Login\LoginCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Views\Login\LoginCollectionView.designer.cs">
+      <DependentUpon>LoginCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Views\Login\LoginView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Views\Login\LoginView.designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Views\Name\NameCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Views\Name\NameCollectionView.designer.cs">
+      <DependentUpon>NameCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Views\Name\NameView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Views\Name\NameView.designer.cs">
+      <DependentUpon>NameView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Views\Score\ScoreCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Views\Score\ScoreCollectionView.designer.cs">
+      <DependentUpon>ScoreCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Views\StudentEntitiesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Views\StudentEntitiesView.designer.cs">
+      <DependentUpon>StudentEntitiesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Views\sysdiagram\sysdiagramCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Views\sysdiagram\sysdiagramCollectionView.designer.cs">
+      <DependentUpon>sysdiagramCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\Views\sysdiagram\sysdiagramView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\Views\sysdiagram\sysdiagramView.designer.cs">
+      <DependentUpon>sysdiagramView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\List_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\List_Manager.Designer.cs">
+      <DependentUpon>List_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Student\XtraReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\XtraReport.Designer.cs">
+      <DependentUpon>XtraReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_StudentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manager_StudentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_StudentDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manager_StudentDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_StudentDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manager_StudentDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_StudentDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manager_StudentDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="My_Database.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Manager\Contact\Add_Contacts.resx">
+      <DependentUpon>Add_Contacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Contact\Contacts.resx">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Contact\Edit_Contact.resx">
+      <DependentUpon>Edit_Contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Contact\Print_Contact.resx">
+      <DependentUpon>Print_Contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Course\Add_Course.resx">
+      <DependentUpon>Add_Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Course\Edit_Course.resx">
+      <DependentUpon>Edit_Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Course\Find Course.resx">
+      <DependentUpon>Find Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Course\ListCourse.resx">
+      <DependentUpon>ListCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Course\Manager.resx">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Course\Manager_Course.resx">
+      <DependentUpon>Manager_Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Course\Print_Course.resx">
+      <DependentUpon>Print_Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Login\Create_Account.resx">
+      <DependentUpon>Create_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Login\Login Account.resx">
+      <DependentUpon>Login Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Login\Progress.resx">
+      <DependentUpon>Progress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Score\Add_Score.resx">
+      <DependentUpon>Add_Score.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Score\Average.resx">
+      <DependentUpon>Average.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Score\Avg_Score.resx">
+      <DependentUpon>Avg_Score.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Score\Manager_Score.resx">
+      <DependentUpon>Manager_Score.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Score\Results.resx">
+      <DependentUpon>Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Student\Add_Students.resx">
+      <DependentUpon>Add_Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Student\CustomGrid.resx">
+      <DependentUpon>CustomGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Student\Edit_Remove.resx">
+      <DependentUpon>Edit_Remove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Student\Find_Student.resx">
+      <DependentUpon>Find_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Student\Manager Student.resx">
+      <DependentUpon>Manager Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Student\List_Student.resx">
+      <DependentUpon>List_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Student\Manager_General.resx">
+      <DependentUpon>Manager_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Student\Print.resx">
+      <DependentUpon>Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Student\Print_List_Student.resx">
+      <DependentUpon>Print_List_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Student\Statics.resx">
+      <DependentUpon>Statics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Student\XtraReport.resx">
+      <DependentUpon>XtraReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <EntityDeploy Include="Manager\Student\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataSet_Student.xsc">
+      <DependentUpon>DataSet_Student.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Student.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Student.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_Student.xss">
+      <DependentUpon>DataSet_Student.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="Manager\Contact\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Manager\Contact\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Manager\List_Full\Entity_School.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Entity_School.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Manager\List_Full\Entity_School.edmx.diagram">
+      <DependentUpon>Entity_School.edmx</DependentUpon>
+    </None>
+    <None Include="Manager\Student\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="Manager_StudentDataSet.xsc">
+      <DependentUpon>Manager_StudentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Manager_StudentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Manager_StudentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Manager_StudentDataSet.xss">
+      <DependentUpon>Manager_StudentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Manager_StudentDataSet1.xsc">
+      <DependentUpon>Manager_StudentDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Manager_StudentDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Manager_StudentDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Manager_StudentDataSet1.xss">
+      <DependentUpon>Manager_StudentDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Manager_StudentDataSet2.xsc">
+      <DependentUpon>Manager_StudentDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Manager_StudentDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Manager_StudentDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Manager_StudentDataSet2.xss">
+      <DependentUpon>Manager_StudentDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Manager_StudentDataSet3.xsc">
+      <DependentUpon>Manager_StudentDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Manager_StudentDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Manager_StudentDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Manager_StudentDataSet3.xss">
+      <DependentUpon>Manager_StudentDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\School123.jpg" />
+    <Content Include="Manager\Contact\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Manager\Contact\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Manager\List_Full\Entity_School.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Entity_School.edmx</DependentUpon>
+      <LastGenOutput>Entity_School.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Manager\List_Full\Entity_School.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Entity_School.edmx</DependentUpon>
+      <LastGenOutput>Entity_School.cs</LastGenOutput>
+    </Content>
+    <Content Include="Manager\Student\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Manager\Student\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Resources\download.png" />
+    <None Include="Resources\download1.png" />
+    <Content Include="Resource\School123.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

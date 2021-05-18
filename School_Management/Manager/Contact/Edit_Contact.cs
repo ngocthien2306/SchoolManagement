@@ -19,6 +19,7 @@ namespace School_Management.Manager.Contact
         {
             InitializeComponent();
         }
+        DataTable table;
         public void Find()
         {
             if (TextEdit_ID.Text.Trim() == "")
@@ -30,7 +31,7 @@ namespace School_Management.Manager.Contact
             {
                 My_Database dataBase = new My_Database();
                 SqlCommand command = new SqlCommand(
-                   "SELECT ID, Firstname, Fastname, Group_id, Gender, Birthday, Phone, Email, Facebook, Address, City, Picture, User_id " +
+                   "SELECT ID, Firstname, Lastname, Group_id, Gender, Birthday, Phone, Email, Facebook, Address, City, Picture, User_id " +
                 "FROM Contact WHERE ID = @id", dataBase.GetConnection);
                 command.Parameters.Add("@ID", SqlDbType.NVarChar).Value = TextEdit_ID.Text;
 
@@ -47,7 +48,7 @@ namespace School_Management.Manager.Contact
                     TextEdit_ID.Text = table.Rows[0]["Id"].ToString();
                     TextEdit_Fname.Text = table.Rows[0]["Firstname"].ToString();
                     TextEdit_Lastname.Text = table.Rows[0]["Fastname"].ToString();
-                    TextEdit_GroupID.Text = table.Rows[0]["Group_id"].ToString();
+                    ComboBox_GroupId.SelectedValue = table.Rows[0]["Group_id"].ToString();
                     ComboBoxEdit_Gender.SelectedItem = table.Rows[0]["Gender"].ToString();
                     DateEdit_Birthday.DateTime = (DateTime)table.Rows[0]["Birthday"];
                     TextEdit_Phone.Text = table.Rows[0]["Phone"].ToString();
@@ -76,12 +77,12 @@ namespace School_Management.Manager.Contact
             try
             {
                 My_Database data = new My_Database();
-                SqlCommand command = new SqlCommand("UPDATE Contact SET Firstname = @fn, Fastname = @ln, Group_id = @group, Gender = @gen, Birthday = @day, " +
+                SqlCommand command = new SqlCommand("UPDATE Contact SET Firstname = @fn, Lastname = @ln, Group_id = @group, Gender = @gen, Birthday = @day, " +
                     "Phone = @phone, Email = @email, Facebook = @fb, Address = @add, City = @city, Picture = @pic, User_id = @id", data.GetConnection);
                 command.Parameters.Add("@fn", SqlDbType.NVarChar).Value = TextEdit_Fname.Text;
                 command.Parameters.Add("@ln", SqlDbType.NVarChar).Value = TextEdit_Lastname.Text;
-                command.Parameters.Add("@group", SqlDbType.NVarChar).Value = TextEdit_GroupID.Text;
-                command.Parameters.Add("@gen", SqlDbType.NVarChar).Value = ComboBoxEdit_Gender.SelectedItem.ToString();
+                command.Parameters.Add("@group", SqlDbType.Int).Value = Convert.ToInt32(table.Rows[ComboBox_GroupId.SelectedIndex][0].ToString());
+                command.Parameters.Add("@gen", SqlDbType.NVarChar).Value = ComboBoxEdit_Gender.Text;
                 command.Parameters.Add("@day", SqlDbType.DateTime).Value = DateEdit_Birthday.DateTime;
                 command.Parameters.Add("@phone", SqlDbType.NVarChar).Value = TextEdit_Phone.Text;
                 command.Parameters.Add("@email", SqlDbType.NVarChar).Value = TextEdit_Mail.Text;
@@ -145,7 +146,24 @@ namespace School_Management.Manager.Contact
         {
             // TODO: This line of code loads data into the 'manager_StudentDataSet3.Contact' table. You can move, or remove it, as needed.
             this.contactTableAdapter.Fill(this.manager_StudentDataSet3.Contact);
+            Group group = new Group();
+            My_Database data = new My_Database();
+            SqlCommand command = new SqlCommand("SELECT * FROM [Group1]", data.GetConnection);
 
+            table = group.GetAll_ID_label();
+            ComboBox_GroupId.ValueMember = "Group_id";
+            foreach (DataRow row in table.Rows)
+            {
+                ComboBox_GroupId.Items.Add(row[1].ToString().Trim());
+
+            }
+
+            DateEdit_Birthday.Text = "1/1/2000";
+        }
+
+        private void Find_Button_Click_1(object sender, EventArgs e)
+        {
+            this.Find();
         }
     }
 }

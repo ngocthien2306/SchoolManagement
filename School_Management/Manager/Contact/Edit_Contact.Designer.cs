@@ -61,7 +61,6 @@ namespace School_Management.Manager.Contact
             this.TextEdit_Address = new DevExpress.XtraEditors.TextEdit();
             this.GroupBox_Intro = new System.Windows.Forms.GroupBox();
             this.Find_Button = new DevExpress.XtraEditors.SimpleButton();
-            this.TextEdit_GroupID = new DevExpress.XtraEditors.TextEdit();
             this.LabelControl_GroupID = new DevExpress.XtraEditors.LabelControl();
             this.LabelControl_Gender = new DevExpress.XtraEditors.LabelControl();
             this.DateEdit_Birthday = new DevExpress.XtraEditors.DateEdit();
@@ -105,6 +104,7 @@ namespace School_Management.Manager.Contact
             this.colPicture = new DevExpress.XtraGrid.Columns.GridColumn();
             this.contactTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.ContactTableAdapter();
             this.tableAdapterManager = new School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager();
+            this.ComboBox_GroupId = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Method)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
@@ -116,7 +116,6 @@ namespace School_Management.Manager.Contact
             ((System.ComponentModel.ISupportInitialize)(this.TextEdit_City.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TextEdit_Address.Properties)).BeginInit();
             this.GroupBox_Intro.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TextEdit_GroupID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateEdit_Birthday.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateEdit_Birthday.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboBoxEdit_Gender.Properties)).BeginInit();
@@ -356,8 +355,8 @@ namespace School_Management.Manager.Contact
             // GroupBox_Intro
             // 
             this.GroupBox_Intro.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.GroupBox_Intro.Controls.Add(this.ComboBox_GroupId);
             this.GroupBox_Intro.Controls.Add(this.Find_Button);
-            this.GroupBox_Intro.Controls.Add(this.TextEdit_GroupID);
             this.GroupBox_Intro.Controls.Add(this.LabelControl_GroupID);
             this.GroupBox_Intro.Controls.Add(this.LabelControl_Gender);
             this.GroupBox_Intro.Controls.Add(this.DateEdit_Birthday);
@@ -385,17 +384,10 @@ namespace School_Management.Manager.Contact
             this.Find_Button.Location = new System.Drawing.Point(495, 18);
             this.Find_Button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Find_Button.Name = "Find_Button";
-            this.Find_Button.Size = new System.Drawing.Size(86, 31);
+            this.Find_Button.Size = new System.Drawing.Size(89, 31);
             this.Find_Button.TabIndex = 28;
             this.Find_Button.Text = "Find";
-            // 
-            // TextEdit_GroupID
-            // 
-            this.TextEdit_GroupID.Location = new System.Drawing.Point(443, 150);
-            this.TextEdit_GroupID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TextEdit_GroupID.Name = "TextEdit_GroupID";
-            this.TextEdit_GroupID.Size = new System.Drawing.Size(139, 28);
-            this.TextEdit_GroupID.TabIndex = 27;
+            this.Find_Button.Click += new System.EventHandler(this.Find_Button_Click_1);
             // 
             // LabelControl_GroupID
             // 
@@ -570,7 +562,7 @@ namespace School_Management.Manager.Contact
             this.contactBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.contactBindingNavigator.Name = "contactBindingNavigator";
             this.contactBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.contactBindingNavigator.Size = new System.Drawing.Size(565, 38);
+            this.contactBindingNavigator.Size = new System.Drawing.Size(565, 33);
             this.contactBindingNavigator.TabIndex = 36;
             this.contactBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -580,7 +572,7 @@ namespace School_Management.Manager.Contact
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // contactBindingSource
@@ -596,7 +588,7 @@ namespace School_Management.Manager.Contact
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 33);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -606,7 +598,7 @@ namespace School_Management.Manager.Contact
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -615,7 +607,7 @@ namespace School_Management.Manager.Contact
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -624,13 +616,13 @@ namespace School_Management.Manager.Contact
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -645,7 +637,7 @@ namespace School_Management.Manager.Contact
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -653,7 +645,7 @@ namespace School_Management.Manager.Contact
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -662,20 +654,20 @@ namespace School_Management.Manager.Contact
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
             // 
             // contactBindingNavigatorSaveItem
             // 
             this.contactBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.contactBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("contactBindingNavigatorSaveItem.Image")));
             this.contactBindingNavigatorSaveItem.Name = "contactBindingNavigatorSaveItem";
-            this.contactBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 33);
+            this.contactBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 28);
             this.contactBindingNavigatorSaveItem.Text = "Save Data";
             // 
             // ContactGridControl
@@ -842,6 +834,14 @@ namespace School_Management.Manager.Contact
             this.tableAdapterManager.ScoreTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // ComboBox_GroupId
+            // 
+            this.ComboBox_GroupId.FormattingEnabled = true;
+            this.ComboBox_GroupId.Location = new System.Drawing.Point(454, 153);
+            this.ComboBox_GroupId.Name = "ComboBox_GroupId";
+            this.ComboBox_GroupId.Size = new System.Drawing.Size(130, 27);
+            this.ComboBox_GroupId.TabIndex = 29;
+            // 
             // Edit_Contact
             // 
             this.Appearance.Options.UseFont = true;
@@ -872,7 +872,6 @@ namespace School_Management.Manager.Contact
             ((System.ComponentModel.ISupportInitialize)(this.TextEdit_Address.Properties)).EndInit();
             this.GroupBox_Intro.ResumeLayout(false);
             this.GroupBox_Intro.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TextEdit_GroupID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateEdit_Birthday.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateEdit_Birthday.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboBoxEdit_Gender.Properties)).EndInit();
@@ -918,7 +917,6 @@ namespace School_Management.Manager.Contact
         private DevExpress.XtraEditors.TextEdit TextEdit_Address;
         private System.Windows.Forms.GroupBox GroupBox_Intro;
         private DevExpress.XtraEditors.SimpleButton Find_Button;
-        private DevExpress.XtraEditors.TextEdit TextEdit_GroupID;
         private DevExpress.XtraEditors.LabelControl LabelControl_GroupID;
         private DevExpress.XtraEditors.LabelControl LabelControl_Gender;
         private DevExpress.XtraEditors.DateEdit DateEdit_Birthday;
@@ -963,5 +961,6 @@ namespace School_Management.Manager.Contact
         private DevExpress.XtraGrid.Columns.GridColumn colAddress;
         private DevExpress.XtraGrid.Columns.GridColumn colCity;
         private DevExpress.XtraGrid.Columns.GridColumn colPicture;
+        private System.Windows.Forms.ComboBox ComboBox_GroupId;
     }
 }

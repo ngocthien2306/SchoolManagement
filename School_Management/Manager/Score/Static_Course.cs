@@ -42,10 +42,13 @@ namespace School_Management.Manager.Score
             Scores score = new Scores();
 
             Students student = new Students();
-            double total =Convert.ToDouble(student.TotalStudent());
+            double total = Convert.ToDouble(student.TotalStudent());
             int pass = score.GetPassNumber();
             int fail = score.GetFailNumber();
-
+            int Total = pass + fail;
+            Label_Total.Text = "Total: " + Total;
+            Label_Pass.Text = "Pass: " + pass + " (" + (pass*100/Total) + ")%";
+            Label_fail.Text = "Fail: " + fail + " ("  + (pass*100/Total) + ")%";
             ResultChart.Series.RemoveAt(0);
             seri = ResultChart.Series.Add("Average Score");
             seri.Points.AddXY("Pass", (Math.Truncate(pass * 100.0) / total));

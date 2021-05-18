@@ -78,6 +78,7 @@ namespace School_Management.Manager.Contact
             this.NameGroup_Textbox = new DevExpress.XtraEditors.TextEdit();
             this.AddGroup_Button = new DevExpress.XtraEditors.SimpleButton();
             this.Label2 = new DevExpress.XtraEditors.LabelControl();
+            this.hyperlinkLabelControl2 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit2)).BeginInit();
@@ -217,6 +218,7 @@ namespace School_Management.Manager.Contact
             this.splitContainerControl1.Panel1.Controls.Add(this.Edit_Button);
             this.splitContainerControl1.Panel1.Controls.Add(this.Add_Button);
             this.splitContainerControl1.Panel1.Text = "Panel1";
+            this.splitContainerControl1.Panel2.Controls.Add(this.hyperlinkLabelControl2);
             this.splitContainerControl1.Panel2.Controls.Add(this.GroupBox4);
             this.splitContainerControl1.Panel2.Controls.Add(this.GroupBox3);
             this.splitContainerControl1.Panel2.Controls.Add(this.GroupBox2);
@@ -575,6 +577,15 @@ namespace School_Management.Manager.Contact
             this.Label2.TabIndex = 7;
             this.Label2.Text = "Group";
             // 
+            // hyperlinkLabelControl2
+            // 
+            this.hyperlinkLabelControl2.Location = new System.Drawing.Point(408, 21);
+            this.hyperlinkLabelControl2.Name = "hyperlinkLabelControl2";
+            this.hyperlinkLabelControl2.Size = new System.Drawing.Size(57, 19);
+            this.hyperlinkLabelControl2.TabIndex = 11;
+            this.hyperlinkLabelControl2.Text = "Log Out";
+            this.hyperlinkLabelControl2.Click += new System.EventHandler(this.hyperlinkLabelControl2_Click);
+            // 
             // Contacts
             // 
             this.Appearance.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -668,5 +679,6 @@ namespace School_Management.Manager.Contact
         public DevExpress.XtraEditors.PictureEdit Picture_User;
         private DevExpress.XtraEditors.LabelControl LabelControl2;
         public DevExpress.XtraEditors.LabelControl LabelControl_ID;
+        private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl2;
     }
 }

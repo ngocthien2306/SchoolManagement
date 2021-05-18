@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using School_Management.Manager.Login;
 namespace School_Management.Manager.Contact
 {
     public partial class Contacts : DevExpress.XtraEditors.XtraForm
@@ -24,7 +24,7 @@ namespace School_Management.Manager.Contact
         private void Add_Button_Click(object sender, EventArgs e)
         {
             Add_Contacts add = new Add_Contacts();
-            add.ShowDialog();
+            add.Show();
         }
 
         private void AddGroup_Button_Click(object sender, EventArgs e)
@@ -109,6 +109,21 @@ namespace School_Management.Manager.Contact
         private void ShowList_Button_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void hyperlinkLabelControl2_Click(object sender, EventArgs e)
+        {
+            DialogResult exit = XtraMessageBox.Show("Do you want logout account?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(exit == DialogResult.Yes)
+            {
+                this.Hide();
+                Login_Account login = new Login_Account();
+                login.Show();
+            }
+            else
+            {
+
+            }
         }
     }
 }

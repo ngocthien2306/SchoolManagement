@@ -374,6 +374,7 @@ namespace School_Management.Manager.Contact
             this.ShowList_Button.Size = new System.Drawing.Size(177, 54);
             this.ShowList_Button.TabIndex = 4;
             this.ShowList_Button.Text = "Show Full List";
+            this.ShowList_Button.Click += new System.EventHandler(this.ShowList_Button_Click);
             // 
             // Edit_Button
             // 
@@ -436,6 +437,7 @@ namespace School_Management.Manager.Contact
             this.Remove_Group_Button.Size = new System.Drawing.Size(100, 30);
             this.Remove_Group_Button.TabIndex = 3;
             this.Remove_Group_Button.Text = "Remove";
+            this.Remove_Group_Button.Click += new System.EventHandler(this.Remove_Group_Button_Click);
             // 
             // GroupBox3
             // 

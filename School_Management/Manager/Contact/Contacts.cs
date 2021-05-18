@@ -53,9 +53,11 @@ namespace School_Management.Manager.Contact
         {
             Group group = new Group();
             My_Database data = new My_Database();
-            SqlCommand command = new SqlCommand("SELECT Group_id, Group_name FROM Group", data.GetConnection);
+            SqlCommand command = new SqlCommand("SELECT Group_id, Group_name FROM Group1", data.GetConnection);
             DataTable table;
             table = group.GetGroup(command);
+            ComboBoxEdit_SelectGroup2.ValueMember = "Group_id";
+            ComboBoxEdit_SelectGroup1.ValueMember = "Group_id";
             foreach(DataRow row in table.Rows)
             {
                 ComboBoxEdit_SelectGroup1.Items.Add(row[1].ToString().Trim());
@@ -64,7 +66,7 @@ namespace School_Management.Manager.Contact
         }
         private void Contacts_Load(object sender, EventArgs e)
         {
-
+            this.ShowGroup();
         }
 
         private void Edit_Button_Click(object sender, EventArgs e)
@@ -74,6 +76,37 @@ namespace School_Management.Manager.Contact
         }
 
         private void Edit_Group_Button_Click(object sender, EventArgs e)
+        {
+            Group group = new Group();
+            int id = ComboBoxEdit_SelectGroup1.SelectedIndex;
+            string name = NewName_Textbox.Text;
+            if(group.UpdateGroup(id, name))
+            {
+                XtraMessageBox.Show("Update Succussful!", "Update Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                XtraMessageBox.Show("Update Failed!", "Update Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
+
+        private void Remove_Group_Button_Click(object sender, EventArgs e)
+        {
+            Group group = new Group();
+            ComboBoxEdit_SelectGroup2.ValueMember = "Group_id";
+            int id = Convert.ToInt32(ComboBoxEdit_SelectGroup2.Text);
+            if(group.DeleteGroup(id))
+            {
+                XtraMessageBox.Show("Delete Succussful!", "Delete Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                XtraMessageBox.Show("Delete Failed!", "Delete Group", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void ShowList_Button_Click(object sender, EventArgs e)
         {
 
         }

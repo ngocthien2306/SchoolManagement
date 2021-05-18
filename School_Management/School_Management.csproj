@@ -211,6 +211,12 @@
     <Compile Include="Manager\Contact\Score.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Manager\Contact\ShowFullList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Contact\ShowFullList.Designer.cs">
+      <DependentUpon>ShowFullList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager\Contact\sysdiagram.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -603,6 +609,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Contact\Print_Contact.resx">
       <DependentUpon>Print_Contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Contact\ShowFullList.resx">
+      <DependentUpon>ShowFullList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Course\AddCourse_FormStuent.resx">
       <DependentUpon>AddCourse_FormStuent.cs</DependentUpon>

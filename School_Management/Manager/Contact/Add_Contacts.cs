@@ -97,5 +97,20 @@ namespace School_Management.Manager.Contact
             this.tableAdapterManager.UpdateAll(this.manager_StudentDataSet3);
 
         }
+
+        private void PictureEdit_User_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PictureEdit_User_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Select Image(*.jpg;*.png;*.gif)|*.jpg;*.pnq;*.gif";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                PictureEdit_User.Image = Image.FromFile(open.FileName);
+            }
+        }
     }
 }

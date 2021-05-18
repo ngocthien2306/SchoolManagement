@@ -119,5 +119,64 @@ namespace School_Management.Manager.Contact
             SDA.Fill(table);
             return table;
         }
+        public bool CheckUserID(int user_id)
+        {
+            string query = "SELECT * FROM Contact WHERE user_id = @user_id";
+            My_Database data = new My_Database();
+            SqlCommand command = new SqlCommand(query, data.GetConnection);
+            command.Parameters.Add("@user_id", SqlDbType.Int).Value = user_id;
+
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public DataTable GetTable(string query)
+        {
+            My_Database data = new My_Database();
+            data.Openconnection();
+            SqlCommand command = new SqlCommand(query, data.GetConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = command;
+            DataSet dataSet = new DataSet();
+            adapter.Fill(dataSet, "Contact");
+            data.Closeconnection();
+
+            DataTable table = dataSet.Tables["Contact"];
+            return table;
+        }
+
+        public DataTable SelectContactList()
+        {
+            string query = "SELECT * FROM Contact";
+            return this.GetTable(query);
+        }
+
+        public DataTable GetContactByID(int id)
+        {
+            string query = $"SELECT * FROM Contact WHERE id = {id}";
+            return this.GetTable(query);
+        }
+
+        public DataTable GetContactByGroup(string group)
+        {
+            My_Database data = new My_Database();
+            SqlCommand command = new SqlCommand("SELECT * FROM Contact WHERE CAST([group1] AS NVARCHAR) = @group", data.GetConnection);
+            command.Parameters.Add("@group", SqlDbType.NVarChar).Value = group;
+
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
     }
 }

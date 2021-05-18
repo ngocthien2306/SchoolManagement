@@ -31,7 +31,7 @@ namespace School_Management.Manager.Contact
         }
         public bool DeleteGroup(int id)
         {
-            SqlCommand command = new SqlCommand("DELETE FROM Group1 WHERE ID = @id", data.GetConnection);
+            SqlCommand command = new SqlCommand("DELETE FROM Group1 WHERE Group_id = @id", data.GetConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             data.Openconnection();
             if (command.ExecuteNonQuery() == 1)

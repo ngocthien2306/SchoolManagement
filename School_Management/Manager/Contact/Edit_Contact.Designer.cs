@@ -40,6 +40,7 @@ namespace School_Management.Manager.Contact
             this.M010101 = new DevExpress.XtraBars.BarButtonItem();
             this.M010102 = new DevExpress.XtraBars.BarButtonItem();
             this.M010103 = new DevExpress.XtraBars.BarButtonItem();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.M01 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.M0101 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.M02 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -73,13 +74,10 @@ namespace School_Management.Manager.Contact
             this.TextEdit_Fname = new DevExpress.XtraEditors.TextEdit();
             this.TextEdit_ID = new DevExpress.XtraEditors.TextEdit();
             this.PictureEdit_User = new DevExpress.XtraEditors.PictureEdit();
-            this.manager_StudentDataSet3 = new School_Management.Manager_StudentDataSet3();
-            this.contactBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.contactTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.ContactTableAdapter();
-            this.tableAdapterManager = new School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager();
-            this.ContactGridControl = new DevExpress.XtraGrid.GridControl();
             this.contactBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.contactBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.manager_StudentDataSet3 = new School_Management.Manager_StudentDataSet3();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -91,7 +89,7 @@ namespace School_Management.Manager.Contact
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.contactBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.ContactGridControl = new DevExpress.XtraGrid.GridControl();
             this.CardView1 = new DevExpress.XtraGrid.Views.Card.CardView();
             this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFirstname = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -105,6 +103,8 @@ namespace School_Management.Manager.Contact
             this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPicture = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.contactTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.ContactTableAdapter();
+            this.tableAdapterManager = new School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.Method)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
@@ -124,11 +124,11 @@ namespace School_Management.Manager.Contact
             ((System.ComponentModel.ISupportInitialize)(this.TextEdit_Fname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TextEdit_ID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureEdit_User.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ContactGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactBindingNavigator)).BeginInit();
             this.contactBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ContactGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,6 +174,15 @@ namespace School_Management.Manager.Contact
             this.M010103.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("M010103.ImageOptions.Image")));
             this.M010103.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("M010103.ImageOptions.LargeImage")));
             this.M010103.Name = "M010103";
+            // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.Caption = "Help?";
+            this.barStaticItem1.Id = 4;
+            this.barStaticItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barStaticItem1.ImageOptions.Image")));
+            this.barStaticItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barStaticItem1.ImageOptions.LargeImage")));
+            this.barStaticItem1.Name = "barStaticItem1";
+            this.barStaticItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // M01
             // 
@@ -534,46 +543,6 @@ namespace School_Management.Manager.Contact
             this.PictureEdit_User.Size = new System.Drawing.Size(175, 185);
             this.PictureEdit_User.TabIndex = 32;
             // 
-            // manager_StudentDataSet3
-            // 
-            this.manager_StudentDataSet3.DataSetName = "Manager_StudentDataSet3";
-            this.manager_StudentDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // contactBindingSource
-            // 
-            this.contactBindingSource.DataMember = "Contact";
-            this.contactBindingSource.DataSource = this.manager_StudentDataSet3;
-            // 
-            // contactTableAdapter
-            // 
-            this.contactTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.Add_StudentTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ContactTableAdapter = this.contactTableAdapter;
-            this.tableAdapterManager.CourseTableAdapter = null;
-            this.tableAdapterManager.GroupTableAdapter = null;
-            this.tableAdapterManager.New_UserTableAdapter = null;
-            this.tableAdapterManager.ScoreTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // ContactGridControl
-            // 
-            this.ContactGridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ContactGridControl.DataSource = this.contactBindingSource;
-            this.ContactGridControl.Location = new System.Drawing.Point(0, 36);
-            this.ContactGridControl.MainView = this.CardView1;
-            this.ContactGridControl.MenuManager = this.Method;
-            this.ContactGridControl.Name = "ContactGridControl";
-            this.ContactGridControl.Size = new System.Drawing.Size(562, 509);
-            this.ContactGridControl.TabIndex = 0;
-            this.ContactGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.CardView1});
-            // 
             // contactBindingNavigator
             // 
             this.contactBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -613,6 +582,16 @@ namespace School_Management.Manager.Contact
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // contactBindingSource
+            // 
+            this.contactBindingSource.DataMember = "Contact";
+            this.contactBindingSource.DataSource = this.manager_StudentDataSet3;
+            // 
+            // manager_StudentDataSet3
+            // 
+            this.manager_StudentDataSet3.DataSetName = "Manager_StudentDataSet3";
+            this.manager_StudentDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -699,14 +678,20 @@ namespace School_Management.Manager.Contact
             this.contactBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 33);
             this.contactBindingNavigatorSaveItem.Text = "Save Data";
             // 
-            // barStaticItem1
+            // ContactGridControl
             // 
-            this.barStaticItem1.Caption = "Help?";
-            this.barStaticItem1.Id = 4;
-            this.barStaticItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barStaticItem1.ImageOptions.Image")));
-            this.barStaticItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barStaticItem1.ImageOptions.LargeImage")));
-            this.barStaticItem1.Name = "barStaticItem1";
-            this.barStaticItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.ContactGridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ContactGridControl.DataSource = this.contactBindingSource;
+            this.ContactGridControl.Location = new System.Drawing.Point(0, 36);
+            this.ContactGridControl.MainView = this.CardView1;
+            this.ContactGridControl.MenuManager = this.Method;
+            this.ContactGridControl.Name = "ContactGridControl";
+            this.ContactGridControl.Size = new System.Drawing.Size(562, 509);
+            this.ContactGridControl.TabIndex = 0;
+            this.ContactGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.CardView1});
             // 
             // CardView1
             // 
@@ -842,6 +827,21 @@ namespace School_Management.Manager.Contact
             this.colPicture.VisibleIndex = 11;
             this.colPicture.Width = 112;
             // 
+            // contactTableAdapter
+            // 
+            this.contactTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.Add_StudentTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ContactTableAdapter = this.contactTableAdapter;
+            this.tableAdapterManager.CourseTableAdapter = null;
+            this.tableAdapterManager.GroupTableAdapter = null;
+            this.tableAdapterManager.New_UserTableAdapter = null;
+            this.tableAdapterManager.ScoreTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // Edit_Contact
             // 
             this.Appearance.Options.UseFont = true;
@@ -880,12 +880,12 @@ namespace School_Management.Manager.Contact
             ((System.ComponentModel.ISupportInitialize)(this.TextEdit_Fname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TextEdit_ID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureEdit_User.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ContactGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactBindingNavigator)).EndInit();
             this.contactBindingNavigator.ResumeLayout(false);
             this.contactBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ContactGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

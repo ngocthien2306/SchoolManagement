@@ -22,7 +22,7 @@ namespace School_Management
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
-            Application.Run(new Results());
+            Application.Run(new Login_Account());
         }
     }
 }

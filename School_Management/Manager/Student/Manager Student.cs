@@ -145,8 +145,7 @@ namespace School_Management.Manager.Student
 
         private void M030103_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Manager_Course manager = new Manager_Course();
-            manager.ShowDialog();
+
         }
 
         private void M010101_ItemClick(object sender, ItemClickEventArgs e)
@@ -180,6 +179,9 @@ namespace School_Management.Manager.Student
             this.add_StudentBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.manager_StudentDataSet3);
             XtraMessageBox.Show("Edit Data Successfull!");
+           
+            this.add_StudentTableAdapter.Fill(this.manager_StudentDataSet3.Add_Student);
+
         }
 
         private void M060101_ItemClick(object sender, ItemClickEventArgs e)
@@ -198,6 +200,12 @@ namespace School_Management.Manager.Student
         {
             RemoveScore remove = new RemoveScore();
             remove.ShowDialog();
+        }
+
+        private void M050102_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Static_Course sta = new Static_Course();
+            sta.ShowDialog();
         }
     }
 }

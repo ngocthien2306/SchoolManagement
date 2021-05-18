@@ -30,6 +30,7 @@ namespace School_Management.Manager.Student
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager_Student));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.M010201 = new DevExpress.XtraBars.BarButtonItem();
@@ -60,6 +61,8 @@ namespace School_Management.Manager.Student
             this.M030103 = new DevExpress.XtraBars.BarButtonItem();
             this.M060101 = new DevExpress.XtraBars.BarButtonItem();
             this.M050101 = new DevExpress.XtraBars.BarButtonItem();
+            this.M030104 = new DevExpress.XtraBars.BarButtonItem();
+            this.M050102 = new DevExpress.XtraBars.BarButtonItem();
             this.M01 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.M0101 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.M0102 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -116,8 +119,6 @@ namespace School_Management.Manager.Student
             this.add_StudentTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.Add_StudentTableAdapter();
             this.tableAdapterManager = new School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager();
             this.courseTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.CourseTableAdapter();
-            this.M030104 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -170,7 +171,7 @@ namespace School_Management.Manager.Student
             this.M060101,
             this.M050101,
             this.M030104,
-            this.barButtonItem2});
+            this.M050102});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbon.MaxItemId = 37;
@@ -412,6 +413,24 @@ namespace School_Management.Manager.Student
             this.M050101.Name = "M050101";
             this.M050101.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.M050101_ItemClick);
             // 
+            // M030104
+            // 
+            this.M030104.Caption = "Remove Score";
+            this.M030104.Id = 35;
+            this.M030104.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("M030104.ImageOptions.Image")));
+            this.M030104.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("M030104.ImageOptions.LargeImage")));
+            this.M030104.Name = "M030104";
+            this.M030104.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.M030104_ItemClick);
+            // 
+            // M050102
+            // 
+            this.M050102.Caption = "Static Result";
+            this.M050102.Id = 36;
+            this.M050102.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.M050102.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.M050102.Name = "M050102";
+            this.M050102.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.M050102_ItemClick);
+            // 
             // M01
             // 
             this.M01.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -526,7 +545,7 @@ namespace School_Management.Manager.Student
             // M05
             // 
             this.M05.ItemLinks.Add(this.M050101);
-            this.M05.ItemLinks.Add(this.barButtonItem2);
+            this.M05.ItemLinks.Add(this.M050102);
             this.M05.Name = "M05";
             this.M05.Text = "Data";
             // 
@@ -587,7 +606,7 @@ namespace School_Management.Manager.Student
             this.add_StudentBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.add_StudentBindingNavigator.Name = "add_StudentBindingNavigator";
             this.add_StudentBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.add_StudentBindingNavigator.Size = new System.Drawing.Size(873, 38);
+            this.add_StudentBindingNavigator.Size = new System.Drawing.Size(873, 33);
             this.add_StudentBindingNavigator.TabIndex = 13;
             this.add_StudentBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -597,7 +616,7 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // add_StudentBindingSource
@@ -613,7 +632,7 @@ namespace School_Management.Manager.Student
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 33);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -623,7 +642,7 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -632,7 +651,7 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -641,19 +660,18 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -662,7 +680,7 @@ namespace School_Management.Manager.Student
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -670,7 +688,7 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -679,20 +697,20 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
             // 
             // add_StudentBindingNavigatorSaveItem
             // 
             this.add_StudentBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.add_StudentBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("add_StudentBindingNavigatorSaveItem.Image")));
             this.add_StudentBindingNavigatorSaveItem.Name = "add_StudentBindingNavigatorSaveItem";
-            this.add_StudentBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 33);
+            this.add_StudentBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 28);
             this.add_StudentBindingNavigatorSaveItem.Text = "Save Data";
             this.add_StudentBindingNavigatorSaveItem.Click += new System.EventHandler(this.add_StudentBindingNavigatorSaveItem_Click_1);
             // 
@@ -925,23 +943,6 @@ namespace School_Management.Manager.Student
             // 
             this.courseTableAdapter.ClearBeforeFill = true;
             // 
-            // M030104
-            // 
-            this.M030104.Caption = "Remove Score";
-            this.M030104.Id = 35;
-            this.M030104.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.M030104.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
-            this.M030104.Name = "M030104";
-            this.M030104.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.M030104_ItemClick);
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "Static Result";
-            this.barButtonItem2.Id = 36;
-            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image1")));
-            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage1")));
-            this.barButtonItem2.Name = "barButtonItem2";
-            // 
             // Manager_Student
             // 
             this.Appearance.Options.UseFont = true;
@@ -1069,6 +1070,6 @@ namespace School_Management.Manager.Student
         private DevExpress.XtraGrid.Columns.GridColumn colperiod;
         private DevExpress.XtraGrid.Columns.GridColumn coldescription;
         private DevExpress.XtraBars.BarButtonItem M030104;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem M050102;
     }
 }

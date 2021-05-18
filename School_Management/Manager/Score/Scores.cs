@@ -248,33 +248,15 @@ namespace School_Management.Manager.Score
                     {
                         result.Rows[row][result.Columns.Count - 2]
                             = avgScore.Rows[row][1].ToString().Trim();
-                        int avg = Convert.ToInt32(avgScore.Rows[row][1].ToString().Trim());
+                        int avg = Convert.ToInt32(avgScore.Rows[row][1]);
                         if(avg < 5)
                         {
-                            for(int count = 0; count < result.Rows.Count; count++)
-                            {
-                                try
-                                {
-                                    result.Rows[row][result.Columns.Count - 1] = "Fail";
-                                }
-                                catch
-                                {
-                                    continue;
-                                }
-                            }
+                             result.Rows[row][result.Columns.Count - 1] = "Fail";
                         }
                         else
                         {
-                            for (int count = 0; count < result.Rows.Count; count++)
                             {
-                                try
-                                {
-                                    result.Rows[count][result.Columns.Count - 1] = "Pass";
-                                }
-                                catch
-                                {
-                                    continue;
-                                }
+                                result.Rows[row][result.Columns.Count - 1] = "Pass";
                             }
                         }
                     }

@@ -31,11 +31,11 @@ namespace School_Management.Manager.Contact
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Contacts));
-            DevExpress.Utils.SimpleContextButton simpleContextButton1 = new DevExpress.Utils.SimpleContextButton();
-            DevExpress.Utils.SimpleContextButton simpleContextButton2 = new DevExpress.Utils.SimpleContextButton();
-            DevExpress.Utils.SimpleContextButton simpleContextButton3 = new DevExpress.Utils.SimpleContextButton();
-            DevExpress.Utils.SimpleContextButton simpleContextButton4 = new DevExpress.Utils.SimpleContextButton();
-            DevExpress.Utils.SimpleContextButton simpleContextButton5 = new DevExpress.Utils.SimpleContextButton();
+            DevExpress.Utils.SimpleContextButton simpleContextButton6 = new DevExpress.Utils.SimpleContextButton();
+            DevExpress.Utils.SimpleContextButton simpleContextButton7 = new DevExpress.Utils.SimpleContextButton();
+            DevExpress.Utils.SimpleContextButton simpleContextButton8 = new DevExpress.Utils.SimpleContextButton();
+            DevExpress.Utils.SimpleContextButton simpleContextButton9 = new DevExpress.Utils.SimpleContextButton();
+            DevExpress.Utils.SimpleContextButton simpleContextButton10 = new DevExpress.Utils.SimpleContextButton();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.MethodX = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.BarButtonItem_Save = new DevExpress.XtraBars.BarButtonItem();
@@ -64,6 +64,9 @@ namespace School_Management.Manager.Contact
             this.TextEdit_City = new DevExpress.XtraEditors.TextEdit();
             this.TextEdit_Address = new DevExpress.XtraEditors.TextEdit();
             this.GroupBox_Intro = new System.Windows.Forms.GroupBox();
+            this.group1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.managerStudentDataSet4BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.manager_StudentDataSet4 = new School_Management.Manager_StudentDataSet4();
             this.LabelControl_GroupID = new DevExpress.XtraEditors.LabelControl();
             this.LabelControl_Gender = new DevExpress.XtraEditors.LabelControl();
             this.DateEdit_Birthday = new DevExpress.XtraEditors.DateEdit();
@@ -105,13 +108,17 @@ namespace School_Management.Manager.Contact
             this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPicture = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.group1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.manager_StudentDataSet2 = new School_Management.Manager_StudentDataSet2();
+            this.groupBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.manager_StudentDataSet31 = new School_Management.Manager_StudentDataSet3();
             this.contactTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.ContactTableAdapter();
             this.tableAdapterManager = new School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager();
-            this.ComboBox_GroupID = new DevExpress.XtraEditors.CheckedComboBoxEdit();
-            this.manager_StudentDataSet31 = new School_Management.Manager_StudentDataSet3();
             this.managerStudentDataSet31BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.GroupTableAdapter();
+            this.group1TableAdapter = new School_Management.Manager_StudentDataSet2TableAdapters.Group1TableAdapter();
+            this.group1TableAdapter1 = new School_Management.Manager_StudentDataSet4TableAdapters.Group1TableAdapter();
+            this.ComboBox_GroupID = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.MethodX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemZoomTrackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -124,6 +131,9 @@ namespace School_Management.Manager.Contact
             ((System.ComponentModel.ISupportInitialize)(this.TextEdit_City.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TextEdit_Address.Properties)).BeginInit();
             this.GroupBox_Intro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.group1BindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managerStudentDataSet4BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateEdit_Birthday.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateEdit_Birthday.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboBoxEdit_Gender.Properties)).BeginInit();
@@ -137,10 +147,11 @@ namespace School_Management.Manager.Contact
             ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComboBox_GroupID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.group1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.managerStudentDataSet31BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonPage2
@@ -433,6 +444,21 @@ namespace School_Management.Manager.Contact
             this.GroupBox_Intro.TabIndex = 29;
             this.GroupBox_Intro.TabStop = false;
             // 
+            // group1BindingSource1
+            // 
+            this.group1BindingSource1.DataMember = "Group1";
+            this.group1BindingSource1.DataSource = this.managerStudentDataSet4BindingSource;
+            // 
+            // managerStudentDataSet4BindingSource
+            // 
+            this.managerStudentDataSet4BindingSource.DataSource = this.manager_StudentDataSet4;
+            this.managerStudentDataSet4BindingSource.Position = 0;
+            // 
+            // manager_StudentDataSet4
+            // 
+            this.manager_StudentDataSet4.DataSetName = "Manager_StudentDataSet4";
+            this.manager_StudentDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // LabelControl_GroupID
             // 
             this.LabelControl_GroupID.Appearance.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -477,36 +503,36 @@ namespace School_Management.Manager.Contact
             this.ComboBoxEdit_Gender.Properties.Appearance.Options.UseFont = true;
             this.ComboBoxEdit_Gender.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            simpleContextButton1.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
-            simpleContextButton1.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
-            simpleContextButton1.Caption = "Dr";
-            simpleContextButton1.Id = new System.Guid("6bf16606-2d29-4737-a878-1758ee85ea22");
-            simpleContextButton1.Name = "SimpleContextButton3";
-            simpleContextButton2.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
-            simpleContextButton2.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
-            simpleContextButton2.Caption = "Mr";
-            simpleContextButton2.Id = new System.Guid("3743aa2e-9809-49d2-a7c7-8e89bb9464dc");
-            simpleContextButton2.Name = "SimpleContextButton";
-            simpleContextButton3.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
-            simpleContextButton3.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
-            simpleContextButton3.Caption = "Ms";
-            simpleContextButton3.Id = new System.Guid("b2971959-8d5c-4ac0-a21e-67a31c103c96");
-            simpleContextButton3.Name = "SimpleContextButton1";
-            simpleContextButton4.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
-            simpleContextButton4.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
-            simpleContextButton4.Caption = "Mrs";
-            simpleContextButton4.Id = new System.Guid("7c6a77e3-436e-486e-9ad6-e767771a09c1");
-            simpleContextButton4.Name = "SimpleContextButton2";
-            simpleContextButton5.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
-            simpleContextButton5.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
-            simpleContextButton5.Caption = "Miss";
-            simpleContextButton5.Id = new System.Guid("df44b04c-ca56-4822-8a46-6278df428802");
-            simpleContextButton5.Name = "SimpleContextButton4";
-            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton1);
-            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton2);
-            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton3);
-            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton4);
-            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton5);
+            simpleContextButton6.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
+            simpleContextButton6.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
+            simpleContextButton6.Caption = "Dr";
+            simpleContextButton6.Id = new System.Guid("6bf16606-2d29-4737-a878-1758ee85ea22");
+            simpleContextButton6.Name = "SimpleContextButton3";
+            simpleContextButton7.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
+            simpleContextButton7.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
+            simpleContextButton7.Caption = "Mr";
+            simpleContextButton7.Id = new System.Guid("3743aa2e-9809-49d2-a7c7-8e89bb9464dc");
+            simpleContextButton7.Name = "SimpleContextButton";
+            simpleContextButton8.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
+            simpleContextButton8.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
+            simpleContextButton8.Caption = "Ms";
+            simpleContextButton8.Id = new System.Guid("b2971959-8d5c-4ac0-a21e-67a31c103c96");
+            simpleContextButton8.Name = "SimpleContextButton1";
+            simpleContextButton9.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
+            simpleContextButton9.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
+            simpleContextButton9.Caption = "Mrs";
+            simpleContextButton9.Id = new System.Guid("7c6a77e3-436e-486e-9ad6-e767771a09c1");
+            simpleContextButton9.Name = "SimpleContextButton2";
+            simpleContextButton10.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
+            simpleContextButton10.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
+            simpleContextButton10.Caption = "Miss";
+            simpleContextButton10.Id = new System.Guid("df44b04c-ca56-4822-8a46-6278df428802");
+            simpleContextButton10.Name = "SimpleContextButton4";
+            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton6);
+            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton7);
+            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton8);
+            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton9);
+            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton10);
             this.ComboBoxEdit_Gender.Properties.Items.AddRange(new object[] {
             "Dr",
             "Mr",
@@ -873,6 +899,26 @@ namespace School_Management.Manager.Contact
             this.colPicture.VisibleIndex = 11;
             this.colPicture.Width = 112;
             // 
+            // group1BindingSource
+            // 
+            this.group1BindingSource.DataMember = "Group1";
+            this.group1BindingSource.DataSource = this.manager_StudentDataSet2;
+            // 
+            // manager_StudentDataSet2
+            // 
+            this.manager_StudentDataSet2.DataSetName = "Manager_StudentDataSet2";
+            this.manager_StudentDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // groupBindingSource
+            // 
+            this.groupBindingSource.DataMember = "Group";
+            this.groupBindingSource.DataSource = this.manager_StudentDataSet31;
+            // 
+            // manager_StudentDataSet31
+            // 
+            this.manager_StudentDataSet31.DataSetName = "Manager_StudentDataSet3";
+            this.manager_StudentDataSet31.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // contactTableAdapter
             // 
             this.contactTableAdapter.ClearBeforeFill = true;
@@ -888,37 +934,30 @@ namespace School_Management.Manager.Contact
             this.tableAdapterManager.ScoreTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // ComboBox_GroupID
-            // 
-            this.ComboBox_GroupID.Location = new System.Drawing.Point(420, 169);
-            this.ComboBox_GroupID.MenuManager = this.MethodX;
-            this.ComboBox_GroupID.Name = "ComboBox_GroupID";
-            this.ComboBox_GroupID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ComboBox_GroupID.Properties.DataSource = this.groupBindingSource;
-            this.ComboBox_GroupID.Properties.DisplayMember = "Group_name";
-            this.ComboBox_GroupID.Properties.ValueMember = "Group_id";
-            this.ComboBox_GroupID.Size = new System.Drawing.Size(150, 28);
-            this.ComboBox_GroupID.TabIndex = 32;
-            // 
-            // manager_StudentDataSet31
-            // 
-            this.manager_StudentDataSet31.DataSetName = "Manager_StudentDataSet3";
-            this.manager_StudentDataSet31.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // managerStudentDataSet31BindingSource
             // 
             this.managerStudentDataSet31BindingSource.DataSource = this.manager_StudentDataSet31;
             this.managerStudentDataSet31BindingSource.Position = 0;
             // 
-            // groupBindingSource
-            // 
-            this.groupBindingSource.DataMember = "Group";
-            this.groupBindingSource.DataSource = this.manager_StudentDataSet31;
-            // 
             // groupTableAdapter
             // 
             this.groupTableAdapter.ClearBeforeFill = true;
+            // 
+            // group1TableAdapter
+            // 
+            this.group1TableAdapter.ClearBeforeFill = true;
+            // 
+            // group1TableAdapter1
+            // 
+            this.group1TableAdapter1.ClearBeforeFill = true;
+            // 
+            // ComboBox_GroupID
+            // 
+            this.ComboBox_GroupID.FormattingEnabled = true;
+            this.ComboBox_GroupID.Location = new System.Drawing.Point(429, 170);
+            this.ComboBox_GroupID.Name = "ComboBox_GroupID";
+            this.ComboBox_GroupID.Size = new System.Drawing.Size(141, 27);
+            this.ComboBox_GroupID.TabIndex = 27;
             // 
             // Add_Contacts
             // 
@@ -951,6 +990,9 @@ namespace School_Management.Manager.Contact
             ((System.ComponentModel.ISupportInitialize)(this.TextEdit_Address.Properties)).EndInit();
             this.GroupBox_Intro.ResumeLayout(false);
             this.GroupBox_Intro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.group1BindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managerStudentDataSet4BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateEdit_Birthday.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateEdit_Birthday.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboBoxEdit_Gender.Properties)).EndInit();
@@ -965,10 +1007,11 @@ namespace School_Management.Manager.Contact
             ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComboBox_GroupID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.group1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.managerStudentDataSet31BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1046,10 +1089,17 @@ namespace School_Management.Manager.Contact
         private DevExpress.XtraGrid.Columns.GridColumn colAddress;
         private DevExpress.XtraGrid.Columns.GridColumn colCity;
         private DevExpress.XtraGrid.Columns.GridColumn colPicture;
-        private DevExpress.XtraEditors.CheckedComboBoxEdit ComboBox_GroupID;
         private System.Windows.Forms.BindingSource managerStudentDataSet31BindingSource;
         private Manager_StudentDataSet3 manager_StudentDataSet31;
         private System.Windows.Forms.BindingSource groupBindingSource;
         private Manager_StudentDataSet3TableAdapters.GroupTableAdapter groupTableAdapter;
+        private Manager_StudentDataSet2 manager_StudentDataSet2;
+        private System.Windows.Forms.BindingSource group1BindingSource;
+        private Manager_StudentDataSet2TableAdapters.Group1TableAdapter group1TableAdapter;
+        private System.Windows.Forms.BindingSource managerStudentDataSet4BindingSource;
+        private Manager_StudentDataSet4 manager_StudentDataSet4;
+        private System.Windows.Forms.BindingSource group1BindingSource1;
+        private Manager_StudentDataSet4TableAdapters.Group1TableAdapter group1TableAdapter1;
+        private System.Windows.Forms.ComboBox ComboBox_GroupID;
     }
 }

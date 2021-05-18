@@ -72,5 +72,10 @@ namespace School_Management.Manager.Contact
             Edit_Contact edit = new Edit_Contact();
             edit.ShowDialog();
         }
+
+        private void Edit_Group_Button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

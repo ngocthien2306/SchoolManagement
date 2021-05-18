@@ -14,8 +14,8 @@ namespace School_Management.Manager.Contact
         public bool InsertGroup(int id, string nid, int userid)
         {
             SqlCommand command = new SqlCommand("INSERT INTO Group1 (Group_id, Group_name, User_id) VALUES (@id, @name, @uid)", data.GetConnection);
-            command.Parameters.Add("@name", SqlDbType.NVarChar).Value = nid;
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@name", SqlDbType.NVarChar).Value = nid;
             command.Parameters.Add("@uid", SqlDbType.Int).Value = userid;
             data.Openconnection();
             if (command.ExecuteNonQuery() == 1)

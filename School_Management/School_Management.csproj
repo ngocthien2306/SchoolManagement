@@ -582,6 +582,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Manager_StudentDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Manager_StudentDataSet42.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manager_StudentDataSet42.xsd</DependentUpon>
+    </Compile>
     <Compile Include="My_Database.cs" />
     <Compile Include="Picture.cs" />
     <Compile Include="Program.cs" />
@@ -770,6 +775,17 @@
     </None>
     <None Include="Manager_StudentDataSet3.xss">
       <DependentUpon>Manager_StudentDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Manager_StudentDataSet42.xsc">
+      <DependentUpon>Manager_StudentDataSet42.xsd</DependentUpon>
+    </None>
+    <None Include="Manager_StudentDataSet42.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Manager_StudentDataSet42.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Manager_StudentDataSet42.xss">
+      <DependentUpon>Manager_StudentDataSet42.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

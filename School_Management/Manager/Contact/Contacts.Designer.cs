@@ -496,6 +496,7 @@ namespace School_Management.Manager.Contact
             this.Edit_Group_Button.Size = new System.Drawing.Size(100, 30);
             this.Edit_Group_Button.TabIndex = 2;
             this.Edit_Group_Button.Text = "Edit";
+            this.Edit_Group_Button.Click += new System.EventHandler(this.Edit_Group_Button_Click);
             // 
             // GroupBox2
             // 

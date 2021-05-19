@@ -23,6 +23,7 @@ namespace School_Management
 
             BonusSkins.Register();
             Application.Run(new Login_Account());
+
         }
     }
 }

@@ -53,6 +53,8 @@ namespace School_Management.Manager.Course
             this.Id_lb = new DevExpress.XtraEditors.LabelControl();
             this.WindowsUIButtonPanel1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.ListBoxControl = new DevExpress.XtraEditors.ListBoxControl();
+            this.Label_Semester = new DevExpress.XtraEditors.LabelControl();
+            this.ComboxBox_Semester = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainerControl)).BeginInit();
             this.SplitContainerControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.XtraTabControl)).BeginInit();
@@ -93,6 +95,8 @@ namespace School_Management.Manager.Course
             // 
             // XtraTabPage_Course
             // 
+            this.XtraTabPage_Course.Controls.Add(this.ComboxBox_Semester);
+            this.XtraTabPage_Course.Controls.Add(this.Label_Semester);
             this.XtraTabPage_Course.Controls.Add(this.WindowsUIButtonPanel);
             this.XtraTabPage_Course.Controls.Add(this.Rich_decs);
             this.XtraTabPage_Course.Controls.Add(this.Period_updown);
@@ -130,7 +134,7 @@ namespace School_Management.Manager.Course
             // 
             // Rich_decs
             // 
-            this.Rich_decs.Location = new System.Drawing.Point(192, 262);
+            this.Rich_decs.Location = new System.Drawing.Point(195, 296);
             this.Rich_decs.Margin = new System.Windows.Forms.Padding(4);
             this.Rich_decs.Name = "Rich_decs";
             this.Rich_decs.Size = new System.Drawing.Size(354, 117);
@@ -139,7 +143,7 @@ namespace School_Management.Manager.Course
             // 
             // Period_updown
             // 
-            this.Period_updown.Location = new System.Drawing.Point(192, 191);
+            this.Period_updown.Location = new System.Drawing.Point(195, 225);
             this.Period_updown.Margin = new System.Windows.Forms.Padding(4);
             this.Period_updown.Maximum = new decimal(new int[] {
             10000,
@@ -152,7 +156,7 @@ namespace School_Management.Manager.Course
             // 
             // NameCourse
             // 
-            this.NameCourse.Location = new System.Drawing.Point(192, 121);
+            this.NameCourse.Location = new System.Drawing.Point(195, 155);
             this.NameCourse.Margin = new System.Windows.Forms.Padding(4);
             this.NameCourse.Name = "NameCourse";
             this.NameCourse.Size = new System.Drawing.Size(356, 28);
@@ -160,7 +164,7 @@ namespace School_Management.Manager.Course
             // 
             // ID_Course
             // 
-            this.ID_Course.Location = new System.Drawing.Point(192, 57);
+            this.ID_Course.Location = new System.Drawing.Point(195, 91);
             this.ID_Course.Margin = new System.Windows.Forms.Padding(4);
             this.ID_Course.Name = "ID_Course";
             this.ID_Course.Size = new System.Drawing.Size(356, 28);
@@ -168,7 +172,7 @@ namespace School_Management.Manager.Course
             // 
             // Desc_lb
             // 
-            this.Desc_lb.Location = new System.Drawing.Point(39, 286);
+            this.Desc_lb.Location = new System.Drawing.Point(42, 320);
             this.Desc_lb.Margin = new System.Windows.Forms.Padding(4);
             this.Desc_lb.Name = "Desc_lb";
             this.Desc_lb.Size = new System.Drawing.Size(79, 19);
@@ -177,7 +181,7 @@ namespace School_Management.Manager.Course
             // 
             // Period_lb
             // 
-            this.Period_lb.Location = new System.Drawing.Point(39, 203);
+            this.Period_lb.Location = new System.Drawing.Point(42, 237);
             this.Period_lb.Margin = new System.Windows.Forms.Padding(4);
             this.Period_lb.Name = "Period_lb";
             this.Period_lb.Size = new System.Drawing.Size(45, 19);
@@ -186,7 +190,7 @@ namespace School_Management.Manager.Course
             // 
             // Name_lb
             // 
-            this.Name_lb.Location = new System.Drawing.Point(39, 130);
+            this.Name_lb.Location = new System.Drawing.Point(42, 164);
             this.Name_lb.Margin = new System.Windows.Forms.Padding(4);
             this.Name_lb.Name = "Name_lb";
             this.Name_lb.Size = new System.Drawing.Size(114, 19);
@@ -195,7 +199,7 @@ namespace School_Management.Manager.Course
             // 
             // Id_lb
             // 
-            this.Id_lb.Location = new System.Drawing.Point(39, 61);
+            this.Id_lb.Location = new System.Drawing.Point(42, 95);
             this.Id_lb.Margin = new System.Windows.Forms.Padding(4);
             this.Id_lb.Name = "Id_lb";
             this.Id_lb.Size = new System.Drawing.Size(71, 19);
@@ -234,6 +238,22 @@ namespace School_Management.Manager.Course
             this.ListBoxControl.Size = new System.Drawing.Size(506, 504);
             this.ListBoxControl.TabIndex = 0;
             this.ListBoxControl.Click += new System.EventHandler(this.ListBoxControl_Click);
+            // 
+            // Label_Semester
+            // 
+            this.Label_Semester.Location = new System.Drawing.Point(42, 44);
+            this.Label_Semester.Name = "Label_Semester";
+            this.Label_Semester.Size = new System.Drawing.Size(65, 19);
+            this.Label_Semester.TabIndex = 10;
+            this.Label_Semester.Text = "Semester";
+            // 
+            // ComboxBox_Semester
+            // 
+            this.ComboxBox_Semester.FormattingEnabled = true;
+            this.ComboxBox_Semester.Location = new System.Drawing.Point(195, 44);
+            this.ComboxBox_Semester.Name = "ComboxBox_Semester";
+            this.ComboxBox_Semester.Size = new System.Drawing.Size(180, 27);
+            this.ComboxBox_Semester.TabIndex = 11;
             // 
             // Manager
             // 
@@ -275,5 +295,7 @@ namespace School_Management.Manager.Course
         private DevExpress.XtraEditors.LabelControl Id_lb;
         private DevExpress.XtraEditors.ListBoxControl ListBoxControl;
         private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel WindowsUIButtonPanel1;
+        private System.Windows.Forms.ComboBox ComboxBox_Semester;
+        private DevExpress.XtraEditors.LabelControl Label_Semester;
     }
 }

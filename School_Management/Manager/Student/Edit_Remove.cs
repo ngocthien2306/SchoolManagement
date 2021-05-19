@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using School_Management.Manager.Course;
 namespace School_Management.Manager.Student
 {
     public partial class Edit_Remove : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -189,19 +189,18 @@ namespace School_Management.Manager.Student
 
                 if (command.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Complete", "Edit completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    XtraMessageBox.Show("Complete", "Edit completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("ERROR", "Edit failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    XtraMessageBox.Show("ERROR", "Edit failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 data.Closeconnection();
             }
 
-            catch (Exception E)
+            catch
             {
-                Console.WriteLine(E.Message);
-                throw;
+                XtraMessageBox.Show("ERROR! Please check the textbox control", "Edit failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void Save_close_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -218,6 +217,12 @@ namespace School_Management.Manager.Student
         private void Check_female_CheckedChanged(object sender, EventArgs e)
         {
             Check_male.Checked = false;
+        }
+
+        private void M0202_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AddCourse_FormStuent add = new AddCourse_FormStuent();
+            add.ShowDialog();
         }
     }
 }

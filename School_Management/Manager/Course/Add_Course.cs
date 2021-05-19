@@ -39,6 +39,7 @@ namespace School_Management.Manager.Course
                 course.Label = NameCourse_tb.Text;
                 course.Period = Convert.ToInt32(Period_tb.Text);
                 course.Description = Description.Text;
+                course.Semester = Convert.ToInt32(ComboBox_Semester.Text);
                 if (course.CheckCourseName(course.Label))
                 {
                     if (this.Check())
@@ -64,13 +65,13 @@ namespace School_Management.Manager.Course
             }
             catch
             {
-                XtraMessageBox.Show("The id course already exist!. Please add a new course", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("Error! Please check textbox", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void Save_Course_Click(object sender, EventArgs e)
         {
             this.AddCourse();
-            this.ResetChange();
+            
         }
 
         private void Save_and_Close_Click(object sender, EventArgs e)

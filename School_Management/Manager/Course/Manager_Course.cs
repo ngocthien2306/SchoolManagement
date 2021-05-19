@@ -141,6 +141,7 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     course.Label = Name_Course.Text;
                     course.Period = Convert.ToInt32(Period.Value);
                     course.Description = Rich_Description.Text;
+                    course.Semester =Convert.ToInt32(ComboBox_Semester.Text);
                     if (course.CheckCourseName(course.Label))
                     {
                         if (this.Check())
@@ -169,7 +170,8 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     string label = Name_Course.Text;
                     int period = Convert.ToInt32(Period.Value);
                     string description = Rich_Description.Text;
-                    if (course.UpdateCourse(id, label, period, description))
+                    int se = Convert.ToInt32(ComboBox_Semester.Text);
+                    if (course.UpdateCourse(id, label, period, description, se))
                     {
                         MessageBox.Show("Edit course successful!", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }

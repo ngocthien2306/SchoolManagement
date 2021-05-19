@@ -62,6 +62,7 @@ namespace School_Management.Manager.Course
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.tabFormContentContainer1 = new DevExpress.XtraBars.TabFormContentContainer();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.Description = new System.Windows.Forms.RichTextBox();
             this.ID_coures_lb = new DevExpress.XtraEditors.LabelControl();
             this.Period_tb = new DevExpress.XtraEditors.TextEdit();
@@ -71,8 +72,7 @@ namespace School_Management.Manager.Course
             this.ID_Course_tb = new DevExpress.XtraEditors.TextEdit();
             this.Desc_lb = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.CheckedComboBox = new DevExpress.XtraEditors.CheckedComboBoxEdit();
+            this.ComboBox_Semester = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
@@ -84,7 +84,6 @@ namespace School_Management.Manager.Course
             ((System.ComponentModel.ISupportInitialize)(this.ID_Course_tb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CheckedComboBox.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -350,7 +349,7 @@ namespace School_Management.Manager.Course
             // 
             // tabFormContentContainer1
             // 
-            this.tabFormContentContainer1.Controls.Add(this.CheckedComboBox);
+            this.tabFormContentContainer1.Controls.Add(this.ComboBox_Semester);
             this.tabFormContentContainer1.Controls.Add(this.labelControl1);
             this.tabFormContentContainer1.Controls.Add(this.Description);
             this.tabFormContentContainer1.Controls.Add(this.ID_coures_lb);
@@ -365,6 +364,17 @@ namespace School_Management.Manager.Course
             this.tabFormContentContainer1.Name = "tabFormContentContainer1";
             this.tabFormContentContainer1.Size = new System.Drawing.Size(686, 434);
             this.tabFormContentContainer1.TabIndex = 10;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(15, 22);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(72, 21);
+            this.labelControl1.TabIndex = 8;
+            this.labelControl1.Text = "Semester";
             // 
             // Description
             // 
@@ -464,30 +474,17 @@ namespace School_Management.Manager.Course
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1});
             // 
-            // labelControl1
+            // ComboBox_Semester
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(15, 22);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(72, 21);
-            this.labelControl1.TabIndex = 8;
-            this.labelControl1.Text = "Semester";
-            // 
-            // CheckedComboBox
-            // 
-            this.CheckedComboBox.EditValue = "";
-            this.CheckedComboBox.Location = new System.Drawing.Point(173, 19);
-            this.CheckedComboBox.Name = "CheckedComboBox";
-            this.CheckedComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CheckedComboBox.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(1),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(2),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("3")});
-            this.CheckedComboBox.Size = new System.Drawing.Size(196, 28);
-            this.CheckedComboBox.TabIndex = 9;
+            this.ComboBox_Semester.FormattingEnabled = true;
+            this.ComboBox_Semester.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.ComboBox_Semester.Location = new System.Drawing.Point(171, 22);
+            this.ComboBox_Semester.Name = "ComboBox_Semester";
+            this.ComboBox_Semester.Size = new System.Drawing.Size(206, 27);
+            this.ComboBox_Semester.TabIndex = 9;
             // 
             // Add_Course
             // 
@@ -529,7 +526,6 @@ namespace School_Management.Manager.Course
             ((System.ComponentModel.ISupportInitialize)(this.ID_Course_tb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.CheckedComboBox.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -577,7 +573,7 @@ namespace School_Management.Manager.Course
         private DevExpress.XtraEditors.LabelControl Desc_lb;
         private DevExpress.XtraBars.Navigation.AccordionControlElement Save_Course;
         private System.Windows.Forms.RichTextBox Description;
-        private DevExpress.XtraEditors.CheckedComboBoxEdit CheckedComboBox;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.ComboBox ComboBox_Semester;
     }
 }

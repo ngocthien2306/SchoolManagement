@@ -105,24 +105,6 @@ namespace School_Management.Manager.Student
             this.coladdress = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colphone = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colpicture = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.GroupBox_Status = new System.Windows.Forms.GroupBox();
-            this.Picture_user = new DevExpress.XtraEditors.PictureEdit();
-            this.Label_Status = new DevExpress.XtraEditors.LabelControl();
-            this.add_StudentTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.Add_StudentTableAdapter();
-            this.tableAdapterManager = new School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager();
-            this.courseTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.CourseTableAdapter();
-            this.student = new School_Management.Student();
-            this.courseBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.courseTableAdapter1 = new School_Management.StudentTableAdapters.CourseTableAdapter();
-            this.tableAdapterManager1 = new School_Management.StudentTableAdapters.TableAdapterManager();
-            this.courseGridControl = new DevExpress.XtraGrid.GridControl();
-            this.GridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colId1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.collabel = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colperiod = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.coldescription = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colsemester = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -136,6 +118,24 @@ namespace School_Management.Manager.Student
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.courseGridControl = new DevExpress.XtraGrid.GridControl();
+            this.courseBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.student = new School_Management.Student();
+            this.GridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.collabel = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colperiod = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldescription = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colsemester = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.GroupBox_Status = new System.Windows.Forms.GroupBox();
+            this.Picture_user = new DevExpress.XtraEditors.PictureEdit();
+            this.Label_Status = new DevExpress.XtraEditors.LabelControl();
+            this.add_StudentTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.Add_StudentTableAdapter();
+            this.tableAdapterManager = new School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager();
+            this.courseTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.CourseTableAdapter();
+            this.courseTableAdapter1 = new School_Management.StudentTableAdapters.CourseTableAdapter();
+            this.tableAdapterManager1 = new School_Management.StudentTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -146,15 +146,15 @@ namespace School_Management.Manager.Student
             ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.add_StudentGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.courseGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.student)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
             this.GroupBox_Status.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_user.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.student)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbon
@@ -628,7 +628,7 @@ namespace School_Management.Manager.Student
             this.add_StudentBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.add_StudentBindingNavigator.Name = "add_StudentBindingNavigator";
             this.add_StudentBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.add_StudentBindingNavigator.Size = new System.Drawing.Size(873, 33);
+            this.add_StudentBindingNavigator.Size = new System.Drawing.Size(873, 38);
             this.add_StudentBindingNavigator.TabIndex = 13;
             this.add_StudentBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -638,7 +638,7 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // add_StudentBindingSource
@@ -654,7 +654,7 @@ namespace School_Management.Manager.Student
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 33);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -664,7 +664,7 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -673,7 +673,7 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -682,13 +682,13 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -703,7 +703,7 @@ namespace School_Management.Manager.Student
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -711,7 +711,7 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -720,20 +720,20 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 38);
             // 
             // add_StudentBindingNavigatorSaveItem
             // 
             this.add_StudentBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.add_StudentBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("add_StudentBindingNavigatorSaveItem.Image")));
             this.add_StudentBindingNavigatorSaveItem.Name = "add_StudentBindingNavigatorSaveItem";
-            this.add_StudentBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 28);
+            this.add_StudentBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 33);
             this.add_StudentBindingNavigatorSaveItem.Text = "Save Data";
             this.add_StudentBindingNavigatorSaveItem.Click += new System.EventHandler(this.add_StudentBindingNavigatorSaveItem_Click_1);
             // 
@@ -847,83 +847,130 @@ namespace School_Management.Manager.Student
             this.colpicture.VisibleIndex = 7;
             this.colpicture.Width = 112;
             // 
-            // courseBindingSource
+            // bindingNavigator1
             // 
-            this.courseBindingSource.DataMember = "Course";
-            this.courseBindingSource.DataSource = this.manager_StudentDataSet3;
+            this.bindingNavigator1.AddNewItem = this.toolStripButton1;
+            this.bindingNavigator1.BindingSource = this.add_StudentBindingSource;
+            this.bindingNavigator1.CountItem = this.toolStripLabel1;
+            this.bindingNavigator1.DeleteItem = this.toolStripButton2;
+            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripSeparator1,
+            this.toolStripTextBox1,
+            this.toolStripLabel1,
+            this.toolStripSeparator2,
+            this.toolStripButton5,
+            this.toolStripButton6,
+            this.toolStripSeparator3,
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton7});
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
+            this.bindingNavigator1.MoveFirstItem = this.toolStripButton3;
+            this.bindingNavigator1.MoveLastItem = this.toolStripButton6;
+            this.bindingNavigator1.MoveNextItem = this.toolStripButton5;
+            this.bindingNavigator1.MovePreviousItem = this.toolStripButton4;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = this.toolStripTextBox1;
+            this.bindingNavigator1.Size = new System.Drawing.Size(601, 38);
+            this.bindingNavigator1.TabIndex = 14;
+            this.bindingNavigator1.Text = "bindingNavigator1";
             // 
-            // GroupBox_Status
+            // toolStripButton1
             // 
-            this.GroupBox_Status.Controls.Add(this.Picture_user);
-            this.GroupBox_Status.Controls.Add(this.Label_Status);
-            this.GroupBox_Status.Location = new System.Drawing.Point(1202, 91);
-            this.GroupBox_Status.Name = "GroupBox_Status";
-            this.GroupBox_Status.Size = new System.Drawing.Size(255, 112);
-            this.GroupBox_Status.TabIndex = 8;
-            this.GroupBox_Status.TabStop = false;
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton1.Size = new System.Drawing.Size(34, 33);
+            this.toolStripButton1.Text = "Add new";
             // 
-            // Picture_user
+            // toolStripLabel1
             // 
-            this.Picture_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Picture_user.Location = new System.Drawing.Point(6, 17);
-            this.Picture_user.MenuManager = this.ribbon;
-            this.Picture_user.Name = "Picture_user";
-            this.Picture_user.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.Picture_user.Size = new System.Drawing.Size(93, 89);
-            this.Picture_user.TabIndex = 0;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(54, 33);
+            this.toolStripLabel1.Text = "of {0}";
+            this.toolStripLabel1.ToolTipText = "Total number of items";
             // 
-            // Label_Status
+            // toolStripButton2
             // 
-            this.Label_Status.Location = new System.Drawing.Point(105, 27);
-            this.Label_Status.Name = "Label_Status";
-            this.Label_Status.Size = new System.Drawing.Size(68, 19);
-            this.Label_Status.TabIndex = 1;
-            this.Label_Status.Text = "Wellcome";
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton2.Size = new System.Drawing.Size(34, 33);
+            this.toolStripButton2.Text = "Delete";
             // 
-            // add_StudentTableAdapter
+            // toolStripButton3
             // 
-            this.add_StudentTableAdapter.ClearBeforeFill = true;
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton3.Size = new System.Drawing.Size(34, 33);
+            this.toolStripButton3.Text = "Move first";
             // 
-            // tableAdapterManager
+            // toolStripButton4
             // 
-            this.tableAdapterManager.Add_StudentTableAdapter = this.add_StudentTableAdapter;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ContactTableAdapter = null;
-            this.tableAdapterManager.CourseTableAdapter = this.courseTableAdapter;
-            this.tableAdapterManager.GroupTableAdapter = null;
-            this.tableAdapterManager.New_UserTableAdapter = null;
-            this.tableAdapterManager.ScoreTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton4.Size = new System.Drawing.Size(34, 33);
+            this.toolStripButton4.Text = "Move previous";
             // 
-            // courseTableAdapter
+            // toolStripSeparator1
             // 
-            this.courseTableAdapter.ClearBeforeFill = true;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 38);
             // 
-            // student
+            // toolStripTextBox1
             // 
-            this.student.DataSetName = "Student";
-            this.student.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.toolStripTextBox1.AccessibleName = "Position";
+            this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 31);
+            this.toolStripTextBox1.Text = "0";
+            this.toolStripTextBox1.ToolTipText = "Current position";
             // 
-            // courseBindingSource1
+            // toolStripSeparator2
             // 
-            this.courseBindingSource1.DataMember = "Course";
-            this.courseBindingSource1.DataSource = this.student;
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 38);
             // 
-            // courseTableAdapter1
+            // toolStripButton5
             // 
-            this.courseTableAdapter1.ClearBeforeFill = true;
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton5.Size = new System.Drawing.Size(34, 33);
+            this.toolStripButton5.Text = "Move next";
             // 
-            // tableAdapterManager1
+            // toolStripButton6
             // 
-            this.tableAdapterManager1.Add_StudentTableAdapter = null;
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.ContactTableAdapter = null;
-            this.tableAdapterManager1.CourseTableAdapter = this.courseTableAdapter1;
-            this.tableAdapterManager1.Group1TableAdapter = null;
-            this.tableAdapterManager1.GroupTableAdapter = null;
-            this.tableAdapterManager1.New_UserTableAdapter = null;
-            this.tableAdapterManager1.ScoreTableAdapter = null;
-            this.tableAdapterManager1.UpdateOrder = School_Management.StudentTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton6.Size = new System.Drawing.Size(34, 33);
+            this.toolStripButton6.Text = "Move last";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 38);
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(34, 33);
+            this.toolStripButton7.Text = "Save Data";
             // 
             // courseGridControl
             // 
@@ -936,6 +983,16 @@ namespace School_Management.Manager.Student
             this.courseGridControl.TabIndex = 0;
             this.courseGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.GridView2});
+            // 
+            // courseBindingSource1
+            // 
+            this.courseBindingSource1.DataMember = "Course";
+            this.courseBindingSource1.DataSource = this.student;
+            // 
+            // student
+            // 
+            this.student.DataSetName = "Student";
+            this.student.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // GridView2
             // 
@@ -999,130 +1056,73 @@ namespace School_Management.Manager.Student
             this.colsemester.VisibleIndex = 4;
             this.colsemester.Width = 112;
             // 
-            // bindingNavigator1
+            // courseBindingSource
             // 
-            this.bindingNavigator1.AddNewItem = this.toolStripButton1;
-            this.bindingNavigator1.BindingSource = this.add_StudentBindingSource;
-            this.bindingNavigator1.CountItem = this.toolStripLabel1;
-            this.bindingNavigator1.DeleteItem = this.toolStripButton2;
-            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton3,
-            this.toolStripButton4,
-            this.toolStripSeparator1,
-            this.toolStripTextBox1,
-            this.toolStripLabel1,
-            this.toolStripSeparator2,
-            this.toolStripButton5,
-            this.toolStripButton6,
-            this.toolStripSeparator3,
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton7});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
-            this.bindingNavigator1.MoveFirstItem = this.toolStripButton3;
-            this.bindingNavigator1.MoveLastItem = this.toolStripButton6;
-            this.bindingNavigator1.MoveNextItem = this.toolStripButton5;
-            this.bindingNavigator1.MovePreviousItem = this.toolStripButton4;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = this.toolStripTextBox1;
-            this.bindingNavigator1.Size = new System.Drawing.Size(601, 33);
-            this.bindingNavigator1.TabIndex = 14;
-            this.bindingNavigator1.Text = "bindingNavigator1";
+            this.courseBindingSource.DataMember = "Course";
+            this.courseBindingSource.DataSource = this.manager_StudentDataSet3;
             // 
-            // toolStripButton1
+            // GroupBox_Status
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton1.Size = new System.Drawing.Size(34, 28);
-            this.toolStripButton1.Text = "Add new";
+            this.GroupBox_Status.Controls.Add(this.Picture_user);
+            this.GroupBox_Status.Controls.Add(this.Label_Status);
+            this.GroupBox_Status.Location = new System.Drawing.Point(1202, 91);
+            this.GroupBox_Status.Name = "GroupBox_Status";
+            this.GroupBox_Status.Size = new System.Drawing.Size(255, 112);
+            this.GroupBox_Status.TabIndex = 8;
+            this.GroupBox_Status.TabStop = false;
             // 
-            // toolStripLabel1
+            // Picture_user
             // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(54, 28);
-            this.toolStripLabel1.Text = "of {0}";
-            this.toolStripLabel1.ToolTipText = "Total number of items";
+            this.Picture_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Picture_user.Location = new System.Drawing.Point(6, 17);
+            this.Picture_user.MenuManager = this.ribbon;
+            this.Picture_user.Name = "Picture_user";
+            this.Picture_user.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.Picture_user.Size = new System.Drawing.Size(93, 89);
+            this.Picture_user.TabIndex = 0;
             // 
-            // toolStripButton2
+            // Label_Status
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton2.Size = new System.Drawing.Size(34, 28);
-            this.toolStripButton2.Text = "Delete";
+            this.Label_Status.Location = new System.Drawing.Point(105, 27);
+            this.Label_Status.Name = "Label_Status";
+            this.Label_Status.Size = new System.Drawing.Size(68, 19);
+            this.Label_Status.TabIndex = 1;
+            this.Label_Status.Text = "Wellcome";
             // 
-            // toolStripButton3
+            // add_StudentTableAdapter
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton3.Size = new System.Drawing.Size(34, 28);
-            this.toolStripButton3.Text = "Move first";
+            this.add_StudentTableAdapter.ClearBeforeFill = true;
             // 
-            // toolStripButton4
+            // tableAdapterManager
             // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton4.Size = new System.Drawing.Size(34, 28);
-            this.toolStripButton4.Text = "Move previous";
+            this.tableAdapterManager.Add_StudentTableAdapter = this.add_StudentTableAdapter;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ContactTableAdapter = null;
+            this.tableAdapterManager.CourseTableAdapter = this.courseTableAdapter;
+            this.tableAdapterManager.GroupTableAdapter = null;
+            this.tableAdapterManager.New_UserTableAdapter = null;
+            this.tableAdapterManager.ScoreTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // toolStripSeparator1
+            // courseTableAdapter
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 33);
+            this.courseTableAdapter.ClearBeforeFill = true;
             // 
-            // toolStripTextBox1
+            // courseTableAdapter1
             // 
-            this.toolStripTextBox1.AccessibleName = "Position";
-            this.toolStripTextBox1.AutoSize = false;
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 31);
-            this.toolStripTextBox1.Text = "0";
-            this.toolStripTextBox1.ToolTipText = "Current position";
+            this.courseTableAdapter1.ClearBeforeFill = true;
             // 
-            // toolStripSeparator2
+            // tableAdapterManager1
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 33);
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton5.Size = new System.Drawing.Size(34, 28);
-            this.toolStripButton5.Text = "Move next";
-            // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton6.Size = new System.Drawing.Size(34, 28);
-            this.toolStripButton6.Text = "Move last";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 33);
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(34, 28);
-            this.toolStripButton7.Text = "Save Data";
+            this.tableAdapterManager1.Add_StudentTableAdapter = null;
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.ContactTableAdapter = null;
+            this.tableAdapterManager1.CourseTableAdapter = this.courseTableAdapter1;
+            this.tableAdapterManager1.Group1TableAdapter = null;
+            this.tableAdapterManager1.GroupTableAdapter = null;
+            this.tableAdapterManager1.New_UserTableAdapter = null;
+            this.tableAdapterManager1.ScoreTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = School_Management.StudentTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // Manager_Student
             // 
@@ -1153,17 +1153,17 @@ namespace School_Management.Manager.Student
             ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.add_StudentGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
+            this.bindingNavigator1.ResumeLayout(false);
+            this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.courseGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.student)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             this.GroupBox_Status.ResumeLayout(false);
             this.GroupBox_Status.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_user.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.student)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.bindingNavigator1.ResumeLayout(false);
-            this.bindingNavigator1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

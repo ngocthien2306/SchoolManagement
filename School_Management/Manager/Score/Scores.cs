@@ -247,8 +247,8 @@ namespace School_Management.Manager.Score
                     {
                         result.Rows[row][result.Columns.Count - 2]
                             = avgScore.Rows[row][1].ToString().Trim();
-                        int avg = Convert.ToInt32(avgScore.Rows[row][1]);
-                        if(avg < 5)
+                        float avg = (float)Convert.ToDouble(avgScore.Rows[row][1]);
+                        if(avg < 4.99999)
                         {
                              result.Rows[row][result.Columns.Count - 1] = "Fail";
                         }

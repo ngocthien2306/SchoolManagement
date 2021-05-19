@@ -64,10 +64,10 @@ namespace School_Management.Manager.Student
             this.Reset = new DevExpress.XtraBars.BarButtonItem();
             this.Delete_bt = new DevExpress.XtraBars.BarButtonItem();
             this.Close_bt = new DevExpress.XtraBars.BarButtonItem();
+            this.M0202 = new DevExpress.XtraBars.BarButtonItem();
             this.Method01 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.Method0101 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Methoad0201 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.M0202 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.Lastname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Firstname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ID_student.Properties)).BeginInit();
@@ -405,6 +405,15 @@ namespace School_Management.Manager.Student
             this.Close_bt.Name = "Close_bt";
             this.Close_bt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Close_bt_ItemClick);
             // 
+            // M0202
+            // 
+            this.M0202.Caption = "Add Course";
+            this.M0202.Id = 7;
+            this.M0202.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("M0202.ImageOptions.Image")));
+            this.M0202.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("M0202.ImageOptions.LargeImage")));
+            this.M0202.Name = "M0202";
+            this.M0202.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.M0202_ItemClick);
+            // 
             // Method01
             // 
             this.Method01.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -428,14 +437,6 @@ namespace School_Management.Manager.Student
             this.Methoad0201.ItemLinks.Add(this.M0202);
             this.Methoad0201.Name = "Methoad0201";
             this.Methoad0201.Text = "Task Course";
-            // 
-            // M0202
-            // 
-            this.M0202.Caption = "Add Course";
-            this.M0202.Id = 7;
-            this.M0202.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("M0202.ImageOptions.Image")));
-            this.M0202.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("M0202.ImageOptions.LargeImage")));
-            this.M0202.Name = "M0202";
             // 
             // Edit_Remove
             // 

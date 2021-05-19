@@ -52,6 +52,7 @@ namespace School_Management.Manager.Course
             NameCourse.Text = dr.ItemArray[1].ToString();
             Period_updown.Value = Convert.ToInt32(dr.ItemArray[2].ToString());
             Rich_decs.Text = dr.ItemArray[3].ToString();
+            ComboxBox_Semester.Text = dr.ItemArray[4].ToString();
 
         }
 
@@ -118,7 +119,8 @@ namespace School_Management.Manager.Course
                         string label = NameCourse.Text;
                         int period = Convert.ToInt32(Period_updown.Value);
                         string description = Rich_decs.Text;
-                        if (course.UpdateCourse(id, label, period, description))
+                        int se = Convert.ToInt32(ComboxBox_Semester.Text);
+                        if (course.UpdateCourse(id, label, period, description, se))
                         {
                             MessageBox.Show("Edit course successful!", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }

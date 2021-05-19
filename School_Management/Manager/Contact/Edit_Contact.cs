@@ -45,17 +45,18 @@ namespace School_Management.Manager.Contact
                     DataSet dataSet = new DataSet();
                     adapter.Fill(dataSet, "Add_Student");
                     dataBase.Closeconnection();
-                    TextEdit_ID.Text = table.Rows[0]["Id"].ToString();
-                    TextEdit_Fname.Text = table.Rows[0]["Firstname"].ToString();
-                    TextEdit_Lastname.Text = table.Rows[0]["Lastname"].ToString();
-                    ComboBox_GroupId.SelectedValue = table.Rows[0]["Group_id"].ToString();
-                    ComboBoxEdit_Gender.SelectedItem = table.Rows[0]["Gender"].ToString();
+                    TextEdit_ID.Text = table.Rows[0]["Id"].ToString().Trim();
+                    TextEdit_Fname.Text = table.Rows[0]["Firstname"].ToString().Trim();
+                    TextEdit_Lastname.Text = table.Rows[0]["Lastname"].ToString().Trim();
+                    ComboBox_GroupId.Text = table.Rows[0]["Group_id"].ToString().Trim();
+                    ComboBox_GroupId.SelectedValue = ComboBox_GroupId.DisplayMember;
+                    ComboBoxEdit_Gender.Text = table.Rows[0]["Gender"].ToString().Trim();
                     DateEdit_Birthday.DateTime = (DateTime)table.Rows[0]["Birthday"];
-                    TextEdit_Phone.Text = table.Rows[0]["Phone"].ToString();
-                    TextEdit_Mail.Text = table.Rows[0]["Email"].ToString();
-                    TextEdit_Fb.Text = table.Rows[0]["Facebook"].ToString();
-                    TextEdit_Address.Text = table.Rows[0]["Address"].ToString();
-                    TextEdit_City.Text = table.Rows[0]["City"].ToString();
+                    TextEdit_Phone.Text = table.Rows[0]["Phone"].ToString().Trim();
+                    TextEdit_Mail.Text = table.Rows[0]["Email"].ToString().Trim();
+                    TextEdit_Fb.Text = table.Rows[0]["Facebook"].ToString().Trim();
+                    TextEdit_Address.Text = table.Rows[0]["Address"].ToString().Trim();
+                    TextEdit_City.Text = table.Rows[0]["City"].ToString().Trim();
                     byte[] pic = (byte[])table.Rows[0]["Picture"];
                     MemoryStream picture = new MemoryStream(pic);
                     PictureEdit_User.Image = Image.FromStream(picture);
@@ -74,17 +75,15 @@ namespace School_Management.Manager.Contact
         }
         public void EditContact()
         {
-            try
-            {
                 My_Database data = new My_Database();
                 SqlCommand command = new SqlCommand("UPDATE Contact SET Firstname = @fn, Lastname = @ln, Group_id = @group, Gender = @gen, Birthday = @day, " +
-                    "Phone = @phone, Email = @email, Facebook = @fb, Address = @add, City = @city, Picture = @pic, User_id = @id", data.GetConnection);
+                    "Phone = @phone, Email = @email, Facebook = @fb, Address = @add, City = @city, Picture = @pic WHERE ID = @id", data.GetConnection);
                 command.Parameters.Add("@fn", SqlDbType.NVarChar).Value = TextEdit_Fname.Text;
                 command.Parameters.Add("@ln", SqlDbType.NVarChar).Value = TextEdit_Lastname.Text;
                 command.Parameters.Add("@group", SqlDbType.Int).Value = Convert.ToInt32(table.Rows[ComboBox_GroupId.SelectedIndex][0].ToString());
                 command.Parameters.Add("@gen", SqlDbType.NVarChar).Value = ComboBoxEdit_Gender.Text;
                 command.Parameters.Add("@day", SqlDbType.DateTime).Value = DateEdit_Birthday.DateTime;
-                command.Parameters.Add("@phone", SqlDbType.NVarChar).Value = TextEdit_Phone.Text;
+                command.Parameters.Add("@phone", SqlDbType.Int).Value = Convert.ToInt32(TextEdit_Phone.Text);
                 command.Parameters.Add("@email", SqlDbType.NVarChar).Value = TextEdit_Mail.Text;
                 command.Parameters.Add("@fb", SqlDbType.NVarChar).Value = TextEdit_Fb.Text;
                 command.Parameters.Add("@add", SqlDbType.NVarChar).Value = TextEdit_Address.Text;
@@ -102,17 +101,17 @@ namespace School_Management.Manager.Contact
                 }
                 else
                 {
-                    XtraMessageBox.Show("Edit Failed!", "Edit Contacts", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    XtraMessageBox.Show("Edit Failed!", "Edit Contacts", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     data.Closeconnection();
                    
                 }
                 
-            }
+            //}
 
-            catch 
-            {
-                XtraMessageBox.Show("");
-            }
+            //catch 
+            //{
+            //    XtraMessageBox.Show("Edit Failed!", "Edit Contacts", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
         private void M010101_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -139,24 +138,32 @@ namespace School_Management.Manager.Contact
             this.Validate();
             this.contactBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.manager_StudentDataSet3);
+            XtraMessageBox.Show("Saved Data Succussful!", "Edit Contacts", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
-
-        private void Edit_Contact_Load(object sender, EventArgs e)
+        public void GetIdGroup()
         {
-            // TODO: This line of code loads data into the 'manager_StudentDataSet3.Contact' table. You can move, or remove it, as needed.
-            this.contactTableAdapter.Fill(this.manager_StudentDataSet3.Contact);
             Group group = new Group();
             My_Database data = new My_Database();
             SqlCommand command = new SqlCommand("SELECT * FROM [Group1]", data.GetConnection);
 
             table = group.GetAll_ID_label();
+            ComboBox_GroupId.SelectedItem = 0;
             ComboBox_GroupId.ValueMember = "Group_id";
+            ComboBox_GroupId.DisplayMember = "Group_name";  
+
             foreach (DataRow row in table.Rows)
             {
                 ComboBox_GroupId.Items.Add(row[1].ToString().Trim());
 
             }
+        }
+        private void Edit_Contact_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'manager_StudentDataSet3.Contact' table. You can move, or remove it, as needed.
+            this.contactTableAdapter.Fill(this.manager_StudentDataSet3.Contact);
+            Group group = new Group();
+            this.GetIdGroup();
 
             DateEdit_Birthday.Text = "1/1/2000";
         }
@@ -164,6 +171,73 @@ namespace School_Management.Manager.Contact
         private void Find_Button_Click_1(object sender, EventArgs e)
         {
             this.Find();
+        }
+
+        private void PictureEdit_User_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Select Image(*.jpg;*.png;*.gif)|*.jpg;*.pnq;*.gif";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                PictureEdit_User.Image = Image.FromFile(open.FileName);
+            }
+        }
+
+        private void M020201_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.contactTableAdapter.Fill(this.manager_StudentDataSet3.Contact);
+        }
+        public void ResetChange()
+        {
+            TextEdit_ID.Text = "";
+            TextEdit_Fname.Text = "";
+            TextEdit_Lastname.Text = "";
+            DateEdit_Birthday.Text = "1/1/1973";
+            ComboBoxEdit_Gender.Text = "";
+            ComboBox_GroupId.Text = "";
+            TextEdit_Address.Text = "";
+            TextEdit_City.Text = "";
+            TextEdit_Phone.Text = "";
+            TextEdit_Mail.Text = "";
+            TextEdit_Fb.Text = "";
+            PictureEdit_User.Image = default;
+        }
+        private void contactBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void M010102_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.EditContact();
+            this.Hide();
+        }
+
+        private void M010103_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.EditContact();
+            this.ResetChange();
+        }
+
+        private void M010104_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Contact_class contact = new Contact_class();
+            if(TextEdit_ID.Text == "")
+            {
+                XtraMessageBox.Show("The textbox incorrect format! Please enter again.", "Delete Contact", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                int id = Convert.ToInt32(TextEdit_ID.Text);
+                if(contact.DeleteContacts(id))
+                {
+                    XtraMessageBox.Show("Delelte Completed", "Delete Contact", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    XtraMessageBox.Show("Delete Failed", "Delete Contact", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
     }
 }

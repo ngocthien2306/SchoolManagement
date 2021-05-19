@@ -114,6 +114,7 @@ namespace School_Management.Manager.Score
             this.Find_btn.Size = new System.Drawing.Size(112, 47);
             this.Find_btn.TabIndex = 10;
             this.Find_btn.Text = "Find";
+            this.Find_btn.Click += new System.EventHandler(this.Find_btn_Click);
             // 
             // TextEdit_find
             // 

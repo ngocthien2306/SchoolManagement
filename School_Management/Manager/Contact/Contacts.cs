@@ -108,7 +108,8 @@ namespace School_Management.Manager.Contact
 
         private void ShowList_Button_Click(object sender, EventArgs e)
         {
-
+            ShowFullList list = new ShowFullList();
+            list.ShowDialog();
         }
 
         private void hyperlinkLabelControl2_Click(object sender, EventArgs e)
@@ -124,6 +125,22 @@ namespace School_Management.Manager.Contact
             {
 
             }
+        }
+
+        private void Select_Button_Click(object sender, EventArgs e)
+        {
+            Edit_Contact edit = new Edit_Contact();
+            edit.TextEdit_ID.Text = ID_Textbox.Text;
+            if(ID_Textbox.Text == "")
+            {
+                XtraMessageBox.Show("The textbox incorrect format", "Find contact", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                edit.Find();
+                edit.ShowDialog();
+            }
+            
         }
     }
 }

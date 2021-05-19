@@ -32,7 +32,8 @@ namespace School_Management.Manager.Course
             string label = NameCourse_tb.Text;
             int period = Convert.ToInt32(Period_tb.Text);
             string description = Description.Text;
-            if(course.UpdateCourse(id, label, period, description)) {
+            int se = Convert.ToInt32(CheckedComboBox.Text);
+            if(course.UpdateCourse(id, label, period, description, se)) {
                 MessageBox.Show("Edit course successful!", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -73,7 +74,7 @@ namespace School_Management.Manager.Course
                     Courses course = new Courses();
                     My_Database dataBase = new My_Database();
                     SqlCommand command = new SqlCommand(
-                        "SELECT Id, label, period, description FROM Course WHERE id = @ID", dataBase.GetConnection);
+                        "SELECT Id, label, period, description, semester FROM Course WHERE id = @ID", dataBase.GetConnection);
                     command.Parameters.Add("@ID", SqlDbType.NVarChar).Value = ID_Course_tb.Text;
 
                     dataBase.Openconnection();
@@ -89,6 +90,7 @@ namespace School_Management.Manager.Course
                         NameCourse_tb.Text = table.Rows[0]["label"].ToString();
                         Period_tb.Text = table.Rows[0]["period"].ToString();
                         Description.Text = table.Rows[0]["description"].ToString();
+                        CheckedComboBox.Text = table.Rows[0]["semester"].ToString();
                         return true;
                     }
                     else
@@ -128,6 +130,11 @@ namespace School_Management.Manager.Course
         private void ResetChange_Click(object sender, EventArgs e)
         {
             this.Reset_Change();
+        }
+
+        private void Find_bt_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

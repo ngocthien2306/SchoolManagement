@@ -45,16 +45,18 @@ namespace School_Management.Manager.Login
             this.ToolTip_new = new System.Windows.Forms.ToolTip(this.components);
             this.Link_account = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.Exit_bt = new DevExpress.XtraEditors.SimpleButton();
+            this.Show_pass_btn = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pass_tb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.User_tb.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Show_pass_btn.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // Pass_tb
             // 
             this.Pass_tb.EditValue = "";
             this.Pass_tb.Location = new System.Drawing.Point(280, 218);
-            this.Pass_tb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Pass_tb.Margin = new System.Windows.Forms.Padding(4);
             this.Pass_tb.Name = "Pass_tb";
             this.Pass_tb.Properties.Appearance.BackColor = System.Drawing.Color.LightSkyBlue;
             this.Pass_tb.Properties.Appearance.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -78,7 +80,7 @@ namespace School_Management.Manager.Login
             this.Login_bt.Appearance.Options.UseFont = true;
             this.Login_bt.Appearance.Options.UseForeColor = true;
             this.Login_bt.Location = new System.Drawing.Point(280, 437);
-            this.Login_bt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Login_bt.Margin = new System.Windows.Forms.Padding(4);
             this.Login_bt.Name = "Login_bt";
             this.Login_bt.Size = new System.Drawing.Size(375, 56);
             this.Login_bt.TabIndex = 3;
@@ -103,7 +105,7 @@ namespace School_Management.Manager.Login
             this.Radio_Student.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Radio_Student.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Radio_Student.Location = new System.Drawing.Point(213, 370);
-            this.Radio_Student.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Radio_Student.Margin = new System.Windows.Forms.Padding(4);
             this.Radio_Student.Name = "Radio_Student";
             this.Radio_Student.Size = new System.Drawing.Size(104, 24);
             this.Radio_Student.TabIndex = 7;
@@ -123,7 +125,7 @@ namespace School_Management.Manager.Login
             this.Radio_human.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Radio_human.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Radio_human.Location = new System.Drawing.Point(534, 370);
-            this.Radio_human.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Radio_human.Margin = new System.Windows.Forms.Padding(4);
             this.Radio_human.Name = "Radio_human";
             this.Radio_human.Size = new System.Drawing.Size(183, 24);
             this.Radio_human.TabIndex = 8;
@@ -143,7 +145,7 @@ namespace School_Management.Manager.Login
             this.RadioButton_Teacher.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RadioButton_Teacher.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.RadioButton_Teacher.Location = new System.Drawing.Point(380, 370);
-            this.RadioButton_Teacher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RadioButton_Teacher.Margin = new System.Windows.Forms.Padding(4);
             this.RadioButton_Teacher.Name = "RadioButton_Teacher";
             this.RadioButton_Teacher.Size = new System.Drawing.Size(111, 24);
             this.RadioButton_Teacher.TabIndex = 10;
@@ -159,7 +161,7 @@ namespace School_Management.Manager.Login
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.Location = new System.Drawing.Point(416, 45);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(97, 49);
             this.labelControl1.TabIndex = 4;
@@ -169,7 +171,7 @@ namespace School_Management.Manager.Login
             // 
             this.User_tb.EditValue = "";
             this.User_tb.Location = new System.Drawing.Point(280, 132);
-            this.User_tb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.User_tb.Margin = new System.Windows.Forms.Padding(4);
             this.User_tb.Name = "User_tb";
             this.User_tb.Properties.Appearance.BackColor = System.Drawing.Color.LightSkyBlue;
             this.User_tb.Properties.Appearance.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -193,7 +195,7 @@ namespace School_Management.Manager.Login
             this.Link_account.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Link_account.Appearance.Options.UseFont = true;
             this.Link_account.Location = new System.Drawing.Point(370, 313);
-            this.Link_account.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Link_account.Margin = new System.Windows.Forms.Padding(4);
             this.Link_account.Name = "Link_account";
             this.Link_account.Size = new System.Drawing.Size(203, 24);
             this.Link_account.TabIndex = 6;
@@ -208,13 +210,24 @@ namespace School_Management.Manager.Login
             this.Exit_bt.Appearance.Options.UseForeColor = true;
             this.Exit_bt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Exit_bt.ImageOptions.Image")));
             this.Exit_bt.Location = new System.Drawing.Point(18, 452);
-            this.Exit_bt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Exit_bt.Margin = new System.Windows.Forms.Padding(4);
             this.Exit_bt.Name = "Exit_bt";
             this.Exit_bt.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.Exit_bt.Size = new System.Drawing.Size(134, 104);
             this.Exit_bt.TabIndex = 9;
             this.Exit_bt.Text = "Exit";
             this.Exit_bt.Click += new System.EventHandler(this.Exit_bt_Click);
+            // 
+            // Show_pass_btn
+            // 
+            this.Show_pass_btn.Location = new System.Drawing.Point(686, 232);
+            this.Show_pass_btn.Name = "Show_pass_btn";
+            this.Show_pass_btn.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.Show_pass_btn.Properties.Appearance.Options.UseForeColor = true;
+            this.Show_pass_btn.Properties.Caption = "Show password";
+            this.Show_pass_btn.Size = new System.Drawing.Size(143, 25);
+            this.Show_pass_btn.TabIndex = 11;
+            this.Show_pass_btn.CheckedChanged += new System.EventHandler(this.Show_pass_btn_CheckedChanged);
             // 
             // Login_Account
             // 
@@ -228,6 +241,7 @@ namespace School_Management.Manager.Login
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
             this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
             this.ClientSize = new System.Drawing.Size(944, 573);
+            this.Controls.Add(this.Show_pass_btn);
             this.Controls.Add(this.RadioButton_Teacher);
             this.Controls.Add(this.Exit_bt);
             this.Controls.Add(this.Radio_human);
@@ -239,7 +253,7 @@ namespace School_Management.Manager.Login
             this.Controls.Add(this.Pass_tb);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login_Account";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Account";
@@ -247,6 +261,7 @@ namespace School_Management.Manager.Login
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pass_tb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.User_tb.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Show_pass_btn.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,5 +283,6 @@ namespace School_Management.Manager.Login
         private System.Windows.Forms.RadioButton Radio_human;
         private DevExpress.XtraEditors.SimpleButton Exit_bt;
         private System.Windows.Forms.RadioButton RadioButton_Teacher;
+        private DevExpress.XtraEditors.CheckEdit Show_pass_btn;
     }
 }

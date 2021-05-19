@@ -61,6 +61,7 @@ namespace School_Management.Manager.Contact
             this.ShowList_Button = new DevExpress.XtraEditors.SimpleButton();
             this.Edit_Button = new DevExpress.XtraEditors.SimpleButton();
             this.Add_Button = new DevExpress.XtraEditors.SimpleButton();
+            this.hyperlinkLabelControl2 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.GroupBox4 = new System.Windows.Forms.GroupBox();
             this.ComboBoxEdit_SelectGroup2 = new System.Windows.Forms.ComboBox();
             this.Select_LabelControl = new DevExpress.XtraEditors.LabelControl();
@@ -78,7 +79,6 @@ namespace School_Management.Manager.Contact
             this.NameGroup_Textbox = new DevExpress.XtraEditors.TextEdit();
             this.AddGroup_Button = new DevExpress.XtraEditors.SimpleButton();
             this.Label2 = new DevExpress.XtraEditors.LabelControl();
-            this.hyperlinkLabelControl2 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit2)).BeginInit();
@@ -357,6 +357,7 @@ namespace School_Management.Manager.Contact
             this.Select_Button.Size = new System.Drawing.Size(123, 46);
             this.Select_Button.TabIndex = 2;
             this.Select_Button.Text = "Select Contact";
+            this.Select_Button.Click += new System.EventHandler(this.Select_Button_Click);
             // 
             // Remove_contact_Button
             // 
@@ -399,6 +400,15 @@ namespace School_Management.Manager.Contact
             this.Add_Button.TabIndex = 0;
             this.Add_Button.Text = "Add Contact";
             this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
+            // 
+            // hyperlinkLabelControl2
+            // 
+            this.hyperlinkLabelControl2.Location = new System.Drawing.Point(408, 21);
+            this.hyperlinkLabelControl2.Name = "hyperlinkLabelControl2";
+            this.hyperlinkLabelControl2.Size = new System.Drawing.Size(57, 19);
+            this.hyperlinkLabelControl2.TabIndex = 11;
+            this.hyperlinkLabelControl2.Text = "Log Out";
+            this.hyperlinkLabelControl2.Click += new System.EventHandler(this.hyperlinkLabelControl2_Click);
             // 
             // GroupBox4
             // 
@@ -576,15 +586,6 @@ namespace School_Management.Manager.Contact
             this.Label2.Size = new System.Drawing.Size(97, 38);
             this.Label2.TabIndex = 7;
             this.Label2.Text = "Group";
-            // 
-            // hyperlinkLabelControl2
-            // 
-            this.hyperlinkLabelControl2.Location = new System.Drawing.Point(408, 21);
-            this.hyperlinkLabelControl2.Name = "hyperlinkLabelControl2";
-            this.hyperlinkLabelControl2.Size = new System.Drawing.Size(57, 19);
-            this.hyperlinkLabelControl2.TabIndex = 11;
-            this.hyperlinkLabelControl2.Text = "Log Out";
-            this.hyperlinkLabelControl2.Click += new System.EventHandler(this.hyperlinkLabelControl2_Click);
             // 
             // Contacts
             // 

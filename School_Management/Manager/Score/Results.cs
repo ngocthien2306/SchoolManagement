@@ -72,5 +72,10 @@ namespace School_Management.Manager.Score
         {
             this.Hide();
         }
+
+        private void Find_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

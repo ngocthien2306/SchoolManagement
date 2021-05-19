@@ -31,11 +31,6 @@ namespace School_Management.Manager.Contact
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Contacts));
-            DevExpress.Utils.SimpleContextButton simpleContextButton6 = new DevExpress.Utils.SimpleContextButton();
-            DevExpress.Utils.SimpleContextButton simpleContextButton7 = new DevExpress.Utils.SimpleContextButton();
-            DevExpress.Utils.SimpleContextButton simpleContextButton8 = new DevExpress.Utils.SimpleContextButton();
-            DevExpress.Utils.SimpleContextButton simpleContextButton9 = new DevExpress.Utils.SimpleContextButton();
-            DevExpress.Utils.SimpleContextButton simpleContextButton10 = new DevExpress.Utils.SimpleContextButton();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.MethodX = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.BarButtonItem_Save = new DevExpress.XtraBars.BarButtonItem();
@@ -46,10 +41,14 @@ namespace School_Management.Manager.Contact
             this.M0203 = new DevExpress.XtraBars.BarButtonItem();
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemZoomTrackBar1 = new DevExpress.XtraEditors.Repository.RepositoryItemZoomTrackBar();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.Skin = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.M0501 = new DevExpress.XtraBars.BarButtonItem();
             this.M01 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.M0101 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.M02 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.M03 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.M05 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.TextEdit_Fb = new DevExpress.XtraEditors.TextEdit();
@@ -77,38 +76,24 @@ namespace School_Management.Manager.Contact
             this.TextEdit_Fname = new DevExpress.XtraEditors.TextEdit();
             this.TextEdit_ID = new DevExpress.XtraEditors.TextEdit();
             this.PictureEdit_User = new DevExpress.XtraEditors.PictureEdit();
+            this.contactBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.contactBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.manager_StudentDataSet3 = new School_Management.Manager_StudentDataSet3();
-            this.contactTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.ContactTableAdapter();
-            this.tableAdapterManager = new School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.Skin = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
-            this.M05 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.M0501 = new DevExpress.XtraBars.BarButtonItem();
-            this.managerStudentDataSet31BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.manager_StudentDataSet31 = new School_Management.Manager_StudentDataSet3();
-            this.groupBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.manager_StudentDataSet4 = new School_Management.Manager_StudentDataSet4();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.contactBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.contactBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.group1TableAdapter1 = new School_Management.Manager_StudentDataSet4TableAdapters.Group1TableAdapter();
-            this.group1TableAdapter = new School_Management.Manager_StudentDataSet2TableAdapters.Group1TableAdapter();
-            this.groupTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.GroupTableAdapter();
-            this.manager_StudentDataSet2 = new School_Management.Manager_StudentDataSet2();
-            this.group1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.managerStudentDataSet4BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.group1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.contactGridControl = new DevExpress.XtraGrid.GridControl();
+            this.contactBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.manager_StudentDataSet4 = new School_Management.Manager_StudentDataSet4();
             this.CardView1 = new DevExpress.XtraGrid.Views.Card.CardView();
             this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFirstname = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -122,8 +107,18 @@ namespace School_Management.Manager.Contact
             this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPicture = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.contactGridControl = new DevExpress.XtraGrid.GridControl();
-            this.contactBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.contactTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.ContactTableAdapter();
+            this.tableAdapterManager = new School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager();
+            this.managerStudentDataSet31BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.manager_StudentDataSet31 = new School_Management.Manager_StudentDataSet3();
+            this.groupBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.group1TableAdapter1 = new School_Management.Manager_StudentDataSet4TableAdapters.Group1TableAdapter();
+            this.group1TableAdapter = new School_Management.Manager_StudentDataSet2TableAdapters.Group1TableAdapter();
+            this.groupTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.GroupTableAdapter();
+            this.manager_StudentDataSet2 = new School_Management.Manager_StudentDataSet2();
+            this.group1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.managerStudentDataSet4BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.group1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.contactTableAdapter1 = new School_Management.Manager_StudentDataSet4TableAdapters.ContactTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.MethodX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemZoomTrackBar1)).BeginInit();
@@ -144,21 +139,21 @@ namespace School_Management.Manager.Contact
             ((System.ComponentModel.ISupportInitialize)(this.TextEdit_Fname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TextEdit_ID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureEdit_User.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contactBindingNavigator)).BeginInit();
+            this.contactBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contactGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CardView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.managerStudentDataSet31BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactBindingNavigator)).BeginInit();
-            this.contactBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.group1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.managerStudentDataSet4BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.group1BindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CardView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonPage2
@@ -260,6 +255,27 @@ namespace School_Management.Manager.Contact
             // 
             this.repositoryItemZoomTrackBar1.Name = "repositoryItemZoomTrackBar1";
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Id = 8;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // Skin
+            // 
+            this.Skin.Caption = "skinRibbonGalleryBarItem1";
+            this.Skin.Id = 10;
+            this.Skin.Name = "Skin";
+            // 
+            // M0501
+            // 
+            this.M0501.Caption = "Re-load List";
+            this.M0501.Id = 11;
+            this.M0501.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("M0501.ImageOptions.Image")));
+            this.M0501.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("M0501.ImageOptions.LargeImage")));
+            this.M0501.Name = "M0501";
+            this.M0501.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.M0501_ItemClick);
+            // 
             // M01
             // 
             this.M01.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -291,6 +307,12 @@ namespace School_Management.Manager.Contact
             this.M03.ItemLinks.Add(this.barEditItem1);
             this.M03.Name = "M03";
             this.M03.Text = "Zoom";
+            // 
+            // M05
+            // 
+            this.M05.ItemLinks.Add(this.M0501);
+            this.M05.Name = "M05";
+            this.M05.Text = "Load";
             // 
             // splitContainerControl1
             // 
@@ -465,7 +487,7 @@ namespace School_Management.Manager.Contact
             this.ComboBox_GroupID.FormattingEnabled = true;
             this.ComboBox_GroupID.Location = new System.Drawing.Point(429, 171);
             this.ComboBox_GroupID.Name = "ComboBox_GroupID";
-            this.ComboBox_GroupID.Size = new System.Drawing.Size(130, 27);
+            this.ComboBox_GroupID.Size = new System.Drawing.Size(121, 27);
             this.ComboBox_GroupID.TabIndex = 27;
             // 
             // LabelControl_GroupID
@@ -512,36 +534,6 @@ namespace School_Management.Manager.Contact
             this.ComboBoxEdit_Gender.Properties.Appearance.Options.UseFont = true;
             this.ComboBoxEdit_Gender.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            simpleContextButton6.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
-            simpleContextButton6.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
-            simpleContextButton6.Caption = "Dr";
-            simpleContextButton6.Id = new System.Guid("6bf16606-2d29-4737-a878-1758ee85ea22");
-            simpleContextButton6.Name = "SimpleContextButton3";
-            simpleContextButton7.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
-            simpleContextButton7.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
-            simpleContextButton7.Caption = "Mr";
-            simpleContextButton7.Id = new System.Guid("3743aa2e-9809-49d2-a7c7-8e89bb9464dc");
-            simpleContextButton7.Name = "SimpleContextButton";
-            simpleContextButton8.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
-            simpleContextButton8.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
-            simpleContextButton8.Caption = "Ms";
-            simpleContextButton8.Id = new System.Guid("b2971959-8d5c-4ac0-a21e-67a31c103c96");
-            simpleContextButton8.Name = "SimpleContextButton1";
-            simpleContextButton9.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
-            simpleContextButton9.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
-            simpleContextButton9.Caption = "Mrs";
-            simpleContextButton9.Id = new System.Guid("7c6a77e3-436e-486e-9ad6-e767771a09c1");
-            simpleContextButton9.Name = "SimpleContextButton2";
-            simpleContextButton10.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
-            simpleContextButton10.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
-            simpleContextButton10.Caption = "Miss";
-            simpleContextButton10.Id = new System.Guid("df44b04c-ca56-4822-8a46-6278df428802");
-            simpleContextButton10.Name = "SimpleContextButton4";
-            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton6);
-            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton7);
-            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton8);
-            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton9);
-            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton10);
             this.ComboBoxEdit_Gender.Properties.DropDownRows = 5;
             this.ComboBoxEdit_Gender.Properties.Items.AddRange(new object[] {
             "Dr",
@@ -634,166 +626,6 @@ namespace School_Management.Manager.Contact
             this.PictureEdit_User.EditValueChanged += new System.EventHandler(this.PictureEdit_User_EditValueChanged);
             this.PictureEdit_User.Click += new System.EventHandler(this.PictureEdit_User_Click_1);
             // 
-            // contactBindingSource
-            // 
-            this.contactBindingSource.DataMember = "Contact";
-            this.contactBindingSource.DataSource = this.manager_StudentDataSet3;
-            // 
-            // manager_StudentDataSet3
-            // 
-            this.manager_StudentDataSet3.DataSetName = "Manager_StudentDataSet3";
-            this.manager_StudentDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // contactTableAdapter
-            // 
-            this.contactTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.Add_StudentTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ContactTableAdapter = this.contactTableAdapter;
-            this.tableAdapterManager.CourseTableAdapter = null;
-            this.tableAdapterManager.GroupTableAdapter = null;
-            this.tableAdapterManager.New_UserTableAdapter = null;
-            this.tableAdapterManager.ScoreTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "barButtonItem1";
-            this.barButtonItem1.Id = 8;
-            this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // Skin
-            // 
-            this.Skin.Caption = "skinRibbonGalleryBarItem1";
-            this.Skin.Id = 10;
-            this.Skin.Name = "Skin";
-            // 
-            // M05
-            // 
-            this.M05.ItemLinks.Add(this.M0501);
-            this.M05.Name = "M05";
-            this.M05.Text = "Load";
-            // 
-            // M0501
-            // 
-            this.M0501.Caption = "Re-load List";
-            this.M0501.Id = 11;
-            this.M0501.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("M0501.ImageOptions.Image")));
-            this.M0501.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("M0501.ImageOptions.LargeImage")));
-            this.M0501.Name = "M0501";
-            this.M0501.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.M0501_ItemClick);
-            // 
-            // manager_StudentDataSet31
-            // 
-            this.manager_StudentDataSet31.DataSetName = "Manager_StudentDataSet3";
-            this.manager_StudentDataSet31.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // groupBindingSource
-            // 
-            this.groupBindingSource.DataMember = "Group";
-            this.groupBindingSource.DataSource = this.manager_StudentDataSet31;
-            // 
-            // manager_StudentDataSet4
-            // 
-            this.manager_StudentDataSet4.DataSetName = "Manager_StudentDataSet4";
-            this.manager_StudentDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 28);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 28);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // contactBindingNavigatorSaveItem
-            // 
-            this.contactBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.contactBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("contactBindingNavigatorSaveItem.Image")));
-            this.contactBindingNavigatorSaveItem.Name = "contactBindingNavigatorSaveItem";
-            this.contactBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 28);
-            this.contactBindingNavigatorSaveItem.Text = "Save Data";
-            // 
             // contactBindingNavigator
             // 
             this.contactBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -825,37 +657,131 @@ namespace School_Management.Manager.Contact
             this.contactBindingNavigator.TabIndex = 32;
             this.contactBindingNavigator.Text = "bindingNavigator1";
             // 
-            // group1TableAdapter1
+            // bindingNavigatorAddNewItem
             // 
-            this.group1TableAdapter1.ClearBeforeFill = true;
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
-            // group1TableAdapter
+            // contactBindingSource
             // 
-            this.group1TableAdapter.ClearBeforeFill = true;
+            this.contactBindingSource.DataMember = "Contact";
+            this.contactBindingSource.DataSource = this.manager_StudentDataSet3;
             // 
-            // groupTableAdapter
+            // manager_StudentDataSet3
             // 
-            this.groupTableAdapter.ClearBeforeFill = true;
+            this.manager_StudentDataSet3.DataSetName = "Manager_StudentDataSet3";
+            this.manager_StudentDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // manager_StudentDataSet2
+            // bindingNavigatorCountItem
             // 
-            this.manager_StudentDataSet2.DataSetName = "Manager_StudentDataSet2";
-            this.manager_StudentDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
-            // group1BindingSource
+            // bindingNavigatorDeleteItem
             // 
-            this.group1BindingSource.DataMember = "Group1";
-            this.group1BindingSource.DataSource = this.manager_StudentDataSet2;
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
-            // managerStudentDataSet4BindingSource
+            // bindingNavigatorMoveFirstItem
             // 
-            this.managerStudentDataSet4BindingSource.DataSource = this.manager_StudentDataSet4;
-            this.managerStudentDataSet4BindingSource.Position = 0;
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
-            // group1BindingSource1
+            // bindingNavigatorMovePreviousItem
             // 
-            this.group1BindingSource1.DataMember = "Group1";
-            this.group1BindingSource1.DataSource = this.managerStudentDataSet4BindingSource;
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
+            // 
+            // contactBindingNavigatorSaveItem
+            // 
+            this.contactBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.contactBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("contactBindingNavigatorSaveItem.Image")));
+            this.contactBindingNavigatorSaveItem.Name = "contactBindingNavigatorSaveItem";
+            this.contactBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 28);
+            this.contactBindingNavigatorSaveItem.Text = "Save Data";
+            // 
+            // contactGridControl
+            // 
+            this.contactGridControl.DataSource = this.contactBindingSource1;
+            this.contactGridControl.Location = new System.Drawing.Point(0, 43);
+            this.contactGridControl.MainView = this.CardView1;
+            this.contactGridControl.MenuManager = this.MethodX;
+            this.contactGridControl.Name = "contactGridControl";
+            this.contactGridControl.Size = new System.Drawing.Size(615, 524);
+            this.contactGridControl.TabIndex = 0;
+            this.contactGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.CardView1});
+            // 
+            // contactBindingSource1
+            // 
+            this.contactBindingSource1.DataMember = "Contact";
+            this.contactBindingSource1.DataSource = this.manager_StudentDataSet4;
+            // 
+            // manager_StudentDataSet4
+            // 
+            this.manager_StudentDataSet4.DataSetName = "Manager_StudentDataSet4";
+            this.manager_StudentDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // CardView1
             // 
@@ -988,22 +914,62 @@ namespace School_Management.Manager.Contact
             this.colPicture.VisibleIndex = 11;
             this.colPicture.Width = 112;
             // 
-            // contactGridControl
+            // contactTableAdapter
             // 
-            this.contactGridControl.DataSource = this.contactBindingSource1;
-            this.contactGridControl.Location = new System.Drawing.Point(0, 43);
-            this.contactGridControl.MainView = this.CardView1;
-            this.contactGridControl.MenuManager = this.MethodX;
-            this.contactGridControl.Name = "contactGridControl";
-            this.contactGridControl.Size = new System.Drawing.Size(615, 524);
-            this.contactGridControl.TabIndex = 0;
-            this.contactGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.CardView1});
+            this.contactTableAdapter.ClearBeforeFill = true;
             // 
-            // contactBindingSource1
+            // tableAdapterManager
             // 
-            this.contactBindingSource1.DataMember = "Contact";
-            this.contactBindingSource1.DataSource = this.manager_StudentDataSet4;
+            this.tableAdapterManager.Add_StudentTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ContactTableAdapter = this.contactTableAdapter;
+            this.tableAdapterManager.CourseTableAdapter = null;
+            this.tableAdapterManager.GroupTableAdapter = null;
+            this.tableAdapterManager.New_UserTableAdapter = null;
+            this.tableAdapterManager.ScoreTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // manager_StudentDataSet31
+            // 
+            this.manager_StudentDataSet31.DataSetName = "Manager_StudentDataSet3";
+            this.manager_StudentDataSet31.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // groupBindingSource
+            // 
+            this.groupBindingSource.DataMember = "Group";
+            this.groupBindingSource.DataSource = this.manager_StudentDataSet31;
+            // 
+            // group1TableAdapter1
+            // 
+            this.group1TableAdapter1.ClearBeforeFill = true;
+            // 
+            // group1TableAdapter
+            // 
+            this.group1TableAdapter.ClearBeforeFill = true;
+            // 
+            // groupTableAdapter
+            // 
+            this.groupTableAdapter.ClearBeforeFill = true;
+            // 
+            // manager_StudentDataSet2
+            // 
+            this.manager_StudentDataSet2.DataSetName = "Manager_StudentDataSet2";
+            this.manager_StudentDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // group1BindingSource
+            // 
+            this.group1BindingSource.DataMember = "Group1";
+            this.group1BindingSource.DataSource = this.manager_StudentDataSet2;
+            // 
+            // managerStudentDataSet4BindingSource
+            // 
+            this.managerStudentDataSet4BindingSource.DataSource = this.manager_StudentDataSet4;
+            this.managerStudentDataSet4BindingSource.Position = 0;
+            // 
+            // group1BindingSource1
+            // 
+            this.group1BindingSource1.DataMember = "Group1";
+            this.group1BindingSource1.DataSource = this.managerStudentDataSet4BindingSource;
             // 
             // contactTableAdapter1
             // 
@@ -1048,22 +1014,22 @@ namespace School_Management.Manager.Contact
             ((System.ComponentModel.ISupportInitialize)(this.TextEdit_Fname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TextEdit_ID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureEdit_User.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.managerStudentDataSet31BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet31)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactBindingNavigator)).EndInit();
             this.contactBindingNavigator.ResumeLayout(false);
             this.contactBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contactGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CardView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managerStudentDataSet31BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.group1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.managerStudentDataSet4BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.group1BindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CardView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

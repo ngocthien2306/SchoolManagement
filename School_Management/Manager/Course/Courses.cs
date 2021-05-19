@@ -29,20 +29,21 @@ namespace School_Management.Manager.Course
                 }
             }
         }
+        public int Semester { get; set; }
         public string Description { get; set; }
         public bool AddThisCourse()
         {
             My_Database mydb = new My_Database();
             try
             {
-                SqlCommand command = new SqlCommand("INSERT INTO Course (Id, label, period, description)" +
-                    "VALUES (@Id, @lable, @period, @desciption)", mydb.GetConnection);
+                SqlCommand command = new SqlCommand("INSERT INTO Course (Id, label, period, description, semester)" +
+                    "VALUES (@Id, @lable, @period, @desciption, @se)", mydb.GetConnection);
 
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = Id;
                 command.Parameters.Add("@lable", SqlDbType.NVarChar).Value = Label;
                 command.Parameters.Add("@period", SqlDbType.Int).Value = Period;
                 command.Parameters.Add("@desciption", SqlDbType.Text).Value = Description;
-
+                command.Parameters.Add("@se", SqlDbType.Int).Value = Semester;
                 mydb.Openconnection();
 
                 if (command.ExecuteNonQuery() == 1)
@@ -78,12 +79,14 @@ namespace School_Management.Manager.Course
                     "label = @label," +
                     "period = @period," +
                     "description = @description" +
+                    "semesrer = @se" +
                     " WHERE id = @ID"
                     , dataBase.GetConnection);
                 command.Parameters.Add("@label", SqlDbType.NVarChar).Value = Label;
                 command.Parameters.Add("@period", SqlDbType.Int).Value = Period;
                 command.Parameters.Add("@description", SqlDbType.Text).Value = Description;
                 command.Parameters.Add("@ID", SqlDbType.Int).Value = Id;
+                command.Parameters.Add("@se", SqlDbType.Int).Value = Semester;
 
                 dataBase.Openconnection();
                 if (command.ExecuteNonQuery() == 1)
@@ -113,7 +116,7 @@ namespace School_Management.Manager.Course
             try
             {
                 SqlCommand command = new SqlCommand(
-                    "DELETE FROM Courses" +
+                    "DELETE FROM Course" +
                     " WHERE Id = @id", dataBase.GetConnection);
                 command.Parameters.Add("@ID", SqlDbType.Int).Value = Id;
 
@@ -154,7 +157,7 @@ namespace School_Management.Manager.Course
             My_Database dataBase = new My_Database();
             try
             {
-                SqlCommand command = new SqlCommand("Select id From Courses", dataBase.GetConnection);
+                SqlCommand command = new SqlCommand("Select Id From Course", dataBase.GetConnection);
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 adapter.SelectCommand = command;
                 DataTable table = new DataTable();
@@ -347,7 +350,7 @@ namespace School_Management.Manager.Course
                 db.Closeconnection();
             }
         }
-        public bool UpdateCourse(int id, string label, int period, string description)
+        public bool UpdateCourse(int id, string label, int period, string description, int se)
         {
             My_Database db = new My_Database();
             try
@@ -358,6 +361,7 @@ namespace School_Management.Manager.Course
                     "label = @label," +
                     "period = @period," +
                     "description = @description" +
+                    "se = @semester" +
                     " WHERE Id = @ID"
                     , db.GetConnection);
 
@@ -365,6 +369,7 @@ namespace School_Management.Manager.Course
                 command.Parameters.Add("@period", SqlDbType.Int).Value = period;
                 command.Parameters.Add("@description", SqlDbType.Text).Value = description;
                 command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+                command.Parameters.Add("se", SqlDbType.Int).Value = se;
 
                 db.Openconnection();
                 if (command.ExecuteNonQuery() == 1)

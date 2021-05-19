@@ -31,16 +31,12 @@ namespace School_Management.Manager.Contact
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edit_Contact));
-            DevExpress.Utils.SimpleContextButton simpleContextButton1 = new DevExpress.Utils.SimpleContextButton();
-            DevExpress.Utils.SimpleContextButton simpleContextButton2 = new DevExpress.Utils.SimpleContextButton();
-            DevExpress.Utils.SimpleContextButton simpleContextButton3 = new DevExpress.Utils.SimpleContextButton();
-            DevExpress.Utils.SimpleContextButton simpleContextButton4 = new DevExpress.Utils.SimpleContextButton();
-            DevExpress.Utils.SimpleContextButton simpleContextButton5 = new DevExpress.Utils.SimpleContextButton();
             this.Method = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.M010101 = new DevExpress.XtraBars.BarButtonItem();
             this.M010102 = new DevExpress.XtraBars.BarButtonItem();
             this.M010103 = new DevExpress.XtraBars.BarButtonItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.M020201 = new DevExpress.XtraBars.BarButtonItem();
             this.M01 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.M0101 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.M02 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -60,6 +56,7 @@ namespace School_Management.Manager.Contact
             this.TextEdit_City = new DevExpress.XtraEditors.TextEdit();
             this.TextEdit_Address = new DevExpress.XtraEditors.TextEdit();
             this.GroupBox_Intro = new System.Windows.Forms.GroupBox();
+            this.ComboBox_GroupId = new System.Windows.Forms.ComboBox();
             this.Find_Button = new DevExpress.XtraEditors.SimpleButton();
             this.LabelControl_GroupID = new DevExpress.XtraEditors.LabelControl();
             this.LabelControl_Gender = new DevExpress.XtraEditors.LabelControl();
@@ -104,7 +101,8 @@ namespace School_Management.Manager.Contact
             this.colPicture = new DevExpress.XtraGrid.Columns.GridColumn();
             this.contactTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.ContactTableAdapter();
             this.tableAdapterManager = new School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager();
-            this.ComboBox_GroupId = new System.Windows.Forms.ComboBox();
+            this.M010104 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.Method)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
@@ -140,10 +138,13 @@ namespace School_Management.Manager.Contact
             this.M010101,
             this.M010102,
             this.M010103,
-            this.barStaticItem1});
+            this.barStaticItem1,
+            this.M020201,
+            this.M010104,
+            this.barButtonItem1});
             this.Method.Location = new System.Drawing.Point(0, 0);
             this.Method.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Method.MaxItemId = 5;
+            this.Method.MaxItemId = 8;
             this.Method.Name = "Method";
             this.Method.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.M01});
@@ -165,14 +166,15 @@ namespace School_Management.Manager.Contact
             this.M010102.Id = 2;
             this.M010102.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("M010102.ImageOptions.SvgImage")));
             this.M010102.Name = "M010102";
+            this.M010102.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.M010102_ItemClick);
             // 
             // M010103
             // 
             this.M010103.Caption = "Edit And Reset";
             this.M010103.Id = 3;
-            this.M010103.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("M010103.ImageOptions.Image")));
-            this.M010103.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("M010103.ImageOptions.LargeImage")));
+            this.M010103.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("M010103.ImageOptions.SvgImage")));
             this.M010103.Name = "M010103";
+            this.M010103.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.M010103_ItemClick);
             // 
             // barStaticItem1
             // 
@@ -182,6 +184,14 @@ namespace School_Management.Manager.Contact
             this.barStaticItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barStaticItem1.ImageOptions.LargeImage")));
             this.barStaticItem1.Name = "barStaticItem1";
             this.barStaticItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // M020201
+            // 
+            this.M020201.Caption = "Refersh List";
+            this.M020201.Id = 5;
+            this.M020201.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("M020201.ImageOptions.SvgImage")));
+            this.M020201.Name = "M020201";
+            this.M020201.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.M020201_ItemClick);
             // 
             // M01
             // 
@@ -196,13 +206,16 @@ namespace School_Management.Manager.Contact
             this.M0101.ItemLinks.Add(this.M010101);
             this.M0101.ItemLinks.Add(this.M010102);
             this.M0101.ItemLinks.Add(this.M010103);
+            this.M0101.ItemLinks.Add(this.barButtonItem1);
+            this.M0101.ItemLinks.Add(this.M010104);
             this.M0101.Name = "M0101";
-            this.M0101.Text = "Edit";
+            this.M0101.Text = "Task";
             // 
             // M02
             // 
+            this.M02.ItemLinks.Add(this.M020201);
             this.M02.Name = "M02";
-            this.M02.Text = "Task";
+            this.M02.Text = "List Contact";
             // 
             // ribbonStatusBar1
             // 
@@ -232,7 +245,7 @@ namespace School_Management.Manager.Contact
             this.splitContainerControl1.Panel2.Controls.Add(this.ContactGridControl);
             this.splitContainerControl1.Panel2.Text = "Panel2";
             this.splitContainerControl1.Size = new System.Drawing.Size(1403, 548);
-            this.splitContainerControl1.SplitterPosition = 820;
+            this.splitContainerControl1.SplitterPosition = 813;
             this.splitContainerControl1.TabIndex = 34;
             // 
             // groupBox3
@@ -376,6 +389,14 @@ namespace School_Management.Manager.Contact
             this.GroupBox_Intro.TabIndex = 33;
             this.GroupBox_Intro.TabStop = false;
             // 
+            // ComboBox_GroupId
+            // 
+            this.ComboBox_GroupId.FormattingEnabled = true;
+            this.ComboBox_GroupId.Location = new System.Drawing.Point(454, 150);
+            this.ComboBox_GroupId.Name = "ComboBox_GroupId";
+            this.ComboBox_GroupId.Size = new System.Drawing.Size(130, 27);
+            this.ComboBox_GroupId.TabIndex = 29;
+            // 
             // Find_Button
             // 
             this.Find_Button.Appearance.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -427,36 +448,6 @@ namespace School_Management.Manager.Contact
             this.ComboBoxEdit_Gender.Name = "ComboBoxEdit_Gender";
             this.ComboBoxEdit_Gender.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            simpleContextButton1.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
-            simpleContextButton1.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
-            simpleContextButton1.Caption = "Dr";
-            simpleContextButton1.Id = new System.Guid("6bf16606-2d29-4737-a878-1758ee85ea22");
-            simpleContextButton1.Name = "SimpleContextButton3";
-            simpleContextButton2.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
-            simpleContextButton2.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
-            simpleContextButton2.Caption = "Mr";
-            simpleContextButton2.Id = new System.Guid("3743aa2e-9809-49d2-a7c7-8e89bb9464dc");
-            simpleContextButton2.Name = "SimpleContextButton";
-            simpleContextButton3.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
-            simpleContextButton3.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
-            simpleContextButton3.Caption = "Ms";
-            simpleContextButton3.Id = new System.Guid("b2971959-8d5c-4ac0-a21e-67a31c103c96");
-            simpleContextButton3.Name = "SimpleContextButton1";
-            simpleContextButton4.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
-            simpleContextButton4.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
-            simpleContextButton4.Caption = "Mrs";
-            simpleContextButton4.Id = new System.Guid("7c6a77e3-436e-486e-9ad6-e767771a09c1");
-            simpleContextButton4.Name = "SimpleContextButton2";
-            simpleContextButton5.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
-            simpleContextButton5.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
-            simpleContextButton5.Caption = "Miss";
-            simpleContextButton5.Id = new System.Guid("df44b04c-ca56-4822-8a46-6278df428802");
-            simpleContextButton5.Name = "SimpleContextButton4";
-            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton1);
-            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton2);
-            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton3);
-            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton4);
-            this.ComboBoxEdit_Gender.Properties.ContextButtons.Add(simpleContextButton5);
             this.ComboBoxEdit_Gender.Properties.Items.AddRange(new object[] {
             "Dr",
             "Mr",
@@ -534,6 +525,7 @@ namespace School_Management.Manager.Contact
             this.PictureEdit_User.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.PictureEdit_User.Size = new System.Drawing.Size(175, 185);
             this.PictureEdit_User.TabIndex = 32;
+            this.PictureEdit_User.Click += new System.EventHandler(this.PictureEdit_User_Click_1);
             // 
             // contactBindingNavigator
             // 
@@ -562,7 +554,7 @@ namespace School_Management.Manager.Contact
             this.contactBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.contactBindingNavigator.Name = "contactBindingNavigator";
             this.contactBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.contactBindingNavigator.Size = new System.Drawing.Size(565, 33);
+            this.contactBindingNavigator.Size = new System.Drawing.Size(572, 33);
             this.contactBindingNavigator.TabIndex = 36;
             this.contactBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -669,6 +661,7 @@ namespace School_Management.Manager.Contact
             this.contactBindingNavigatorSaveItem.Name = "contactBindingNavigatorSaveItem";
             this.contactBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 28);
             this.contactBindingNavigatorSaveItem.Text = "Save Data";
+            this.contactBindingNavigatorSaveItem.Click += new System.EventHandler(this.contactBindingNavigatorSaveItem_Click_1);
             // 
             // ContactGridControl
             // 
@@ -680,7 +673,7 @@ namespace School_Management.Manager.Contact
             this.ContactGridControl.MainView = this.CardView1;
             this.ContactGridControl.MenuManager = this.Method;
             this.ContactGridControl.Name = "ContactGridControl";
-            this.ContactGridControl.Size = new System.Drawing.Size(562, 509);
+            this.ContactGridControl.Size = new System.Drawing.Size(517, 509);
             this.ContactGridControl.TabIndex = 0;
             this.ContactGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.CardView1});
@@ -834,13 +827,21 @@ namespace School_Management.Manager.Contact
             this.tableAdapterManager.ScoreTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // ComboBox_GroupId
+            // M010104
             // 
-            this.ComboBox_GroupId.FormattingEnabled = true;
-            this.ComboBox_GroupId.Location = new System.Drawing.Point(454, 153);
-            this.ComboBox_GroupId.Name = "ComboBox_GroupId";
-            this.ComboBox_GroupId.Size = new System.Drawing.Size(130, 27);
-            this.ComboBox_GroupId.TabIndex = 29;
+            this.M010104.Caption = "Delete";
+            this.M010104.Id = 6;
+            this.M010104.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.M010104.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.M010104.Name = "M010104";
+            this.M010104.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.M010104_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Reset Change";
+            this.barButtonItem1.Id = 7;
+            this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.barButtonItem1.Name = "barButtonItem1";
             // 
             // Edit_Contact
             // 
@@ -904,31 +905,8 @@ namespace School_Management.Manager.Contact
         private DevExpress.XtraBars.BarButtonItem M010103;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private DevExpress.XtraEditors.TextEdit TextEdit_Fb;
-        private DevExpress.XtraEditors.TextEdit TextEdit_Mail;
-        private DevExpress.XtraEditors.TextEdit TextEdit_Phone;
-        private DevExpress.XtraEditors.LabelControl LabelControl_Fb;
-        private DevExpress.XtraEditors.LabelControl LabelControl_Email;
-        private DevExpress.XtraEditors.LabelControl LabelControl_Phone;
         private System.Windows.Forms.GroupBox groupBox2;
-        private DevExpress.XtraEditors.LabelControl LabelControl_City;
-        private DevExpress.XtraEditors.LabelControl LabelControl_Address;
-        private DevExpress.XtraEditors.TextEdit TextEdit_City;
-        private DevExpress.XtraEditors.TextEdit TextEdit_Address;
         private System.Windows.Forms.GroupBox GroupBox_Intro;
-        private DevExpress.XtraEditors.SimpleButton Find_Button;
-        private DevExpress.XtraEditors.LabelControl LabelControl_GroupID;
-        private DevExpress.XtraEditors.LabelControl LabelControl_Gender;
-        private DevExpress.XtraEditors.DateEdit DateEdit_Birthday;
-        private DevExpress.XtraEditors.ComboBoxEdit ComboBoxEdit_Gender;
-        private DevExpress.XtraEditors.LabelControl LabelControl_Birthday;
-        private DevExpress.XtraEditors.LabelControl LabelControl_Lastname;
-        private DevExpress.XtraEditors.LabelControl LabelControl_Firstname;
-        private DevExpress.XtraEditors.LabelControl LabelControl_ID;
-        private DevExpress.XtraEditors.TextEdit TextEdit_Lastname;
-        private DevExpress.XtraEditors.TextEdit TextEdit_Fname;
-        private DevExpress.XtraEditors.TextEdit TextEdit_ID;
-        private DevExpress.XtraEditors.PictureEdit PictureEdit_User;
         private Manager_StudentDataSet3 manager_StudentDataSet3;
         private System.Windows.Forms.BindingSource contactBindingSource;
         private Manager_StudentDataSet3TableAdapters.ContactTableAdapter contactTableAdapter;
@@ -961,6 +939,32 @@ namespace School_Management.Manager.Contact
         private DevExpress.XtraGrid.Columns.GridColumn colAddress;
         private DevExpress.XtraGrid.Columns.GridColumn colCity;
         private DevExpress.XtraGrid.Columns.GridColumn colPicture;
-        private System.Windows.Forms.ComboBox ComboBox_GroupId;
+        private DevExpress.XtraBars.BarButtonItem M020201;
+        private DevExpress.XtraBars.BarButtonItem M010104;
+        public DevExpress.XtraEditors.TextEdit TextEdit_Fb;
+        public DevExpress.XtraEditors.TextEdit TextEdit_Mail;
+        public DevExpress.XtraEditors.TextEdit TextEdit_Phone;
+        public DevExpress.XtraEditors.LabelControl LabelControl_Fb;
+        public DevExpress.XtraEditors.LabelControl LabelControl_Email;
+        public DevExpress.XtraEditors.LabelControl LabelControl_Phone;
+        public DevExpress.XtraEditors.LabelControl LabelControl_City;
+        public DevExpress.XtraEditors.LabelControl LabelControl_Address;
+        public DevExpress.XtraEditors.TextEdit TextEdit_City;
+        public DevExpress.XtraEditors.TextEdit TextEdit_Address;
+        public DevExpress.XtraEditors.SimpleButton Find_Button;
+        public DevExpress.XtraEditors.LabelControl LabelControl_GroupID;
+        public DevExpress.XtraEditors.LabelControl LabelControl_Gender;
+        public DevExpress.XtraEditors.DateEdit DateEdit_Birthday;
+        public DevExpress.XtraEditors.ComboBoxEdit ComboBoxEdit_Gender;
+        public DevExpress.XtraEditors.LabelControl LabelControl_Birthday;
+        public DevExpress.XtraEditors.LabelControl LabelControl_Lastname;
+        public DevExpress.XtraEditors.LabelControl LabelControl_Firstname;
+        public DevExpress.XtraEditors.LabelControl LabelControl_ID;
+        public DevExpress.XtraEditors.TextEdit TextEdit_Lastname;
+        public DevExpress.XtraEditors.TextEdit TextEdit_Fname;
+        public DevExpress.XtraEditors.TextEdit TextEdit_ID;
+        public DevExpress.XtraEditors.PictureEdit PictureEdit_User;
+        public System.Windows.Forms.ComboBox ComboBox_GroupId;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }
 }

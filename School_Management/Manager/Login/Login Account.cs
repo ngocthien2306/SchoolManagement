@@ -98,14 +98,12 @@ namespace School_Management.Manager.Login
                     }
                     else
                     {
-                        XtraMessageBox.Show("Plase choose again role login!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        XtraMessageBox.Show("Username or Password incorrect!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
                     XtraMessageBox.Show("Login failed, your name or pass incorrect!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    User_tb.Text = "";
-                    Pass_tb.Text = "";
                 }
             }
             catch (Exception)
@@ -216,6 +214,11 @@ namespace School_Management.Manager.Login
                 contact.LabelControl_ID.Text = table.Rows[0]["Id"].ToString();
                 contact.Show();
             }
+        }
+
+        private void Show_pass_btn_CheckedChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

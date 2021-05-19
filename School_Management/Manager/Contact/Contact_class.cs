@@ -216,7 +216,7 @@ namespace School_Management.Manager.Contact
         public DataTable GetContactByGroup(string group)
         {
             My_Database data = new My_Database();
-            SqlCommand command = new SqlCommand("SELECT * FROM Contact WHERE CAST([group1] AS NVARCHAR) = @group", data.GetConnection);
+            SqlCommand command = new SqlCommand("SELECT * FROM Contact WHERE CAST([Group1] AS NVARCHAR) = @group", data.GetConnection);
             command.Parameters.Add("@group", SqlDbType.NVarChar).Value = group;
 
             SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -224,5 +224,6 @@ namespace School_Management.Manager.Contact
             adapter.Fill(table);
             return table;
         }
+ 
     }
 }

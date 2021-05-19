@@ -107,6 +107,20 @@ namespace School_Management.Manager.Contact
             SDA.Fill(table);
             return table;
         }
+        public DataTable GetAllContactInGroup(int id)
+        {
+            My_Database data = new My_Database();
+            string query = "SELECT * from Contact WHERE ID = " + id.ToString();
+            data.Openconnection();
+            SqlCommand command = new SqlCommand(query, data.GetConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = command;
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            data.Closeconnection();
+
+            return table;
+        }
         public bool GroupExist(string name, string operation, int userid = 0, int groupid = 0)
         {
             string query = "";

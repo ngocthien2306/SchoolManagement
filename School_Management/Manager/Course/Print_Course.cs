@@ -24,18 +24,38 @@ namespace School_Management.Manager.Course
 
         private void Print_Course_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'manager_StudentDataSet3.Course' table. You can move, or remove it, as needed.
-            this.courseTableAdapter.Fill(this.manager_StudentDataSet3.Course);
-            // TODO: This line of code loads data into the 'manager_StudentDataSet3.Course' table. You can move, or remove it, as needed.
-            this.courseTableAdapter.Fill(this.manager_StudentDataSet3.Course);
-
-
+            Courses course = new Courses();
+            CourseDataGridView.DataSource = course.GetAllCourses();
         }
 
 
         private void Print_btn_Click(object sender, EventArgs e)
         {
-            this.Save_Documment();
+            Report report = new Report()
+            {
+                Title = "",
+                Table = (System.Data.DataTable)CourseDataGridView.DataSource
+            };
+
+            SaveFileDialog savefile = new SaveFileDialog();
+            savefile.FileName = "Report";
+            savefile.DefaultExt = "*.docx";
+            savefile.Filter = "DOCX files(*.docx)|*.docx|Excel files(.xlsx) |*.xlsx";
+
+
+            if (savefile.ShowDialog() == DialogResult.OK && savefile.FileName.Length > 0)
+            {
+                if (savefile.FileName.EndsWith("docx") == true)
+                {
+                    report.toWordReport(savefile.FileName);
+                    MessageBox.Show("File saved!", "Message Dialog", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                if (savefile.FileName.EndsWith("xlsx") == true)
+                {
+                    report.ToExcelReport(savefile.FileName);
+                    MessageBox.Show("File saved!", "Message Dialog", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
         private void Save_Documment()
         {
@@ -57,7 +77,7 @@ namespace School_Management.Manager.Course
                     Paragraph para1 = document.Content.Paragraphs.Add(ref missing);
                     object styleHeading1 = "Heading 1";
                     para1.Range.set_Style(ref styleHeading1);
-                    para1.Range.Text = "List of Student\nClass: 19110CLA2\nObject Winform Programming";
+                    para1.Range.Text = "List of Course\nHCMUTE";
                     para1.Range.InsertParagraphAfter();
                     int rows = CourseDataGridView.Rows.Count + 1;
                     int cols = CourseDataGridView.Columns.Count + 1;
@@ -106,7 +126,7 @@ namespace School_Management.Manager.Course
         {
             this.Validate();
             this.courseBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.manager_StudentDataSet3);
+            this.tableAdapterManager.UpdateAll(this.student);
 
         }
 
@@ -114,7 +134,7 @@ namespace School_Management.Manager.Course
         {
             this.Validate();
             this.courseBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.manager_StudentDataSet3);
+            this.tableAdapterManager.UpdateAll(this.student);
 
         }
     }

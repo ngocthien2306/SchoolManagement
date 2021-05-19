@@ -33,10 +33,10 @@ namespace School_Management.Manager.Course
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Print_Course));
             this.Exit_btn = new DevExpress.XtraEditors.SimpleButton();
             this.Print_btn = new DevExpress.XtraEditors.SimpleButton();
-            this.manager_StudentDataSet3 = new School_Management.Manager_StudentDataSet3();
+            this.student = new School_Management.Student();
             this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.courseTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.CourseTableAdapter();
-            this.tableAdapterManager = new School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager();
+            this.courseTableAdapter = new School_Management.StudentTableAdapters.CourseTableAdapter();
+            this.tableAdapterManager = new School_Management.StudentTableAdapters.TableAdapterManager();
             this.courseBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -51,11 +51,7 @@ namespace School_Management.Manager.Course
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.courseBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.CourseDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.student)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingNavigator)).BeginInit();
             this.courseBindingNavigator.SuspendLayout();
@@ -69,8 +65,8 @@ namespace School_Management.Manager.Course
             this.Exit_btn.Appearance.Options.UseFont = true;
             this.Exit_btn.Appearance.Options.UseForeColor = true;
             this.Exit_btn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Exit_btn.ImageOptions.Image")));
-            this.Exit_btn.Location = new System.Drawing.Point(257, 550);
-            this.Exit_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Exit_btn.Location = new System.Drawing.Point(257, 563);
+            this.Exit_btn.Margin = new System.Windows.Forms.Padding(4);
             this.Exit_btn.Name = "Exit_btn";
             this.Exit_btn.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.Exit_btn.Size = new System.Drawing.Size(168, 64);
@@ -85,8 +81,8 @@ namespace School_Management.Manager.Course
             this.Print_btn.Appearance.Options.UseFont = true;
             this.Print_btn.Appearance.Options.UseForeColor = true;
             this.Print_btn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Print_btn.ImageOptions.Image")));
-            this.Print_btn.Location = new System.Drawing.Point(13, 550);
-            this.Print_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Print_btn.Location = new System.Drawing.Point(13, 563);
+            this.Print_btn.Margin = new System.Windows.Forms.Padding(4);
             this.Print_btn.Name = "Print_btn";
             this.Print_btn.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.Print_btn.Size = new System.Drawing.Size(168, 64);
@@ -94,15 +90,15 @@ namespace School_Management.Manager.Course
             this.Print_btn.Text = "Print to File";
             this.Print_btn.Click += new System.EventHandler(this.Print_btn_Click);
             // 
-            // manager_StudentDataSet3
+            // student
             // 
-            this.manager_StudentDataSet3.DataSetName = "Manager_StudentDataSet3";
-            this.manager_StudentDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.student.DataSetName = "Student";
+            this.student.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // courseBindingSource
             // 
             this.courseBindingSource.DataMember = "Course";
-            this.courseBindingSource.DataSource = this.manager_StudentDataSet3;
+            this.courseBindingSource.DataSource = this.student;
             // 
             // courseTableAdapter
             // 
@@ -114,10 +110,11 @@ namespace School_Management.Manager.Course
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.ContactTableAdapter = null;
             this.tableAdapterManager.CourseTableAdapter = this.courseTableAdapter;
+            this.tableAdapterManager.Group1TableAdapter = null;
             this.tableAdapterManager.GroupTableAdapter = null;
             this.tableAdapterManager.New_UserTableAdapter = null;
             this.tableAdapterManager.ScoreTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = School_Management.Manager_StudentDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = School_Management.StudentTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // courseBindingNavigator
             // 
@@ -177,6 +174,7 @@ namespace School_Management.Manager.Course
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -246,53 +244,14 @@ namespace School_Management.Manager.Course
             // 
             // CourseDataGridView
             // 
-            this.CourseDataGridView.AutoGenerateColumns = false;
-            this.CourseDataGridView.BackgroundColor = System.Drawing.Color.LavenderBlush;
+            this.CourseDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.CourseDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CourseDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.CourseDataGridView.DataSource = this.courseBindingSource;
-            this.CourseDataGridView.Location = new System.Drawing.Point(0, 36);
+            this.CourseDataGridView.Location = new System.Drawing.Point(0, 38);
             this.CourseDataGridView.Name = "CourseDataGridView";
             this.CourseDataGridView.RowHeadersWidth = 62;
             this.CourseDataGridView.RowTemplate.Height = 28;
-            this.CourseDataGridView.Size = new System.Drawing.Size(856, 507);
+            this.CourseDataGridView.Size = new System.Drawing.Size(856, 505);
             this.CourseDataGridView.TabIndex = 12;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "label";
-            this.dataGridViewTextBoxColumn2.HeaderText = "label";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "period";
-            this.dataGridViewTextBoxColumn3.HeaderText = "period";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "description";
-            this.dataGridViewTextBoxColumn4.HeaderText = "description";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 150;
             // 
             // Print_Course
             // 
@@ -303,11 +262,11 @@ namespace School_Management.Manager.Course
             this.Controls.Add(this.courseBindingNavigator);
             this.Controls.Add(this.Exit_btn);
             this.Controls.Add(this.Print_btn);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Print_Course";
             this.Text = "Print Course";
             this.Load += new System.EventHandler(this.Print_Course_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.manager_StudentDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.student)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingNavigator)).EndInit();
             this.courseBindingNavigator.ResumeLayout(false);
@@ -321,10 +280,10 @@ namespace School_Management.Manager.Course
         #endregion
         private DevExpress.XtraEditors.SimpleButton Exit_btn;
         private DevExpress.XtraEditors.SimpleButton Print_btn;
-        private Manager_StudentDataSet3 manager_StudentDataSet3;
+        private School_Management.Student student;
         private System.Windows.Forms.BindingSource courseBindingSource;
-        private Manager_StudentDataSet3TableAdapters.CourseTableAdapter courseTableAdapter;
-        private Manager_StudentDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
+        private StudentTableAdapters.CourseTableAdapter courseTableAdapter;
+        private StudentTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator courseBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -339,9 +298,5 @@ namespace School_Management.Manager.Course
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton courseBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView CourseDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

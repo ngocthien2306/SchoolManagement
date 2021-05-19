@@ -39,32 +39,38 @@ namespace School_Management.Manager.Login
         }
         public void Insert_User()
         {
-            Users user = new Users();
-            if(this.ChechBox())
+            try
             {
-
-                MessageBox.Show("The textboxs are blank, please enter again!", "Add User", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                int id = Convert.ToInt32(ID_tb.Text);
-                string fname = First_tb.Text;
-                string lname = Last_tb.Text;
-                string uname = User_tb.Text;
-                string pass = Pass_tb.Text;
-                MemoryStream pic = new MemoryStream();
-                PictureUser.Image.Save(pic, PictureUser.Image.RawFormat);
-                string role = CheckedComboBox_Role.SelectedText.ToString();
-                if (user.Insert_User(id, fname, lname, uname, pass, pic, role))
+                Users user = new Users();
+                if (this.ChechBox())
                 {
-                    MessageBox.Show("Add new user successful!", "Add User", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    MessageBox.Show("The textboxs are blank, please enter again!", "Add User", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    MessageBox.Show("Add failed!", "Add User", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int id = Convert.ToInt32(ID_tb.Text);
+                    string fname = First_tb.Text;
+                    string lname = Last_tb.Text;
+                    string uname = User_tb.Text;
+                    string pass = Pass_tb.Text;
+                    MemoryStream pic = new MemoryStream();
+                    PictureUser.Image.Save(pic, PictureUser.Image.RawFormat);
+                    string role = CheckedComboBox_Role.SelectedText.ToString();
+                    if (user.Insert_User(id, fname, lname, uname, pass, pic, role))
+                    {
+                        MessageBox.Show("Add new user successful!", "Add User", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Add failed!", "Add User", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
-            
+            catch
+            {
+                XtraMessageBox.Show("");
+            }
         }
 
         private void PictureUser_Click(object sender, EventArgs e)

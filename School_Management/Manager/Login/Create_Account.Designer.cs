@@ -75,7 +75,7 @@ namespace School_Management.Manager.Login
             this.PictureUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PictureUser.Name = "PictureUser";
             this.PictureUser.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.PictureUser.Size = new System.Drawing.Size(297, 346);
+            this.PictureUser.Size = new System.Drawing.Size(297, 406);
             this.PictureUser.TabIndex = 0;
             this.PictureUser.Click += new System.EventHandler(this.PictureUser_Click);
             // 
@@ -85,10 +85,10 @@ namespace School_Management.Manager.Login
             this.First_lb.Appearance.ForeColor = System.Drawing.Color.Black;
             this.First_lb.Appearance.Options.UseFont = true;
             this.First_lb.Appearance.Options.UseForeColor = true;
-            this.First_lb.Location = new System.Drawing.Point(342, 127);
+            this.First_lb.Location = new System.Drawing.Point(345, 135);
             this.First_lb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.First_lb.Name = "First_lb";
-            this.First_lb.Size = new System.Drawing.Size(53, 16);
+            this.First_lb.Size = new System.Drawing.Size(83, 21);
             this.First_lb.TabIndex = 1;
             this.First_lb.Text = "First name";
             // 
@@ -98,20 +98,20 @@ namespace School_Management.Manager.Login
             this.Last_lb.Appearance.ForeColor = System.Drawing.Color.Black;
             this.Last_lb.Appearance.Options.UseFont = true;
             this.Last_lb.Appearance.Options.UseForeColor = true;
-            this.Last_lb.Location = new System.Drawing.Point(342, 170);
+            this.Last_lb.Location = new System.Drawing.Point(345, 186);
             this.Last_lb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Last_lb.Name = "Last_lb";
-            this.Last_lb.Size = new System.Drawing.Size(56, 16);
+            this.Last_lb.Size = new System.Drawing.Size(87, 21);
             this.Last_lb.TabIndex = 2;
             this.Last_lb.Text = "Last name";
             // 
             // XtraTabControl_Account
             // 
-            this.XtraTabControl_Account.Location = new System.Drawing.Point(318, 245);
+            this.XtraTabControl_Account.Location = new System.Drawing.Point(317, 285);
             this.XtraTabControl_Account.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.XtraTabControl_Account.Name = "XtraTabControl_Account";
             this.XtraTabControl_Account.SelectedTabPage = this.TabPage1;
-            this.XtraTabControl_Account.Size = new System.Drawing.Size(517, 187);
+            this.XtraTabControl_Account.Size = new System.Drawing.Size(750, 207);
             this.XtraTabControl_Account.TabIndex = 6;
             this.XtraTabControl_Account.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.TabPage1});
@@ -126,31 +126,31 @@ namespace School_Management.Manager.Login
             this.TabPage1.Controls.Add(this.User_lb);
             this.TabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TabPage1.Name = "TabPage1";
-            this.TabPage1.Size = new System.Drawing.Size(515, 162);
+            this.TabPage1.Size = new System.Drawing.Size(748, 172);
             this.TabPage1.Text = "User create a new account";
             // 
             // RePass_tb
             // 
-            this.RePass_tb.Location = new System.Drawing.Point(114, 118);
+            this.RePass_tb.Location = new System.Drawing.Point(176, 115);
             this.RePass_tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RePass_tb.Name = "RePass_tb";
-            this.RePass_tb.Size = new System.Drawing.Size(380, 20);
+            this.RePass_tb.Size = new System.Drawing.Size(555, 28);
             this.RePass_tb.TabIndex = 12;
             // 
             // Pass_tb
             // 
-            this.Pass_tb.Location = new System.Drawing.Point(114, 71);
+            this.Pass_tb.Location = new System.Drawing.Point(176, 68);
             this.Pass_tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Pass_tb.Name = "Pass_tb";
-            this.Pass_tb.Size = new System.Drawing.Size(380, 20);
+            this.Pass_tb.Size = new System.Drawing.Size(555, 28);
             this.Pass_tb.TabIndex = 11;
             // 
             // User_tb
             // 
-            this.User_tb.Location = new System.Drawing.Point(114, 23);
+            this.User_tb.Location = new System.Drawing.Point(176, 20);
             this.User_tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.User_tb.Name = "User_tb";
-            this.User_tb.Size = new System.Drawing.Size(380, 20);
+            this.User_tb.Size = new System.Drawing.Size(555, 28);
             this.User_tb.TabIndex = 10;
             // 
             // Re_pass
@@ -159,10 +159,10 @@ namespace School_Management.Manager.Login
             this.Re_pass.Appearance.ForeColor = System.Drawing.Color.Black;
             this.Re_pass.Appearance.Options.UseFont = true;
             this.Re_pass.Appearance.Options.UseForeColor = true;
-            this.Re_pass.Location = new System.Drawing.Point(25, 121);
+            this.Re_pass.Location = new System.Drawing.Point(27, 117);
             this.Re_pass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Re_pass.Name = "Re_pass";
-            this.Re_pass.Size = new System.Drawing.Size(69, 16);
+            this.Re_pass.Size = new System.Drawing.Size(105, 21);
             this.Re_pass.TabIndex = 9;
             this.Re_pass.Text = "Re-Password";
             // 
@@ -172,10 +172,10 @@ namespace School_Management.Manager.Login
             this.Pass_lb.Appearance.ForeColor = System.Drawing.Color.Black;
             this.Pass_lb.Appearance.Options.UseFont = true;
             this.Pass_lb.Appearance.Options.UseForeColor = true;
-            this.Pass_lb.Location = new System.Drawing.Point(25, 75);
+            this.Pass_lb.Location = new System.Drawing.Point(27, 71);
             this.Pass_lb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Pass_lb.Name = "Pass_lb";
-            this.Pass_lb.Size = new System.Drawing.Size(51, 16);
+            this.Pass_lb.Size = new System.Drawing.Size(78, 21);
             this.Pass_lb.TabIndex = 8;
             this.Pass_lb.Text = "Password";
             // 
@@ -185,10 +185,10 @@ namespace School_Management.Manager.Login
             this.User_lb.Appearance.ForeColor = System.Drawing.Color.Black;
             this.User_lb.Appearance.Options.UseFont = true;
             this.User_lb.Appearance.Options.UseForeColor = true;
-            this.User_lb.Location = new System.Drawing.Point(25, 27);
+            this.User_lb.Location = new System.Drawing.Point(27, 23);
             this.User_lb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.User_lb.Name = "User_lb";
-            this.User_lb.Size = new System.Drawing.Size(54, 16);
+            this.User_lb.Size = new System.Drawing.Size(83, 21);
             this.User_lb.TabIndex = 7;
             this.User_lb.Text = "Username";
             // 
@@ -201,32 +201,32 @@ namespace School_Management.Manager.Login
             this.ID_lb.Location = new System.Drawing.Point(344, 86);
             this.ID_lb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ID_lb.Name = "ID_lb";
-            this.ID_lb.Size = new System.Drawing.Size(36, 16);
+            this.ID_lb.Size = new System.Drawing.Size(58, 21);
             this.ID_lb.TabIndex = 6;
             this.ID_lb.Text = "User ID";
             // 
             // ID_tb
             // 
-            this.ID_tb.Location = new System.Drawing.Point(435, 82);
+            this.ID_tb.Location = new System.Drawing.Point(438, 83);
             this.ID_tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ID_tb.Name = "ID_tb";
-            this.ID_tb.Size = new System.Drawing.Size(380, 20);
+            this.ID_tb.Size = new System.Drawing.Size(634, 28);
             this.ID_tb.TabIndex = 8;
             // 
             // First_tb
             // 
-            this.First_tb.Location = new System.Drawing.Point(434, 125);
+            this.First_tb.Location = new System.Drawing.Point(437, 133);
             this.First_tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.First_tb.Name = "First_tb";
-            this.First_tb.Size = new System.Drawing.Size(380, 20);
+            this.First_tb.Size = new System.Drawing.Size(634, 28);
             this.First_tb.TabIndex = 9;
             // 
             // Last_tb
             // 
-            this.Last_tb.Location = new System.Drawing.Point(433, 168);
+            this.Last_tb.Location = new System.Drawing.Point(436, 184);
             this.Last_tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Last_tb.Name = "Last_tb";
-            this.Last_tb.Size = new System.Drawing.Size(380, 20);
+            this.Last_tb.Size = new System.Drawing.Size(634, 28);
             this.Last_tb.TabIndex = 10;
             // 
             // WindowsUIButtonPanel
@@ -239,10 +239,10 @@ namespace School_Management.Manager.Login
             new DevExpress.XtraBars.Docking2010.WindowsUIButton("Reset Change", true, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.CheckButton, "Click here to clear all the page", -1, true, null, true, false, true, "A2", 1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUIButton("     Back     ", true, windowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.CheckButton, "Click here to return before step", -1, true, null, true, false, true, "A3", 1, false)});
             this.WindowsUIButtonPanel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WindowsUIButtonPanel.Location = new System.Drawing.Point(14, 457);
+            this.WindowsUIButtonPanel.Location = new System.Drawing.Point(18, 526);
             this.WindowsUIButtonPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.WindowsUIButtonPanel.Name = "WindowsUIButtonPanel";
-            this.WindowsUIButtonPanel.Size = new System.Drawing.Size(821, 81);
+            this.WindowsUIButtonPanel.Size = new System.Drawing.Size(1054, 108);
             this.WindowsUIButtonPanel.TabIndex = 11;
             this.WindowsUIButtonPanel.Text = "WindowsUIButtonPanel";
             this.WindowsUIButtonPanel.ButtonChecked += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.WindowsUIButtonPanel_ButtonChecked);
@@ -257,7 +257,7 @@ namespace School_Management.Manager.Login
             this.User.Location = new System.Drawing.Point(343, 15);
             this.User.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.User.Name = "User";
-            this.User.Size = new System.Drawing.Size(124, 21);
+            this.User.Size = new System.Drawing.Size(187, 30);
             this.User.TabIndex = 12;
             this.User.Text = "User information";
             // 
@@ -277,17 +277,17 @@ namespace School_Management.Manager.Login
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(342, 212);
+            this.labelControl1.Location = new System.Drawing.Point(345, 239);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(48, 16);
+            this.labelControl1.Size = new System.Drawing.Size(35, 21);
             this.labelControl1.TabIndex = 15;
-            this.labelControl1.Text = "You are: ";
+            this.labelControl1.Text = "Role";
             // 
             // CheckedComboBox_Role
             // 
             this.CheckedComboBox_Role.EditValue = "";
-            this.CheckedComboBox_Role.Location = new System.Drawing.Point(433, 207);
+            this.CheckedComboBox_Role.Location = new System.Drawing.Point(436, 234);
             this.CheckedComboBox_Role.Name = "CheckedComboBox_Role";
             this.CheckedComboBox_Role.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -298,17 +298,17 @@ namespace School_Management.Manager.Login
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("Manager", "Manager")});
             this.CheckedComboBox_Role.Properties.SelectAllItemVisible = false;
             this.CheckedComboBox_Role.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.CheckedComboBox_Role.Size = new System.Drawing.Size(187, 20);
+            this.CheckedComboBox_Role.Size = new System.Drawing.Size(187, 28);
             this.CheckedComboBox_Role.TabIndex = 16;
             this.CheckedComboBox_Role.EditValueChanged += new System.EventHandler(this.CheckedComboBox_Role_EditValueChanged);
             // 
             // hyperlinkLabelControl1
             // 
-            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(364, 545);
+            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(424, 641);
             this.hyperlinkLabelControl1.Name = "hyperlinkLabelControl1";
-            this.hyperlinkLabelControl1.Size = new System.Drawing.Size(87, 13);
+            this.hyperlinkLabelControl1.Size = new System.Drawing.Size(241, 19);
             this.hyperlinkLabelControl1.TabIndex = 18;
-            this.hyperlinkLabelControl1.Text = "I have an account";
+            this.hyperlinkLabelControl1.Text = "I have an account <> Login now?";
             // 
             // Create_Account
             // 
@@ -317,9 +317,9 @@ namespace School_Management.Manager.Login
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseFont = true;
             this.Appearance.Options.UseForeColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 565);
+            this.ClientSize = new System.Drawing.Size(1084, 675);
             this.Controls.Add(this.hyperlinkLabelControl1);
             this.Controls.Add(this.CheckedComboBox_Role);
             this.Controls.Add(this.labelControl1);
@@ -358,27 +358,26 @@ namespace School_Management.Manager.Login
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.PictureEdit PictureUser;
-        private DevExpress.XtraEditors.LabelControl First_lb;
-        private DevExpress.XtraEditors.LabelControl Last_lb;
         private DevExpress.XtraTab.XtraTabControl XtraTabControl_Account;
         private DevExpress.XtraTab.XtraTabPage TabPage1;
-        private DevExpress.XtraEditors.LabelControl Pass_lb;
-        private DevExpress.XtraEditors.LabelControl User_lb;
-        private DevExpress.XtraEditors.LabelControl ID_lb;
-        private DevExpress.XtraEditors.TextEdit RePass_tb;
-        private DevExpress.XtraEditors.TextEdit Pass_tb;
-        private DevExpress.XtraEditors.TextEdit User_tb;
-        private DevExpress.XtraEditors.LabelControl Re_pass;
-        private DevExpress.XtraEditors.TextEdit ID_tb;
-        private DevExpress.XtraEditors.TextEdit First_tb;
-        private DevExpress.XtraEditors.TextEdit Last_tb;
         private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel WindowsUIButtonPanel;
         private DevExpress.XtraEditors.LabelControl User;
         private DevExpress.XtraEditors.PictureEdit Picture_User;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.CheckedComboBoxEdit CheckedComboBox_Role;
         private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl1;
+        public DevExpress.XtraEditors.PictureEdit PictureUser;
+        public DevExpress.XtraEditors.LabelControl First_lb;
+        public DevExpress.XtraEditors.LabelControl Last_lb;
+        public DevExpress.XtraEditors.LabelControl Pass_lb;
+        public DevExpress.XtraEditors.LabelControl User_lb;
+        public DevExpress.XtraEditors.LabelControl ID_lb;
+        public DevExpress.XtraEditors.TextEdit RePass_tb;
+        public DevExpress.XtraEditors.TextEdit Pass_tb;
+        public DevExpress.XtraEditors.TextEdit User_tb;
+        public DevExpress.XtraEditors.LabelControl Re_pass;
+        public DevExpress.XtraEditors.TextEdit ID_tb;
+        public DevExpress.XtraEditors.TextEdit First_tb;
+        public DevExpress.XtraEditors.TextEdit Last_tb;
+        public DevExpress.XtraEditors.LabelControl labelControl1;
+        public DevExpress.XtraEditors.CheckedComboBoxEdit CheckedComboBox_Role;
     }
 }

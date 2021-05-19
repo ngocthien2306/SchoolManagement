@@ -46,14 +46,19 @@ namespace School_Management.Manager.Contact
 
         private void ListBox_Group_DoubleClick(object sender, EventArgs e)
         {
-            My_Database data = new My_Database();
-            SqlCommand command = new SqlCommand("select * from group", data.GetConnection);
-            int idx = ListBox_Group.SelectedIndex;
+            int idx;
+            try
+            {
+                idx = (int)ListBox_Group.SelectedValue;
+            }
+            catch (Exception)
+            {
+                return;
+            }
             if (idx < 0) return;
-            DataTable allgroup = group.GetGroup(command);
-            string _group = group.GetGroup(command).Rows[idx].ItemArray[1].ToString();
-            DataTable table = contact.GetContactByGroup(_group);
-            this.ShowAll(table);
+            DataTable allcontact = group.GetAllContactInGroup(idx);
+
+            this.ShowAll(allcontact);
         }
 
         private void ShowFull_Click(object sender, EventArgs e)
@@ -64,6 +69,43 @@ namespace School_Management.Manager.Contact
         private void Group_btn_Click(object sender, EventArgs e)
         {
             this.ShowGroup();
+        }
+
+        private void Print_btn_Click(object sender, EventArgs e)
+        {
+            Report report = new Report()
+            {
+                Title = "",
+                Table = (System.Data.DataTable)ListShowAll.DataSource
+            };
+
+            SaveFileDialog savefile = new SaveFileDialog();
+            savefile.FileName = "Report";
+            savefile.DefaultExt = "*.docx";
+            savefile.Filter = "DOCX files(*.docx)|*.docx|Excel files(.xlsx) |*.xlsx";
+
+
+            if (savefile.ShowDialog() == DialogResult.OK && savefile.FileName.Length > 0)
+            {
+                if (savefile.FileName.EndsWith("docx") == true)
+                {
+                    report.toWordReport(savefile.FileName);
+                    MessageBox.Show("File saved!", "Message Dialog", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                if (savefile.FileName.EndsWith("xlsx") == true)
+                {
+                    report.ToExcelReport(savefile.FileName);
+                    MessageBox.Show("File saved!", "Message Dialog", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void ListShowAll_DoubleClick(object sender, EventArgs e)
+        {
+            Edit_Contact edit = new Edit_Contact();
+            edit.TextEdit_ID.Text = ListShowAll.CurrentRow.Cells[0].Value.ToString().Trim();
+            edit.Find();
+            edit.ShowDialog();
         }
     }
 }

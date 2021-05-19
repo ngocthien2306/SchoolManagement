@@ -218,26 +218,37 @@ namespace School_Management.Manager.Contact
             this.EditContact();
             this.ResetChange();
         }
-
-        private void M010104_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        public void DeleteContact()
         {
-            Contact_class contact = new Contact_class();
-            if(TextEdit_ID.Text == "")
+            try
             {
-                XtraMessageBox.Show("The textbox incorrect format! Please enter again.", "Delete Contact", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                int id = Convert.ToInt32(TextEdit_ID.Text);
-                if(contact.DeleteContacts(id))
+                Contact_class contact = new Contact_class();
+                if (TextEdit_ID.Text == "")
                 {
-                    XtraMessageBox.Show("Delelte Completed", "Delete Contact", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    XtraMessageBox.Show("The textbox incorrect format! Please enter again.", "Delete Contact", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    XtraMessageBox.Show("Delete Failed", "Delete Contact", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    DialogResult delete = XtraMessageBox.Show("Are you sure delete record to the list with id: " + TextEdit_ID, "Delete Contact", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    int id = Convert.ToInt32(TextEdit_ID.Text);
+                    if (delete == DialogResult.Yes && contact.DeleteContacts(id))
+                    {
+                        XtraMessageBox.Show("Delelte Completed", "Delete Contact", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("Delete Failed", "Delete Contact", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
             }
+            catch
+            {
+                XtraMessageBox.Show("Error! The textbox incorrect format! Please enter again.", "Delete Contact", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        private void M010104_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
 }

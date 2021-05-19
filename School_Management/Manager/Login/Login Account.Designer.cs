@@ -45,11 +45,9 @@ namespace School_Management.Manager.Login
             this.ToolTip_new = new System.Windows.Forms.ToolTip(this.components);
             this.Link_account = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.Exit_bt = new DevExpress.XtraEditors.SimpleButton();
-            this.Show_pass_btn = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pass_tb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.User_tb.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Show_pass_btn.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // Pass_tb
@@ -218,17 +216,6 @@ namespace School_Management.Manager.Login
             this.Exit_bt.Text = "Exit";
             this.Exit_bt.Click += new System.EventHandler(this.Exit_bt_Click);
             // 
-            // Show_pass_btn
-            // 
-            this.Show_pass_btn.Location = new System.Drawing.Point(686, 232);
-            this.Show_pass_btn.Name = "Show_pass_btn";
-            this.Show_pass_btn.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.Show_pass_btn.Properties.Appearance.Options.UseForeColor = true;
-            this.Show_pass_btn.Properties.Caption = "Show password";
-            this.Show_pass_btn.Size = new System.Drawing.Size(143, 25);
-            this.Show_pass_btn.TabIndex = 11;
-            this.Show_pass_btn.CheckedChanged += new System.EventHandler(this.Show_pass_btn_CheckedChanged);
-            // 
             // Login_Account
             // 
             this.defaultToolTipController1.SetAllowHtmlText(this, DevExpress.Utils.DefaultBoolean.Default);
@@ -241,7 +228,6 @@ namespace School_Management.Manager.Login
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
             this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
             this.ClientSize = new System.Drawing.Size(944, 573);
-            this.Controls.Add(this.Show_pass_btn);
             this.Controls.Add(this.RadioButton_Teacher);
             this.Controls.Add(this.Exit_bt);
             this.Controls.Add(this.Radio_human);
@@ -261,7 +247,6 @@ namespace School_Management.Manager.Login
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pass_tb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.User_tb.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Show_pass_btn.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,6 +268,5 @@ namespace School_Management.Manager.Login
         private System.Windows.Forms.RadioButton Radio_human;
         private DevExpress.XtraEditors.SimpleButton Exit_bt;
         private System.Windows.Forms.RadioButton RadioButton_Teacher;
-        private DevExpress.XtraEditors.CheckEdit Show_pass_btn;
     }
 }

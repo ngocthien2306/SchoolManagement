@@ -79,6 +79,7 @@ namespace School_Management.Manager.Contact
             this.NameGroup_Textbox = new DevExpress.XtraEditors.TextEdit();
             this.AddGroup_Button = new DevExpress.XtraEditors.SimpleButton();
             this.Label2 = new DevExpress.XtraEditors.LabelControl();
+            this.Print_btn = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit2)).BeginInit();
@@ -211,6 +212,7 @@ namespace School_Management.Manager.Contact
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
             this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainerControl1.Name = "splitContainerControl1";
+            this.splitContainerControl1.Panel1.Controls.Add(this.Print_btn);
             this.splitContainerControl1.Panel1.Controls.Add(this.groupBox5);
             this.splitContainerControl1.Panel1.Controls.Add(this.Label1);
             this.splitContainerControl1.Panel1.Controls.Add(this.GroupBox1);
@@ -239,7 +241,7 @@ namespace School_Management.Manager.Contact
             this.groupBox5.Controls.Add(this.Picture_User);
             this.groupBox5.Location = new System.Drawing.Point(25, 4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(474, 72);
+            this.groupBox5.Size = new System.Drawing.Size(489, 72);
             this.groupBox5.TabIndex = 7;
             this.groupBox5.TabStop = false;
             // 
@@ -284,6 +286,7 @@ namespace School_Management.Manager.Contact
             this.HyperlinkLabelControl.Size = new System.Drawing.Size(141, 19);
             this.HyperlinkLabelControl.TabIndex = 2;
             this.HyperlinkLabelControl.Text = "Edit my information";
+            this.HyperlinkLabelControl.Click += new System.EventHandler(this.HyperlinkLabelControl_Click);
             // 
             // Wellcome_LabelControl
             // 
@@ -367,6 +370,7 @@ namespace School_Management.Manager.Contact
             this.Remove_contact_Button.Size = new System.Drawing.Size(466, 46);
             this.Remove_contact_Button.TabIndex = 3;
             this.Remove_contact_Button.Text = "Remove";
+            this.Remove_contact_Button.Click += new System.EventHandler(this.Remove_contact_Button_Click);
             // 
             // ShowList_Button
             // 
@@ -403,11 +407,11 @@ namespace School_Management.Manager.Contact
             // 
             // hyperlinkLabelControl2
             // 
-            this.hyperlinkLabelControl2.Location = new System.Drawing.Point(408, 21);
+            this.hyperlinkLabelControl2.Location = new System.Drawing.Point(367, 21);
             this.hyperlinkLabelControl2.Name = "hyperlinkLabelControl2";
-            this.hyperlinkLabelControl2.Size = new System.Drawing.Size(57, 19);
+            this.hyperlinkLabelControl2.Size = new System.Drawing.Size(111, 19);
             this.hyperlinkLabelControl2.TabIndex = 11;
-            this.hyperlinkLabelControl2.Text = "Log Out";
+            this.hyperlinkLabelControl2.Text = "Logout Account";
             this.hyperlinkLabelControl2.Click += new System.EventHandler(this.hyperlinkLabelControl2_Click);
             // 
             // GroupBox4
@@ -587,6 +591,17 @@ namespace School_Management.Manager.Contact
             this.Label2.TabIndex = 7;
             this.Label2.Text = "Group";
             // 
+            // Print_btn
+            // 
+            this.Print_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.Print_btn.Location = new System.Drawing.Point(334, 121);
+            this.Print_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.Print_btn.Name = "Print_btn";
+            this.Print_btn.Size = new System.Drawing.Size(157, 47);
+            this.Print_btn.TabIndex = 8;
+            this.Print_btn.Text = "Print Contact";
+            this.Print_btn.Click += new System.EventHandler(this.Print_btn_Click);
+            // 
             // Contacts
             // 
             this.Appearance.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -681,5 +696,6 @@ namespace School_Management.Manager.Contact
         private DevExpress.XtraEditors.LabelControl LabelControl2;
         public DevExpress.XtraEditors.LabelControl LabelControl_ID;
         private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl2;
+        private DevExpress.XtraEditors.SimpleButton Print_btn;
     }
 }

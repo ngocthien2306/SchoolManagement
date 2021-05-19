@@ -202,6 +202,12 @@
     <Compile Include="Manager\Contact\Name.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Manager\Contact\PrintCo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Contact\PrintCo.Designer.cs">
+      <DependentUpon>PrintCo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager\Contact\Print_Contact.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -611,6 +617,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Contact\Edit_Contact.resx">
       <DependentUpon>Edit_Contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Contact\PrintCo.resx">
+      <DependentUpon>PrintCo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Contact\Print_Contact.resx">
       <DependentUpon>Print_Contact.cs</DependentUpon>

@@ -33,8 +33,10 @@ namespace School_Management.Manager.Student
             Picture = picture;
         }
         My_Database data = new My_Database();
+
+
         public bool EditStudent(int id, string firstname, string lastname, DateTime birthday, string gender,
-    string address, string phone, MemoryStream picture)
+            string address, string phone, MemoryStream picture)
         {
             SqlCommand command = new SqlCommand("UPDATE Add_Student" + " SET " +
                     "firstname = @Fname," +

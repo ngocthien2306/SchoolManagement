@@ -155,8 +155,8 @@ namespace School_Management.Manager.Login
         }
 
         private void Login_Account_Load(object sender, EventArgs e)
-        { 
-            Radio_Student.Checked = true;
+        {
+            RadioButton_Teacher.Checked = true;
            
         }
 

@@ -130,6 +130,7 @@ namespace School_Management.Manager.Score
             {
                 ComboBox_Course.Items.Add(row[1].ToString().Trim());
             }
+            show_avg_by_id.Visible = false;
             this.LoadData();
 
         }
@@ -251,14 +252,21 @@ namespace School_Management.Manager.Score
             this.Save_Documment();
         }
 
-        private void TabPage1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void DataGridView_DoubleClick(object sender, EventArgs e)
         {
             IDStudent.Text = DataGridView_Student.CurrentRow.Cells[0].Value.ToString().Trim();
         }
+
+        private void btn_find_by_id_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(IDStudent.Text);
+            DataGridView_Student.DataSource = score.GetAllScoreByStudentID(id);
+
+            show_avg_by_id.Visible = true;
+            show_avg_by_id.Text = "Avg: " + score.Avg_Score_ByID(id).ToString();
+        }
+
+   
     }
 }

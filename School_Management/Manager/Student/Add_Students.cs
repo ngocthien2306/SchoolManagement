@@ -70,6 +70,7 @@ namespace School_Management.Manager.Student
                 }
                 else
                 {
+
                     Picture_Student.Image.Save(pic, Picture_Student.Image.RawFormat);
                     if (student.AddStudent(Id, firstname, lastname, birthday, gender, phone, address, pic))
                     {

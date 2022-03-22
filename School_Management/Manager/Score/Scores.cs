@@ -121,6 +121,65 @@ namespace School_Management.Manager.Score
                 dataBase.Closeconnection();
             }
         }
+        public double Avg_Score_ByID(int sid)
+        {
+            My_Database dataBase = new My_Database();
+ 
+    
+            try
+            {
+                SqlCommand command = new SqlCommand("SELECT dbo.Avg_score_by_Student(@sid)", dataBase.GetConnection);
+                command.Parameters.Add("@sid", SqlDbType.Int).Value = sid;
+
+
+                dataBase.Openconnection();
+
+                return Convert.ToDouble(command.ExecuteScalar());
+
+                dataBase.Closeconnection();
+
+  
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                dataBase.Closeconnection();
+            }
+        }
+        public DataTable GetAllScoreByStudentID(int sid)
+        {
+            My_Database dataBase = new My_Database();
+            try
+            {
+                SqlCommand command = new SqlCommand("Select * from dbo.List_Score_By_Student(@sid)", dataBase.GetConnection);
+                command.Parameters.Add("@sid", SqlDbType.Int).Value = sid;
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                adapter.SelectCommand = command;
+                DataTable table = new DataTable();
+
+                dataBase.Openconnection();
+
+                adapter.Fill(table);
+
+                dataBase.Closeconnection();
+
+                return table;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                dataBase.Closeconnection();
+            }
+        }
+    
         public DataTable GetScore(SqlCommand command)
         {
             command.Connection = data.GetConnection;

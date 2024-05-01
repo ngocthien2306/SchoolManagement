@@ -105,6 +105,7 @@ namespace School_Management.Manager.Student
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Selected_Course = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnImportExcel = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
@@ -155,9 +156,10 @@ namespace School_Management.Manager.Student
             this.Reset_bt,
             this.Exit_bt,
             this.Reload_Grid,
-            this.barEditItem2});
+            this.barEditItem2,
+            this.btnImportExcel});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 15;
+            this.ribbonControl1.MaxItemId = 16;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.M01});
@@ -251,6 +253,7 @@ namespace School_Management.Manager.Student
             // 
             // Find_page
             // 
+            this.Find_page.ItemLinks.Add(this.btnImportExcel);
             this.Find_page.Name = "Find_page";
             // 
             // Group_pageCourse
@@ -834,6 +837,14 @@ namespace School_Management.Manager.Student
             this.dataGridViewImageColumn1.ReadOnly = true;
             this.dataGridViewImageColumn1.Width = 150;
             // 
+            // btnImportExcel
+            // 
+            this.btnImportExcel.Caption = "Import Excel";
+            this.btnImportExcel.Id = 15;
+            this.btnImportExcel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.btnImportExcel.Name = "btnImportExcel";
+            this.btnImportExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnImportExcel_ItemClick);
+            // 
             // Manager_General
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -965,5 +976,6 @@ namespace School_Management.Manager.Student
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Selected_Course;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private DevExpress.XtraBars.BarButtonItem btnImportExcel;
     }
 }

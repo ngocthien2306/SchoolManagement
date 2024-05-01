@@ -69,7 +69,6 @@ namespace School_Management.Manager.Student
             this.m0105 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.M010601 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.M07 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.M02 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.M0201 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.M0202 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -462,8 +461,7 @@ namespace School_Management.Manager.Student
             this.M0103,
             this.m0105,
             this.M010601,
-            this.M07,
-            this.ribbonPageGroup1});
+            this.M07});
             this.M01.Name = "M01";
             this.M01.Text = "Student";
             // 
@@ -510,11 +508,6 @@ namespace School_Management.Manager.Student
             this.M07.ItemLinks.Add(this.M060101);
             this.M07.Name = "M07";
             this.M07.Text = "Contact";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
             // M02
             // 
@@ -1283,6 +1276,5 @@ namespace School_Management.Manager.Student
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
     }
 }

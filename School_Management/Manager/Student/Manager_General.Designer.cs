@@ -750,6 +750,7 @@ namespace School_Management.Manager.Student
             this.DataSource_Student.RowTemplate.Height = 28;
             this.DataSource_Student.Size = new System.Drawing.Size(1369, 867);
             this.DataSource_Student.TabIndex = 0;
+            this.DataSource_Student.Click += new System.EventHandler(this.DataSource_Student_Click);
             this.DataSource_Student.DoubleClick += new System.EventHandler(this.DataSource_Student_DoubleClick_1);
             // 
             // dataGridViewTextBoxColumn1

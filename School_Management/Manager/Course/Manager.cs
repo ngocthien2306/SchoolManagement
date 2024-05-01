@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using School_Management.Manager.Student;
+
 namespace School_Management.Manager.Course
 {
     public partial class Manager : DevExpress.XtraEditors.XtraForm
@@ -202,6 +204,35 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
         private void XtraTabPage_Course_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ListBoxControl_DoubleClick(object sender, EventArgs e)
+        {
+
+            StudentCourse sc = new StudentCourse();
+            string query = "SELECT s.id, s.firstname, s.lastname, s.birthday, c.semester, c.label " +
+               "FROM Student_Courses sc " +
+               "LEFT JOIN Add_Student s ON s.id = sc.stdId " +
+               "LEFT JOIN Course c ON c.Id = sc.courseId " +
+               "WHERE c.Id = @courseId";
+
+            SqlCommand command = new SqlCommand(query, data.GetConnection);
+            int id = Convert.ToInt32(ID_Course.Text);
+            // Assuming 'courseId' is a parameter to filter the data based on the selected item
+            command.Parameters.AddWithValue("@courseId", id);
+            DataTable table = new DataTable();
+
+            data.Openconnection();
+
+            using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+            {
+                adapter.Fill(table);
+            }
+
+            data.Closeconnection();
+
+            sc.gridControlStudentCourse.DataSource = table;
+            sc.ShowDialog();
         }
     }
 }

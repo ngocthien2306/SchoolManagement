@@ -153,7 +153,7 @@ namespace School_Management.Manager.Student
                 DataSource_Student.DataSource = table;
                 DataSource_Student.ReadOnly = true;
                 DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
-                imageColumn = (DataGridViewImageColumn)DataSource_Student.Columns[7];
+                imageColumn = (DataGridViewImageColumn)DataSource_Student.Columns[8];
                 imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
                 DataSource_Student.AllowUserToAddRows = false;
 
@@ -182,15 +182,19 @@ namespace School_Management.Manager.Student
                 if (DataSource_Student.CurrentRow.Cells[4].Value.ToString().Trim() == "Male")
                 {
                     Check_male.Checked = true;
+                    Check_female.Checked = false;
+
                 }
                 else if (DataSource_Student.CurrentRow.Cells[4].Value.ToString().Trim() == "Female")
                 {
                     Check_female.Checked = true;
-                    
+                    Check_male.Checked = false;
+
+
                 }
                 Address_student.Text = DataSource_Student.CurrentRow.Cells[5].Value.ToString().Trim();
                 Phone_student.Text = DataSource_Student.CurrentRow.Cells[6].Value.ToString().Trim();
-                byte[] byteImage = (byte[])DataSource_Student.CurrentRow.Cells[7].Value;
+                byte[] byteImage = (byte[])DataSource_Student.CurrentRow.Cells[8].Value;
                 MemoryStream stream = new MemoryStream(byteImage);
                 Picture_Student.Image = Image.FromStream(stream);
                 return true;
@@ -245,7 +249,7 @@ namespace School_Management.Manager.Student
                 DataSource_Student.DataSource = table;
                 DataSource_Student.ReadOnly = true;
                 DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
-                imageColumn = (DataGridViewImageColumn)DataSource_Student.Columns[7];
+                imageColumn = (DataGridViewImageColumn)DataSource_Student.Columns[8];
                 imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
                 DataSource_Student.AllowUserToAddRows = false;
             }
@@ -284,7 +288,13 @@ namespace School_Management.Manager.Student
 
         private void DataSource_Student_DoubleClick_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void DataSource_Student_Click(object sender, EventArgs e)
+        {
             this.OpenEdit();
+
         }
     }
 }

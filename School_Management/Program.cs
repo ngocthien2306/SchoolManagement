@@ -1,6 +1,5 @@
 ﻿using DevExpress.UserSkins;
-using School_Management.Manager.Course;
-using School_Management.Manager.Student;
+using School_Management.Manager.Login;
 using System;
 
 using System.Windows.Forms;
@@ -19,7 +18,7 @@ namespace School_Management
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
-            Application.Run(new Manager_Student());
+            Application.Run(new Login_Account());
 
         }
     }

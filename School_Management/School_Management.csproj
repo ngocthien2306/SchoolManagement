@@ -471,6 +471,12 @@
     <Compile Include="Manager\Student\Statics.Designer.cs">
       <DependentUpon>Statics.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager\Student\StudentCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\StudentCourse.Designer.cs">
+      <DependentUpon>StudentCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager\Student\StudentEntitiesDataModel\IStudentEntitiesUnitOfWork.cs" />
     <Compile Include="Manager\Student\StudentEntitiesDataModel\StudentEntitiesUnitOfWork.cs" />
     <Compile Include="Manager\Student\StudentEntitiesDataModel\UnitOfWorkSource.cs" />
@@ -710,6 +716,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Student\Statics.resx">
       <DependentUpon>Statics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Student\StudentCourse.resx">
+      <DependentUpon>StudentCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Student\XtraReport.resx">
       <DependentUpon>XtraReport.cs</DependentUpon>

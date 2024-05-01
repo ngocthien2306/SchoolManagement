@@ -110,7 +110,7 @@ namespace School_Management.Manager.Student
 
         private void M0201_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Add_Course add = new Add_Course();
+            AddCourse_FormStudent add = new AddCourse_FormStudent();
             add.ShowDialog();
         }
 

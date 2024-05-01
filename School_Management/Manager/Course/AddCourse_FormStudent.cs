@@ -146,14 +146,24 @@ namespace School_Management.Manager.Course
             course = new Courses();
             student = new Students();
             selectedCourceAdded = new Stack<int>();
-
+            var index = 0;
             var idTable = student.GetAllBriefInfo();
             for (int i = 0; i < idTable.Rows.Count; i++)
             {
+                if (lbStudentId.Text != "")
+                {
+
+                    string id = lbStudentId.Text.ToString().Trim();
+                    string id_check = idTable.Rows[i].ItemArray[0].ToString().Trim();
+                    if (id == id_check)
+                    {
+                        index = i;
+                    }
+                }
                 ComboBox_Student.Items.Add(idTable.Rows[i].ItemArray[0] + " - " + idTable.Rows[i].ItemArray[1] + " " + idTable.Rows[i].ItemArray[2]);
             }
-            ComboBox_Student.SelectedIndex = 0;
-            ComboBox_Student.Text = idTable.Rows[0].ItemArray[0] + " - " + idTable.Rows[0].ItemArray[1] + " " + idTable.Rows[0].ItemArray[2]; // default
+            ComboBox_Student.Text = idTable.Rows[index].ItemArray[0] + " - " + idTable.Rows[index].ItemArray[1] + " " + idTable.Rows[index].ItemArray[2]; // default
+            ComboBox_Student.SelectedIndex = index;
 
             ComboBox_Semester.Items.Add("1");
             ComboBox_Semester.Items.Add("2");

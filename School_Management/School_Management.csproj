@@ -486,6 +486,12 @@
     <Compile Include="Manager\Student\Course.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Manager\Student\CourseStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Student\CourseStudent.Designer.cs">
+      <DependentUpon>CourseStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager\Student\CustomGrid.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -779,6 +785,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Student\Add_Students.resx">
       <DependentUpon>Add_Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Student\CourseStudent.resx">
+      <DependentUpon>CourseStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Student\CustomGrid.resx">
       <DependentUpon>CustomGrid.cs</DependentUpon>

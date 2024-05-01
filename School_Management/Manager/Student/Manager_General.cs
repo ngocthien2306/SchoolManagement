@@ -19,6 +19,7 @@ namespace School_Management.Manager.Student
         {
             InitializeComponent();
         }
+        My_Database data = new My_Database();
 
         private void Fname_lb_Click(object sender, EventArgs e)
         {
@@ -288,7 +289,32 @@ namespace School_Management.Manager.Student
 
         private void DataSource_Student_DoubleClick_1(object sender, EventArgs e)
         {
+            CourseStudent sc = new CourseStudent();
+            string query = "SELECT c.semester, c.label, score.Student_score, score.Description " +
+               "FROM Student_Courses sc " +
+               "LEFT JOIN Add_Student s ON s.id = sc.stdId " +
+               "LEFT JOIN Course c ON c.Id = sc.courseId " +
+               "LEFT JOIN Score score on score.Student_id = s.id and score.Course_id = c.Id " + 
+                "WHERE s.id = @sid";
 
+            SqlCommand command = new SqlCommand(query, data.GetConnection);
+            int id = Convert.ToInt32(ID_student.Text);
+            // Assuming 'courseId' is a parameter to filter the data based on the selected item
+            command.Parameters.AddWithValue("@sid", id);
+            DataTable table = new DataTable();
+
+            data.Openconnection();
+
+            using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+            {
+                adapter.Fill(table);
+            }
+
+            data.Closeconnection();
+            sc.lbStudentId.Text = id.ToString();
+
+            sc.gridControlCourse.DataSource = table;
+            sc.ShowDialog();
         }
 
         private void DataSource_Student_Click(object sender, EventArgs e)

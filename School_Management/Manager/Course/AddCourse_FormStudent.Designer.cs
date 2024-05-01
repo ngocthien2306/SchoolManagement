@@ -33,9 +33,9 @@ namespace School_Management.Manager.Course
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Add = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.Delete_course = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Edit_andSave = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ResetChange = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.Delete_course = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Back = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Label_ID = new DevExpress.XtraEditors.LabelControl();
             this.Label_semester = new DevExpress.XtraEditors.LabelControl();
@@ -45,6 +45,7 @@ namespace School_Management.Manager.Course
             this.Listbox_Available = new DevExpress.XtraEditors.ListBoxControl();
             this.ComboBox_Student = new System.Windows.Forms.ComboBox();
             this.ComboBox_Semester = new System.Windows.Forms.ComboBox();
+            this.lbStudentId = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListBoxCourse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Listbox_Available)).BeginInit();
@@ -82,6 +83,14 @@ namespace School_Management.Manager.Course
             this.Add.Text = "Add";
             this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
+            // Delete_course
+            // 
+            this.Delete_course.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Delete_course.ImageOptions.Image")));
+            this.Delete_course.Name = "Delete_course";
+            this.Delete_course.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.Delete_course.Text = "Delete";
+            this.Delete_course.Click += new System.EventHandler(this.Delete_course_Click);
+            // 
             // Edit_andSave
             // 
             this.Edit_andSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Edit_andSave.ImageOptions.Image")));
@@ -96,14 +105,6 @@ namespace School_Management.Manager.Course
             this.ResetChange.Name = "ResetChange";
             this.ResetChange.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.ResetChange.Text = "Reset Change";
-            // 
-            // Delete_course
-            // 
-            this.Delete_course.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Delete_course.ImageOptions.Image")));
-            this.Delete_course.Name = "Delete_course";
-            this.Delete_course.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.Delete_course.Text = "Delete";
-            this.Delete_course.Click += new System.EventHandler(this.Delete_course_Click);
             // 
             // Back
             // 
@@ -184,11 +185,20 @@ namespace School_Management.Manager.Course
             this.ComboBox_Semester.TabIndex = 23;
             this.ComboBox_Semester.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Semester_SelectedIndexChanged);
             // 
+            // lbStudentId
+            // 
+            this.lbStudentId.Location = new System.Drawing.Point(181, 383);
+            this.lbStudentId.Name = "lbStudentId";
+            this.lbStudentId.Size = new System.Drawing.Size(0, 16);
+            this.lbStudentId.TabIndex = 24;
+            this.lbStudentId.Visible = false;
+            // 
             // AddCourse_FormStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 411);
+            this.Controls.Add(this.lbStudentId);
             this.Controls.Add(this.ComboBox_Semester);
             this.Controls.Add(this.ComboBox_Student);
             this.Controls.Add(this.Listbox_Available);
@@ -229,5 +239,6 @@ namespace School_Management.Manager.Course
         private DevExpress.XtraEditors.ListBoxControl Listbox_Available;
         private System.Windows.Forms.ComboBox ComboBox_Student;
         private System.Windows.Forms.ComboBox ComboBox_Semester;
+        public DevExpress.XtraEditors.LabelControl lbStudentId;
     }
 }

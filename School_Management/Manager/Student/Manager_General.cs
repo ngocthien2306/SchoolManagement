@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
 using ClosedXML.Excel;
+using System.Globalization;
+
 namespace School_Management.Manager.Student
 {
     public partial class Manager_General : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -342,27 +344,21 @@ namespace School_Management.Manager.Student
 
                 DataTable dt = new DataTable();
                 dt.Columns.Add("ID");
-                dt.Columns.Add("Password");
                 dt.Columns.Add("FirstName");
                 dt.Columns.Add("LastName");
                 dt.Columns.Add("Birthday");
-                dt.Columns.Add("Gender");
-                dt.Columns.Add("Address");
-                dt.Columns.Add("Phone");
-                dt.Columns.Add("Picture");
+                dt.Columns.Add("Email");
+
 
                 foreach (IXLRow row in worksheet.RowsUsed().Skip(1)) // Skip header row
                 {
                     DataRow dataRow = dt.NewRow();
-                    dataRow["ID"] = row.Cell(1).Value.ToString();
-                    dataRow["Password"] = row.Cell(2).Value.ToString();
+                    dataRow["ID"] = row.Cell(2).Value.ToString();
                     dataRow["FirstName"] = row.Cell(3).Value.ToString();
-                    dataRow["LastName"] = row.Cell(4).Value.ToString();
-                    dataRow["Birthday"] = row.Cell(5).Value.ToString();
-                    dataRow["Gender"] = row.Cell(6).Value.ToString();
-                    dataRow["Address"] = row.Cell(7).Value.ToString();
-                    dataRow["Phone"] = row.Cell(8).Value.ToString();
-                    dataRow["Picture"] = row.Cell(9).Value.ToString(); // Assuming picture path is in cell 9
+                    dataRow["LastName"] = row.Cell(5).Value.ToString();
+                    dataRow["Birthday"] = row.Cell(6).Value.ToString();
+                    dataRow["Email"] = row.Cell(7).Value.ToString();
+
                     dt.Rows.Add(dataRow);
                 }
 
@@ -385,18 +381,25 @@ namespace School_Management.Manager.Student
                 {
                     foreach (DataRow row in dt.Rows)
                     {
-                        string query = "INSERT INTO Students (id, password, firstname, lastname, birthday, gender, address, phone, picture) " +
-                                       "VALUES (@ID, @Password, @FirstName, @LastName, @Birthday, @Gender, @Address, @Phone, @Picture)";
+                        string query = "INSERT INTO Add_Student (id, firstname, lastname, birthday, email) " +
+                                       "VALUES (@ID, @FirstName, @LastName, @Birthday, @Email)";
                         SqlCommand command = new SqlCommand(query, connection, transaction);
                         command.Parameters.AddWithValue("@ID", row["ID"]);
-                        command.Parameters.AddWithValue("@Password", row["Password"]);
                         command.Parameters.AddWithValue("@FirstName", row["FirstName"]);
                         command.Parameters.AddWithValue("@LastName", row["LastName"]);
-                        command.Parameters.AddWithValue("@Birthday", row["Birthday"]);
-                        command.Parameters.AddWithValue("@Gender", row["Gender"]);
-                        command.Parameters.AddWithValue("@Address", row["Address"]);
-                        command.Parameters.AddWithValue("@Phone", row["Phone"]);
-                        command.Parameters.AddWithValue("@Picture", row["Picture"]);
+                        string birthdayString = row["Birthday"].ToString();
+                        DateTime birthdayDate;
+                        if (DateTime.TryParseExact(birthdayString, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out birthdayDate))
+                        {
+                            string formattedBirthday = birthdayDate.ToString("yyyy-MM-dd");
+                            command.Parameters.AddWithValue("@Birthday", formattedBirthday);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Invalid date format: " + birthdayString);
+                        }
+                        command.Parameters.AddWithValue("@Email", row["Email"]);
+    
                         command.ExecuteNonQuery();
                     }
 

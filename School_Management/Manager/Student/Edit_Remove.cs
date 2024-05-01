@@ -63,9 +63,16 @@ namespace School_Management.Manager.Student
                     }
                     Address_student.Text = table.Rows[0]["address"].ToString();
                     Phone_student.Text = table.Rows[0]["phone"].ToString();
-                    byte[] pic = (byte[])table.Rows[0]["picture"];
-                    MemoryStream picture = new MemoryStream(pic);
-                    Picture_Student.Image = Image.FromStream(picture);
+                    try
+                    {
+                        byte[] pic = (byte[])table.Rows[0]["picture"];
+                        MemoryStream picture = new MemoryStream(pic);
+                        Picture_Student.Image = Image.FromStream(picture);
+                    }
+                    catch
+                    {
+                       
+                    }
                     return true;
                 }
                 else
@@ -221,7 +228,7 @@ namespace School_Management.Manager.Student
 
         private void M0202_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            AddCourse_FormStuent add = new AddCourse_FormStuent();
+            AddCourse_FormStudent add = new AddCourse_FormStudent();
             add.ShowDialog();
         }
     }

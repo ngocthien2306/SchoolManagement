@@ -226,7 +226,7 @@ namespace School_Management.Manager.Student
             try
             {
                 SqlCommand command = new SqlCommand("SELECT * FROM Student_Courses " +
-                                                    "inner join Courses on Student_Courses.courseId = Courses.Id " +
+                                                    "inner join Course on Student_Courses.courseId = Course.Id " +
                                                     "WHERE stdId=@id");
                 command.Parameters.Add("@id", SqlDbType.Int).Value = id;
                 return this.GetStudents(command);
@@ -284,7 +284,7 @@ namespace School_Management.Manager.Student
             My_Database db = new My_Database();
             try
             {
-                SqlCommand command = new SqlCommand("Insert into Course (Student_id, Course_id) " +
+                SqlCommand command = new SqlCommand("Insert into Student_Courses (stdId, courseId) " +
                                                      "values (@stdId, @courseId)", db.GetConnection);
 
                 command.Parameters.Add("@stdId", SqlDbType.Int).Value = id;

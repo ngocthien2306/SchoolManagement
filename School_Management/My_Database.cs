@@ -9,8 +9,7 @@ namespace School_Management
 {
     public class My_Database
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=26.178.255.191;Initial Catalog=Manager_Student;Persist Security Info=True;
-                User ID=thiennguyen;Password=ngocthien");
+        SqlConnection connect = new SqlConnection(@"Data Source=DESKTOP-BIDDRQT;Initial Catalog=Manager_Student;Integrated Security=True");
         public SqlConnection GetConnection
         {
             get { return this.connect; }

@@ -32,7 +32,7 @@ namespace School_Management.Manager.Student
                 adapter.Fill(dataSet, "Add_Student");
                 dataBase.Closeconnection();
 
-                DataSource_Student.RowTemplate.Height = 40;
+                DataSource_Student.RowTemplate.Height = 80;
                
                 DataTable table = dataSet.Tables["Add_Student"];
                 DataSource_Student.DataSource = table;

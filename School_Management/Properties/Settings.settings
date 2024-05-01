@@ -5,18 +5,18 @@
     <Setting Name="Manager_StudentConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=DESKTOP-US6D43H;Initial Catalog=Manager_Student;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=DESKTOP-BIDDRQT;Initial Catalog=Manager_Student;Integrated Security=True&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=DESKTOP-US6D43H;Initial Catalog=Manager_Student;Integrated Security=True</Value>
+      <Value Profile="(Default)">Data Source=DESKTOP-BIDDRQT;Initial Catalog=Manager_Student;Integrated Security=True</Value>
     </Setting>
     <Setting Name="Manager_StudentConnectionString1" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=DESKTOP-NHHG86O;Initial Catalog=Manager_Student;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=DESKTOP-BIDDRQT;Initial Catalog=Manager_Student;Integrated Security=True&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=DESKTOP-NHHG86O;Initial Catalog=Manager_Student;Integrated Security=True</Value>
+      <Value Profile="(Default)">Data Source=DESKTOP-BIDDRQT;Initial Catalog=Manager_Student;Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

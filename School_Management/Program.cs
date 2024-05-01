@@ -1,13 +1,10 @@
-﻿using DevExpress.LookAndFeel;
-using DevExpress.Skins;
-using DevExpress.UserSkins;
-using School_Management.Manager.Login;
+﻿using DevExpress.UserSkins;
+using School_Management.Manager.Course;
+using School_Management.Manager.Student;
 using System;
-using System.Collections.Generic;
-using System.Linq;
+
 using System.Windows.Forms;
-using School_Management.Manager.Contact;
-using School_Management.Manager.Score;
+
 namespace School_Management
 {
     static class Program
@@ -22,7 +19,7 @@ namespace School_Management
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
-            Application.Run(new Login_Account());
+            Application.Run(new Manager_Student());
 
         }
     }

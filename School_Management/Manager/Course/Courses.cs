@@ -74,7 +74,7 @@ namespace School_Management.Manager.Course
             try
             {
                 SqlCommand command = new SqlCommand(
-                    "UPDATE Courses" +
+                    "UPDATE Course" +
                     " SET " +
                     "label = @label," +
                     "period = @period," +
@@ -320,6 +320,36 @@ namespace School_Management.Manager.Course
                 db.Closeconnection();
             }
         }
+        public bool RemoveStudentCourse(string sid)
+        {
+            My_Database db = new My_Database();
+            try
+            {
+                SqlCommand command = new SqlCommand("DELETE FROM Student_Courses WHERE stdId = @id", db.GetConnection);
+                command.Parameters.Add("@id", SqlDbType.Int).Value = sid;
+
+                db.Openconnection();
+                if (command.ExecuteNonQuery() >= 0)
+                {
+                    db.Closeconnection();
+                    return true;
+                }
+                else
+                {
+                    db.Closeconnection();
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+            finally
+            {
+                db.Closeconnection();
+            }
+        }
         public bool RemoveCourse(int id)
         {
             My_Database db = new My_Database();
@@ -473,7 +503,7 @@ namespace School_Management.Manager.Course
             My_Database db = new My_Database();
             try
             {
-                string query = $"SELECT * FROM Courses WHERE id = {id}";
+                string query = $"SELECT * FROM Course WHERE id = {id}";
                 return this.GetTable(query);
             }
             catch (Exception)
@@ -595,7 +625,7 @@ namespace School_Management.Manager.Course
                 SqlCommand command = new SqlCommand()
                 {
                     Connection = db.GetConnection,
-                    CommandText = "SELECT * FROM Courses WHERE semester = @semester"
+                    CommandText = "SELECT * FROM Course WHERE semester = @semester"
                 };
                 command.Parameters.Add("@semester", SqlDbType.NVarChar).Value = semester;
                 SqlDataAdapter adapter = new SqlDataAdapter();

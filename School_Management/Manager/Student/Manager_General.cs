@@ -130,13 +130,24 @@ namespace School_Management.Manager.Student
             {
                 My_Database dataBase = new My_Database();
                 dataBase.Openconnection();
-                SqlCommand command = new SqlCommand("SELECT * FROM Add_Student", dataBase.GetConnection);
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                adapter.SelectCommand = command;
+
+                // Create a SqlCommand object for the stored procedure
+                SqlCommand command = new SqlCommand("GetStudentCourses", dataBase.GetConnection);
+                command.CommandType = CommandType.StoredProcedure; // Specify that it's a stored procedure
+
+                // Create a SqlDataAdapter to fill a DataSet with the result of the stored procedure
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                // Create a new DataSet
                 DataSet dataSet = new DataSet();
+
+                // Fill the DataSet with the data returned by the stored procedure
                 adapter.Fill(dataSet, "Add_Student");
+
+                // Close the database connection
                 dataBase.Closeconnection();
 
+                // Configure the DataGridView to display the data from the DataSet
                 DataSource_Student.RowTemplate.Height = 80;
                 DataTable table = dataSet.Tables["Add_Student"];
                 DataSource_Student.DataSource = table;
@@ -145,15 +156,16 @@ namespace School_Management.Manager.Student
                 imageColumn = (DataGridViewImageColumn)DataSource_Student.Columns[7];
                 imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
                 DataSource_Student.AllowUserToAddRows = false;
+
                 return true;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
                 return false;
-                throw;
             }
         }
+
         private void Reload_Grid_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             this.ShowList();

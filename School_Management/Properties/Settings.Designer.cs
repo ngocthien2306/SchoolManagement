@@ -12,7 +12,7 @@ namespace School_Management.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,7 +26,7 @@ namespace School_Management.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-US6D43H;Initial Catalog=Manager_Student;Integrated Security=T" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-BIDDRQT;Initial Catalog=Manager_Student;Integrated Security=T" +
             "rue")]
         public string Manager_StudentConnectionString {
             get {
@@ -37,7 +37,7 @@ namespace School_Management.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-NHHG86O;Initial Catalog=Manager_Student;Integrated Security=T" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-BIDDRQT;Initial Catalog=Manager_Student;Integrated Security=T" +
             "rue")]
         public string Manager_StudentConnectionString1 {
             get {

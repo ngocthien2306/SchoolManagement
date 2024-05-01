@@ -226,11 +226,11 @@
     <Compile Include="Manager\Contact\sysdiagram.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Manager\Course\AddCourse_FormStuent.cs">
+    <Compile Include="Manager\Course\AddCourse_FormStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manager\Course\AddCourse_FormStuent.Designer.cs">
-      <DependentUpon>AddCourse_FormStuent.cs</DependentUpon>
+    <Compile Include="Manager\Course\AddCourse_FormStudent.Designer.cs">
+      <DependentUpon>AddCourse_FormStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="Manager\Course\Add_Course.cs">
       <SubType>Form</SubType>
@@ -589,6 +589,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Manager_StudentDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Manager_StudentDataSet3.cs">
+      <DependentUpon>Manager_StudentDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Manager_StudentDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -627,8 +630,8 @@
     <EmbeddedResource Include="Manager\Contact\ShowFullList.resx">
       <DependentUpon>ShowFullList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manager\Course\AddCourse_FormStuent.resx">
-      <DependentUpon>AddCourse_FormStuent.cs</DependentUpon>
+    <EmbeddedResource Include="Manager\Course\AddCourse_FormStudent.resx">
+      <DependentUpon>AddCourse_FormStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Course\Add_Course.resx">
       <DependentUpon>Add_Course.cs</DependentUpon>

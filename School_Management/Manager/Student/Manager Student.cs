@@ -207,5 +207,11 @@ namespace School_Management.Manager.Student
             Static_Course sta = new Static_Course();
             sta.ShowDialog();
         }
+
+        private void M010402_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Edit_Remove edit_Remove = new Edit_Remove();
+            edit_Remove.ShowDialog();
+        }
     }
 }

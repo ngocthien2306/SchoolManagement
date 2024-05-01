@@ -69,6 +69,7 @@ namespace School_Management.Manager.Student
             this.m0105 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.M010601 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.M07 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.M02 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.M0201 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.M0202 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -136,7 +137,6 @@ namespace School_Management.Manager.Student
             this.courseTableAdapter = new School_Management.Manager_StudentDataSet3TableAdapters.CourseTableAdapter();
             this.courseTableAdapter1 = new School_Management.StudentTableAdapters.CourseTableAdapter();
             this.tableAdapterManager1 = new School_Management.StudentTableAdapters.TableAdapterManager();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -273,6 +273,7 @@ namespace School_Management.Manager.Student
             this.M010402.Id = 8;
             this.M010402.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("M010402.ImageOptions.SvgImage")));
             this.M010402.Name = "M010402";
+            this.M010402.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.M010402_ItemClick);
             // 
             // M010403
             // 
@@ -509,6 +510,11 @@ namespace School_Management.Manager.Student
             this.M07.ItemLinks.Add(this.M060101);
             this.M07.Name = "M07";
             this.M07.Text = "Contact";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
             // M02
             // 
@@ -1125,11 +1131,6 @@ namespace School_Management.Manager.Student
             this.tableAdapterManager1.New_UserTableAdapter = null;
             this.tableAdapterManager1.ScoreTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = School_Management.StudentTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
             // Manager_Student
             // 

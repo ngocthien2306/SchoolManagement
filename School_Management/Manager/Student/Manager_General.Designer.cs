@@ -103,6 +103,7 @@ namespace School_Management.Manager.Student
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Selected_Course = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -156,7 +157,6 @@ namespace School_Management.Manager.Student
             this.Reload_Grid,
             this.barEditItem2});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonControl1.MaxItemId = 15;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -166,7 +166,7 @@ namespace School_Management.Manager.Student
             this.repositoryItemTextEdit2,
             this.repositoryItemTimeEdit1,
             this.repositoryItemTextEdit3});
-            this.ribbonControl1.Size = new System.Drawing.Size(1408, 210);
+            this.ribbonControl1.Size = new System.Drawing.Size(1918, 181);
             // 
             // Add_bt
             // 
@@ -292,22 +292,20 @@ namespace School_Management.Manager.Student
             // 
             this.Key_Find.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Key_Find.Appearance.Options.UseFont = true;
-            this.Key_Find.Location = new System.Drawing.Point(797, 125);
-            this.Key_Find.Margin = new System.Windows.Forms.Padding(4);
+            this.Key_Find.Location = new System.Drawing.Point(620, 105);
             this.Key_Find.Name = "Key_Find";
-            this.Key_Find.Size = new System.Drawing.Size(87, 28);
+            this.Key_Find.Size = new System.Drawing.Size(72, 23);
             this.Key_Find.TabIndex = 21;
             this.Key_Find.Text = "Keyword";
             // 
             // Find_tb
             // 
-            this.Find_tb.Location = new System.Drawing.Point(901, 121);
-            this.Find_tb.Margin = new System.Windows.Forms.Padding(4);
+            this.Find_tb.Location = new System.Drawing.Point(701, 102);
             this.Find_tb.MenuManager = this.ribbonControl1;
             this.Find_tb.Name = "Find_tb";
             this.Find_tb.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Find_tb.Properties.Appearance.Options.UseFont = true;
-            this.Find_tb.Size = new System.Drawing.Size(367, 32);
+            this.Find_tb.Size = new System.Drawing.Size(285, 28);
             this.Find_tb.TabIndex = 22;
             // 
             // Find_bt
@@ -315,10 +313,9 @@ namespace School_Management.Manager.Student
             this.Find_bt.Appearance.ForeColor = System.Drawing.Color.DodgerBlue;
             this.Find_bt.Appearance.Options.UseForeColor = true;
             this.Find_bt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Find_bt.ImageOptions.Image")));
-            this.Find_bt.Location = new System.Drawing.Point(1287, 114);
-            this.Find_bt.Margin = new System.Windows.Forms.Padding(4);
+            this.Find_bt.Location = new System.Drawing.Point(1001, 96);
             this.Find_bt.Name = "Find_bt";
-            this.Find_bt.Size = new System.Drawing.Size(97, 46);
+            this.Find_bt.Size = new System.Drawing.Size(75, 39);
             this.Find_bt.TabIndex = 23;
             this.Find_bt.Text = "Find";
             this.Find_bt.Click += new System.EventHandler(this.Find_bt_Click);
@@ -368,15 +365,15 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.add_StudentBindingNavigatorSaveItem});
-            this.add_StudentBindingNavigator.Location = new System.Drawing.Point(0, 210);
+            this.add_StudentBindingNavigator.Location = new System.Drawing.Point(0, 181);
             this.add_StudentBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.add_StudentBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.add_StudentBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.add_StudentBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.add_StudentBindingNavigator.Name = "add_StudentBindingNavigator";
-            this.add_StudentBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.add_StudentBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.add_StudentBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.add_StudentBindingNavigator.Size = new System.Drawing.Size(1408, 38);
+            this.add_StudentBindingNavigator.Size = new System.Drawing.Size(1918, 31);
             this.add_StudentBindingNavigator.TabIndex = 25;
             this.add_StudentBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -386,13 +383,13 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 33);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -402,7 +399,7 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -411,7 +408,7 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -420,13 +417,13 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -434,14 +431,14 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(40, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -449,7 +446,7 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -458,27 +455,28 @@ namespace School_Management.Manager.Student
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // add_StudentBindingNavigatorSaveItem
             // 
             this.add_StudentBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.add_StudentBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("add_StudentBindingNavigatorSaveItem.Image")));
             this.add_StudentBindingNavigatorSaveItem.Name = "add_StudentBindingNavigatorSaveItem";
-            this.add_StudentBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 33);
+            this.add_StudentBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
             this.add_StudentBindingNavigatorSaveItem.Text = "Save Data";
             this.add_StudentBindingNavigatorSaveItem.Click += new System.EventHandler(this.add_StudentBindingNavigatorSaveItem_Click);
             // 
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 248);
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 212);
+            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.Label_Total);
             this.splitContainerControl1.Panel1.Controls.Add(this.Group_Control);
@@ -493,8 +491,8 @@ namespace School_Management.Manager.Student
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.DataSource_Student);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1408, 671);
-            this.splitContainerControl1.SplitterPosition = 687;
+            this.splitContainerControl1.Size = new System.Drawing.Size(1918, 867);
+            this.splitContainerControl1.SplitterPosition = 534;
             this.splitContainerControl1.TabIndex = 26;
             // 
             // Label_Total
@@ -502,10 +500,9 @@ namespace School_Management.Manager.Student
             this.Label_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label_Total.Location = new System.Drawing.Point(471, 402);
-            this.Label_Total.Margin = new System.Windows.Forms.Padding(4);
+            this.Label_Total.Location = new System.Drawing.Point(366, 339);
             this.Label_Total.Name = "Label_Total";
-            this.Label_Total.Size = new System.Drawing.Size(95, 19);
+            this.Label_Total.Size = new System.Drawing.Size(77, 16);
             this.Label_Total.TabIndex = 30;
             this.Label_Total.Text = "Total Student";
             // 
@@ -513,10 +510,9 @@ namespace School_Management.Manager.Student
             // 
             this.Group_Control.Controls.Add(this.Download_bt);
             this.Group_Control.Controls.Add(this.Load_image);
-            this.Group_Control.Location = new System.Drawing.Point(332, 417);
-            this.Group_Control.Margin = new System.Windows.Forms.Padding(4);
+            this.Group_Control.Location = new System.Drawing.Point(258, 351);
             this.Group_Control.Name = "Group_Control";
-            this.Group_Control.Size = new System.Drawing.Size(342, 218);
+            this.Group_Control.Size = new System.Drawing.Size(266, 184);
             this.Group_Control.TabIndex = 29;
             // 
             // Download_bt
@@ -525,10 +521,9 @@ namespace School_Management.Manager.Student
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Download_bt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Download_bt.ImageOptions.Image")));
-            this.Download_bt.Location = new System.Drawing.Point(33, 133);
-            this.Download_bt.Margin = new System.Windows.Forms.Padding(4);
+            this.Download_bt.Location = new System.Drawing.Point(26, 112);
             this.Download_bt.Name = "Download_bt";
-            this.Download_bt.Size = new System.Drawing.Size(146, 53);
+            this.Download_bt.Size = new System.Drawing.Size(114, 45);
             this.Download_bt.TabIndex = 19;
             this.Download_bt.Text = "Download";
             // 
@@ -538,30 +533,27 @@ namespace School_Management.Manager.Student
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Load_image.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Load_image.ImageOptions.Image")));
-            this.Load_image.Location = new System.Drawing.Point(33, 57);
-            this.Load_image.Margin = new System.Windows.Forms.Padding(4);
+            this.Load_image.Location = new System.Drawing.Point(26, 48);
             this.Load_image.Name = "Load_image";
-            this.Load_image.Size = new System.Drawing.Size(146, 61);
+            this.Load_image.Size = new System.Drawing.Size(114, 51);
             this.Load_image.TabIndex = 18;
             this.Load_image.Text = "Up Picrture";
             // 
             // Picture_Student
             // 
-            this.Picture_Student.Location = new System.Drawing.Point(22, 430);
-            this.Picture_Student.Margin = new System.Windows.Forms.Padding(4);
+            this.Picture_Student.Location = new System.Drawing.Point(17, 362);
             this.Picture_Student.MenuManager = this.ribbonControl1;
             this.Picture_Student.Name = "Picture_Student";
             this.Picture_Student.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.Picture_Student.Size = new System.Drawing.Size(298, 206);
+            this.Picture_Student.Size = new System.Drawing.Size(232, 173);
             this.Picture_Student.TabIndex = 28;
             // 
             // GroupPage
             // 
-            this.GroupPage.Location = new System.Drawing.Point(22, 196);
-            this.GroupPage.Margin = new System.Windows.Forms.Padding(4);
+            this.GroupPage.Location = new System.Drawing.Point(17, 165);
             this.GroupPage.Name = "GroupPage";
             this.GroupPage.SelectedTabPage = this.Contact_student;
-            this.GroupPage.Size = new System.Drawing.Size(658, 191);
+            this.GroupPage.Size = new System.Drawing.Size(512, 161);
             this.GroupPage.TabIndex = 27;
             this.GroupPage.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.Contact_student,
@@ -578,91 +570,81 @@ namespace School_Management.Manager.Student
             this.Contact_student.Controls.Add(this.Gender_lb);
             this.Contact_student.Controls.Add(this.Phone_lb);
             this.Contact_student.Controls.Add(this.Birthday_lb);
-            this.Contact_student.Margin = new System.Windows.Forms.Padding(4);
             this.Contact_student.Name = "Contact_student";
-            this.Contact_student.Size = new System.Drawing.Size(656, 156);
+            this.Contact_student.Size = new System.Drawing.Size(510, 131);
             this.Contact_student.Text = "Contact";
             // 
             // Check_female
             // 
-            this.Check_female.Location = new System.Drawing.Point(531, 32);
-            this.Check_female.Margin = new System.Windows.Forms.Padding(4);
+            this.Check_female.Location = new System.Drawing.Point(413, 27);
             this.Check_female.Name = "Check_female";
             this.Check_female.Properties.Caption = "Fename";
-            this.Check_female.Size = new System.Drawing.Size(102, 25);
+            this.Check_female.Size = new System.Drawing.Size(79, 20);
             this.Check_female.TabIndex = 8;
             // 
             // Check_male
             // 
-            this.Check_male.Location = new System.Drawing.Point(447, 32);
-            this.Check_male.Margin = new System.Windows.Forms.Padding(4);
+            this.Check_male.Location = new System.Drawing.Point(348, 27);
             this.Check_male.Name = "Check_male";
             this.Check_male.Properties.Caption = "Male";
-            this.Check_male.Size = new System.Drawing.Size(102, 25);
+            this.Check_male.Size = new System.Drawing.Size(79, 20);
             this.Check_male.TabIndex = 7;
             // 
             // Birthday_picker
             // 
             this.Birthday_picker.EditValue = null;
-            this.Birthday_picker.Location = new System.Drawing.Point(106, 26);
-            this.Birthday_picker.Margin = new System.Windows.Forms.Padding(4);
+            this.Birthday_picker.Location = new System.Drawing.Point(82, 22);
             this.Birthday_picker.Name = "Birthday_picker";
             this.Birthday_picker.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.Birthday_picker.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.Birthday_picker.Size = new System.Drawing.Size(192, 28);
+            this.Birthday_picker.Size = new System.Drawing.Size(149, 22);
             this.Birthday_picker.TabIndex = 6;
             // 
             // Address_student
             // 
-            this.Address_student.Location = new System.Drawing.Point(447, 88);
-            this.Address_student.Margin = new System.Windows.Forms.Padding(4);
+            this.Address_student.Location = new System.Drawing.Point(348, 74);
             this.Address_student.Name = "Address_student";
-            this.Address_student.Size = new System.Drawing.Size(186, 28);
+            this.Address_student.Size = new System.Drawing.Size(145, 22);
             this.Address_student.TabIndex = 5;
             // 
             // Phone_student
             // 
-            this.Phone_student.Location = new System.Drawing.Point(106, 94);
-            this.Phone_student.Margin = new System.Windows.Forms.Padding(4);
+            this.Phone_student.Location = new System.Drawing.Point(82, 79);
             this.Phone_student.Name = "Phone_student";
-            this.Phone_student.Size = new System.Drawing.Size(192, 28);
+            this.Phone_student.Size = new System.Drawing.Size(149, 22);
             this.Phone_student.TabIndex = 4;
             // 
             // Address_lb
             // 
-            this.Address_lb.Location = new System.Drawing.Point(340, 92);
-            this.Address_lb.Margin = new System.Windows.Forms.Padding(4);
+            this.Address_lb.Location = new System.Drawing.Point(264, 77);
             this.Address_lb.Name = "Address_lb";
-            this.Address_lb.Size = new System.Drawing.Size(57, 19);
+            this.Address_lb.Size = new System.Drawing.Size(46, 16);
             this.Address_lb.TabIndex = 3;
             this.Address_lb.Text = "Address";
             // 
             // Gender_lb
             // 
-            this.Gender_lb.Location = new System.Drawing.Point(340, 37);
-            this.Gender_lb.Margin = new System.Windows.Forms.Padding(4);
+            this.Gender_lb.Location = new System.Drawing.Point(264, 31);
             this.Gender_lb.Name = "Gender_lb";
-            this.Gender_lb.Size = new System.Drawing.Size(51, 19);
+            this.Gender_lb.Size = new System.Drawing.Size(41, 16);
             this.Gender_lb.TabIndex = 2;
             this.Gender_lb.Text = "Gender";
             // 
             // Phone_lb
             // 
-            this.Phone_lb.Location = new System.Drawing.Point(32, 98);
-            this.Phone_lb.Margin = new System.Windows.Forms.Padding(4);
+            this.Phone_lb.Location = new System.Drawing.Point(25, 83);
             this.Phone_lb.Name = "Phone_lb";
-            this.Phone_lb.Size = new System.Drawing.Size(44, 19);
+            this.Phone_lb.Size = new System.Drawing.Size(35, 16);
             this.Phone_lb.TabIndex = 1;
             this.Phone_lb.Text = "Phone";
             // 
             // Birthday_lb
             // 
-            this.Birthday_lb.Location = new System.Drawing.Point(32, 34);
-            this.Birthday_lb.Margin = new System.Windows.Forms.Padding(4);
+            this.Birthday_lb.Location = new System.Drawing.Point(25, 29);
             this.Birthday_lb.Name = "Birthday_lb";
-            this.Birthday_lb.Size = new System.Drawing.Size(58, 19);
+            this.Birthday_lb.Size = new System.Drawing.Size(46, 16);
             this.Birthday_lb.TabIndex = 0;
             this.Birthday_lb.Text = "Birthday";
             // 
@@ -670,50 +652,44 @@ namespace School_Management.Manager.Student
             // 
             this.xtraTabPage2.Controls.Add(this.textEdit1);
             this.xtraTabPage2.Controls.Add(this.Email_lb);
-            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(656, 156);
+            this.xtraTabPage2.Size = new System.Drawing.Size(510, 131);
             this.xtraTabPage2.Text = "Addition Information";
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(112, 25);
-            this.textEdit1.Margin = new System.Windows.Forms.Padding(4);
+            this.textEdit1.Location = new System.Drawing.Point(87, 21);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(208, 28);
+            this.textEdit1.Size = new System.Drawing.Size(162, 22);
             this.textEdit1.TabIndex = 1;
             // 
             // Email_lb
             // 
-            this.Email_lb.Location = new System.Drawing.Point(34, 29);
-            this.Email_lb.Margin = new System.Windows.Forms.Padding(4);
+            this.Email_lb.Location = new System.Drawing.Point(26, 24);
             this.Email_lb.Name = "Email_lb";
-            this.Email_lb.Size = new System.Drawing.Size(43, 19);
+            this.Email_lb.Size = new System.Drawing.Size(35, 16);
             this.Email_lb.TabIndex = 0;
             this.Email_lb.Text = "E-Mail";
             // 
             // Lastname
             // 
-            this.Lastname.Location = new System.Drawing.Point(166, 140);
-            this.Lastname.Margin = new System.Windows.Forms.Padding(4);
+            this.Lastname.Location = new System.Drawing.Point(129, 118);
             this.Lastname.Name = "Lastname";
-            this.Lastname.Size = new System.Drawing.Size(501, 28);
+            this.Lastname.Size = new System.Drawing.Size(390, 22);
             this.Lastname.TabIndex = 26;
             // 
             // Firstname
             // 
-            this.Firstname.Location = new System.Drawing.Point(166, 80);
-            this.Firstname.Margin = new System.Windows.Forms.Padding(4);
+            this.Firstname.Location = new System.Drawing.Point(129, 67);
             this.Firstname.Name = "Firstname";
-            this.Firstname.Size = new System.Drawing.Size(501, 28);
+            this.Firstname.Size = new System.Drawing.Size(390, 22);
             this.Firstname.TabIndex = 25;
             // 
             // ID_student
             // 
-            this.ID_student.Location = new System.Drawing.Point(166, 20);
-            this.ID_student.Margin = new System.Windows.Forms.Padding(4);
+            this.ID_student.Location = new System.Drawing.Point(129, 17);
             this.ID_student.Name = "ID_student";
-            this.ID_student.Size = new System.Drawing.Size(501, 28);
+            this.ID_student.Size = new System.Drawing.Size(390, 22);
             this.ID_student.TabIndex = 24;
             // 
             // Lname_lb
@@ -721,10 +697,9 @@ namespace School_Management.Manager.Student
             this.Lname_lb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Lname_lb.Location = new System.Drawing.Point(22, 145);
-            this.Lname_lb.Margin = new System.Windows.Forms.Padding(4);
+            this.Lname_lb.Location = new System.Drawing.Point(17, 122);
             this.Lname_lb.Name = "Lname_lb";
-            this.Lname_lb.Size = new System.Drawing.Size(72, 19);
+            this.Lname_lb.Size = new System.Drawing.Size(59, 16);
             this.Lname_lb.TabIndex = 23;
             this.Lname_lb.Text = "Last name";
             // 
@@ -733,10 +708,9 @@ namespace School_Management.Manager.Student
             this.Fname_lb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Fname_lb.Location = new System.Drawing.Point(26, 83);
-            this.Fname_lb.Margin = new System.Windows.Forms.Padding(4);
+            this.Fname_lb.Location = new System.Drawing.Point(20, 70);
             this.Fname_lb.Name = "Fname_lb";
-            this.Fname_lb.Size = new System.Drawing.Size(74, 19);
+            this.Fname_lb.Size = new System.Drawing.Size(61, 16);
             this.Fname_lb.TabIndex = 22;
             this.Fname_lb.Text = "First name";
             // 
@@ -745,10 +719,9 @@ namespace School_Management.Manager.Student
             this.IdStudent_lb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.IdStudent_lb.Location = new System.Drawing.Point(22, 23);
-            this.IdStudent_lb.Margin = new System.Windows.Forms.Padding(4);
+            this.IdStudent_lb.Location = new System.Drawing.Point(17, 19);
             this.IdStudent_lb.Name = "IdStudent_lb";
-            this.IdStudent_lb.Size = new System.Drawing.Size(76, 19);
+            this.IdStudent_lb.Size = new System.Drawing.Size(60, 16);
             this.IdStudent_lb.TabIndex = 21;
             this.IdStudent_lb.Text = "Student ID";
             // 
@@ -765,15 +738,17 @@ namespace School_Management.Manager.Student
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
+            this.Selected_Course,
             this.dataGridViewImageColumn1});
             this.DataSource_Student.DataSource = this.add_StudentBindingSource;
             this.DataSource_Student.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DataSource_Student.Location = new System.Drawing.Point(0, 0);
+            this.DataSource_Student.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DataSource_Student.Name = "DataSource_Student";
             this.DataSource_Student.ReadOnly = true;
             this.DataSource_Student.RowHeadersWidth = 45;
             this.DataSource_Student.RowTemplate.Height = 28;
-            this.DataSource_Student.Size = new System.Drawing.Size(703, 671);
+            this.DataSource_Student.Size = new System.Drawing.Size(1369, 867);
             this.DataSource_Student.TabIndex = 0;
             this.DataSource_Student.DoubleClick += new System.EventHandler(this.DataSource_Student_DoubleClick_1);
             // 
@@ -840,6 +815,15 @@ namespace School_Management.Manager.Student
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             this.dataGridViewTextBoxColumn7.Width = 150;
             // 
+            // Selected_Course
+            // 
+            this.Selected_Course.DataPropertyName = "selected_course";
+            this.Selected_Course.HeaderText = "Selected Course";
+            this.Selected_Course.MinimumWidth = 6;
+            this.Selected_Course.Name = "Selected_Course";
+            this.Selected_Course.ReadOnly = true;
+            this.Selected_Course.Width = 125;
+            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.DataPropertyName = "picture";
@@ -851,18 +835,18 @@ namespace School_Management.Manager.Student
             // 
             // Manager_General
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1408, 919);
+            this.ClientSize = new System.Drawing.Size(1918, 1079);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.add_StudentBindingNavigator);
             this.Controls.Add(this.Find_bt);
             this.Controls.Add(this.Find_tb);
             this.Controls.Add(this.Key_Find);
             this.Controls.Add(this.ribbonControl1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Manager_General";
             this.Ribbon = this.ribbonControl1;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "General Manager";
             this.Load += new System.EventHandler(this.Manager_General_Load);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).EndInit();
@@ -978,6 +962,7 @@ namespace School_Management.Manager.Student
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Selected_Course;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
     }
 }
